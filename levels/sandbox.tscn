@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cpw5rkjet4364"]
+
+[ext_resource type="PackedScene" uid="uid://cy0r1nnyfoc00" path="res://levels/level_walls.tscn" id="1_lbfr3"]
+[ext_resource type="PackedScene" uid="uid://cdtt7rqvbt4lx" path="res://player/player.tscn" id="2_hp7qg"]
+
+[node name="Sandbox" type="Node2D"]
+
+[node name="LevelWalls" parent="." instance=ExtResource("1_lbfr3")]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Player" parent="." instance=ExtResource("2_hp7qg")]
