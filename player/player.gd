@@ -4,7 +4,7 @@ extends CharacterBody2D
 @export var movement_speed: float = 500
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	_move()
 	move_and_slide()
 
