@@ -15,4 +15,4 @@
 [node name="Bullet" parent="." instance=ExtResource("3_3da8h")]
 position = Vector2(-453, 265)
 movment_speed = 300.0
-directoin = Vector2(1, 0)
+direction = Vector2(2, 3)
