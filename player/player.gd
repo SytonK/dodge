@@ -14,3 +14,7 @@ func _move() -> void:
 			Input.get_action_strength("move_right") - Input.get_action_strength("move_left"),
 			Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
 	).normalized() * movement_speed
+
+
+func _on_hurtbox_hurt() -> void:
+	print('i was hurt')

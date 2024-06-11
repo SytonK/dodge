@@ -21,3 +21,5 @@ script = ExtResource("2_3vspw")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
 rotation = 0.785398
 shape = SubResource("RectangleShape2D_xnu0d")
+
+[connection signal="hurt" from="Hurtbox" to="." method="_on_hurtbox_hurt"]
