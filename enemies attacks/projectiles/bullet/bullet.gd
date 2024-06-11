@@ -20,6 +20,5 @@ func _on_hit() -> void:
 
 
 func _queue_free_out_of_sceen() -> void:
-	print(DisplayServer.window_get_size())
 	if abs(global_position.x) > SceenSize.X || abs(global_position.y) > SceenSize.Y:
 		queue_free()
