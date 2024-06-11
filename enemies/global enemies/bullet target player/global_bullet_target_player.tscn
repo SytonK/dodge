@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cior0vm42r3eg"]
+
+[ext_resource type="Script" path="res://enemies/global enemies/bullet target player/global_bullet_target_player.gd" id="1_qjnjn"]
+
+[node name="global_bullet_target_player" type="Node2D"]
+script = ExtResource("1_qjnjn")
