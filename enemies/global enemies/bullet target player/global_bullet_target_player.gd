@@ -22,5 +22,6 @@ func _init_timer() -> void:
 func _spawn_bullet() -> void:
 	var new_bullet = BULLET.instantiate()
 	new_bullet.movment_speed = speed
+	new_bullet.position = Screen.get_random_position_on_screen_edge()
 	new_bullet.direction = player_ref.position - new_bullet.position
 	add_child(new_bullet)
