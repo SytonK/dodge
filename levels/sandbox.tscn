@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cy0r1nnyfoc00" path="res://levels/envierment/level_walls.tscn" id="1_lbfr3"]
 [ext_resource type="PackedScene" uid="uid://cdtt7rqvbt4lx" path="res://player/player.tscn" id="2_hp7qg"]
-[ext_resource type="PackedScene" uid="uid://c4ijp0jd2r1y2" path="res://enemies attacks/projectiles/bullet/bullet.tscn" id="3_3da8h"]
+[ext_resource type="PackedScene" uid="uid://cior0vm42r3eg" path="res://enemies/global enemies/bullet target player/global_bullet_target_player.tscn" id="3_8sinq"]
 
 [node name="Sandbox" type="Node2D"]
 
@@ -12,7 +12,7 @@
 
 [node name="Player" parent="." instance=ExtResource("2_hp7qg")]
 
-[node name="Bullet" parent="." instance=ExtResource("3_3da8h")]
-position = Vector2(-453, 265)
-movment_speed = 300.0
-direction = Vector2(2, 3)
+[node name="global_bullet_target_player" parent="." node_paths=PackedStringArray("player_ref") instance=ExtResource("3_8sinq")]
+speed = 100.0
+frequency = 2.0
+player_ref = NodePath("../Player")
