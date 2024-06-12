@@ -1,11 +1,11 @@
 class_name Screen
 
 
-const X = 1920
-const Y = 1080
+const X: float = 1920
+const Y: float = 1080
 
-const X_SIZE = X/2 + 64 
-const Y_SIZE = Y/2 + 64
+const X_SIZE: float = X/2 + 64 
+const Y_SIZE: float = Y/2 + 64
 
 enum SIDE { left, right, top, bottom }
 
