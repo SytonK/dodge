@@ -12,6 +12,7 @@ var pause_menu: Control
 
 func _ready() -> void:
 	_add_player()
+	_add_level_ui()
 
 func _add_player() -> void:
 	player = PLAYER.instantiate()

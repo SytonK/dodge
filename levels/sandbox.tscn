@@ -1,10 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cpw5rkjet4364"]
+[gd_scene load_steps=3 format=3 uid="uid://cpw5rkjet4364"]
 
 [ext_resource type="PackedScene" uid="uid://cy0r1nnyfoc00" path="res://levels/envierment/level_walls.tscn" id="1_lbfr3"]
 [ext_resource type="Script" path="res://levels/level.gd" id="1_tvtlc"]
-[ext_resource type="PackedScene" uid="uid://cior0vm42r3eg" path="res://enemies/global enemies/bullet target player/global_bullet_target_player.tscn" id="3_8sinq"]
-[ext_resource type="PackedScene" uid="uid://btg6r1ilc3tjr" path="res://UI/menus/pause menu/pause_menu.tscn" id="4_w2ksn"]
-[ext_resource type="PackedScene" uid="uid://dep5y2rjemfn8" path="res://UI/menus/game over menu/game_over_menu.tscn" id="5_72rdt"]
 
 [node name="Sandbox" type="Node2D"]
 script = ExtResource("1_tvtlc")
@@ -12,13 +9,3 @@ script = ExtResource("1_tvtlc")
 [node name="LevelWalls" parent="." instance=ExtResource("1_lbfr3")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
-
-[node name="global_bullet_target_player" parent="." instance=ExtResource("3_8sinq")]
-speed = 100.0
-frequency = 2.0
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("4_w2ksn")]
-
-[node name="GameOverMenu" parent="CanvasLayer" instance=ExtResource("5_72rdt")]
