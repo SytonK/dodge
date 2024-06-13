@@ -13,10 +13,9 @@ script = ExtResource("1_tvtlc")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="global_bullet_target_player" parent="." node_paths=PackedStringArray("player_ref") instance=ExtResource("3_8sinq")]
+[node name="global_bullet_target_player" parent="." instance=ExtResource("3_8sinq")]
 speed = 100.0
 frequency = 2.0
-player_ref = NodePath("")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
