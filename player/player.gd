@@ -4,6 +4,9 @@ extends CharacterBody2D
 
 @export var movement_speed: float = 500
 
+@export var max_health: int = 4
+@onready var health: int = max_health
+
 
 func _physics_process(_delta: float) -> void:
 	_move()
@@ -18,4 +21,9 @@ func _move() -> void:
 
 
 func _on_hurtbox_hurt() -> void:
-	print('i was hurt')
+	health -= 1
+	if health <= 0:
+		_game_over()
+
+func _game_over() -> void:
+	print('game_over')
