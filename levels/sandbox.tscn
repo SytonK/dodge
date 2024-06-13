@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cpw5rkjet4364"]
+[gd_scene load_steps=6 format=3 uid="uid://cpw5rkjet4364"]
 
 [ext_resource type="PackedScene" uid="uid://cy0r1nnyfoc00" path="res://levels/envierment/level_walls.tscn" id="1_lbfr3"]
 [ext_resource type="PackedScene" uid="uid://cdtt7rqvbt4lx" path="res://player/player.tscn" id="2_hp7qg"]
 [ext_resource type="PackedScene" uid="uid://cior0vm42r3eg" path="res://enemies/global enemies/bullet target player/global_bullet_target_player.tscn" id="3_8sinq"]
 [ext_resource type="PackedScene" uid="uid://btg6r1ilc3tjr" path="res://UI/menus/pause menu/pause_menu.tscn" id="4_w2ksn"]
+[ext_resource type="PackedScene" uid="uid://dep5y2rjemfn8" path="res://UI/menus/game over menu/game_over_menu.tscn" id="5_72rdt"]
 
 [node name="Sandbox" type="Node2D"]
 
@@ -21,3 +22,5 @@ player_ref = NodePath("../Player")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("4_w2ksn")]
+
+[node name="GameOverMenu" parent="CanvasLayer" instance=ExtResource("5_72rdt")]
