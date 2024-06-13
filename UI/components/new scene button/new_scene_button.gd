@@ -10,4 +10,5 @@ func _init() -> void:
 
 
 func _change_scene() -> void:
+	get_tree().paused = false
 	get_tree().change_scene_to_file(file_path)
