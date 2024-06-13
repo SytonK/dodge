@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cpw5rkjet4364"]
+[gd_scene load_steps=4 format=3 uid="uid://cpw5rkjet4364"]
 
 [ext_resource type="PackedScene" uid="uid://cy0r1nnyfoc00" path="res://levels/envierment/level_walls.tscn" id="1_lbfr3"]
 [ext_resource type="Script" path="res://levels/level.gd" id="1_tvtlc"]
+[ext_resource type="PackedScene" uid="uid://cior0vm42r3eg" path="res://enemies/global enemies/bullet target player/global_bullet_target_player.tscn" id="3_8sinq"]
 
 [node name="Sandbox" type="Node2D"]
 script = ExtResource("1_tvtlc")
@@ -9,3 +10,7 @@ script = ExtResource("1_tvtlc")
 [node name="LevelWalls" parent="." instance=ExtResource("1_lbfr3")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="global_bullet_target_player" parent="." instance=ExtResource("3_8sinq")]
+speed = 400.0
+frequency = 0.5

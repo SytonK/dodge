@@ -2,11 +2,16 @@ class_name Player
 extends CharacterBody2D
 
 
+signal game_over
+
 @export var movement_speed: float = 500
 
 @export var max_health: int = 4
 @onready var health: int = max_health
 
+
+func _ready() -> void:
+	PlayerRef.player_ref = self
 
 func _physics_process(_delta: float) -> void:
 	_move()
@@ -26,4 +31,4 @@ func _on_hurtbox_hurt() -> void:
 		_game_over()
 
 func _game_over() -> void:
-	print('game_over')
+	game_over.emit()
