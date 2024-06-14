@@ -1,10 +1,16 @@
 class_name Level
 extends Node2D
 
+enum {
+	EASY,
+	NORMAL,
+	HARD
+}
 
 @export var easy_time: int
 @export var normal_time: int
 @export var hard_time: int
+var current_difficulty: int = EASY
 var level_timer: Timer
 var time_left: int
 
@@ -43,11 +49,28 @@ func _add_level_timer() -> void:
 	add_child(level_timer)
 	time_left = easy_time
 	time_label.text = str(time_left)
+	time_label.modulate = Color(0,1,0)
 
 
 func _on_level_timer_timeout() -> void:
 	time_left -= 1
+	if time_left < 0:
+		_next_difficulty()
 	time_label.text = str(time_left)
+
+
+func _next_difficulty() -> void:
+	match current_difficulty:
+		EASY:
+			current_difficulty = NORMAL
+			time_label.modulate = Color(1,1,0)
+			time_left = normal_time
+		NORMAL:
+			current_difficulty = HARD
+			time_label.modulate = Color(1,0,0)
+			time_left = hard_time
+		HARD:
+			print('open next level')
 
 func _on_game_over() -> void:
 	game_over_menu.visible = true
