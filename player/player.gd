@@ -8,6 +8,7 @@ signal game_over
 
 @export var max_health: int = 4
 @onready var health: int = max_health
+@onready var health_ui: HealthUI = $CanvasLayer/HealthUI
 
 
 func _ready() -> void:
@@ -27,6 +28,7 @@ func _move() -> void:
 
 func _on_hurtbox_hurt() -> void:
 	health -= 1
+	health_ui.update_health(health)
 	if health <= 0:
 		_game_over()
 

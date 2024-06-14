@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cdtt7rqvbt4lx"]
+[gd_scene load_steps=5 format=3 uid="uid://cdtt7rqvbt4lx"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_xaxgn"]
 [ext_resource type="Script" path="res://components/hitbox and hurtbox/hurtbox/hurtbox.gd" id="2_3vspw"]
+[ext_resource type="PackedScene" uid="uid://c15jpkscomgn" path="res://UI/player/health/health_ui.tscn" id="3_u7htc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xnu0d"]
 size = Vector2(32, 32)
@@ -10,6 +11,8 @@ size = Vector2(32, 32)
 collision_layer = 2
 motion_mode = 1
 script = ExtResource("1_xaxgn")
+movement_speed = null
+max_health = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 rotation = 0.785398
@@ -21,5 +24,9 @@ script = ExtResource("2_3vspw")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
 rotation = 0.785398
 shape = SubResource("RectangleShape2D_xnu0d")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="HealthUI" parent="CanvasLayer" instance=ExtResource("3_u7htc")]
 
 [connection signal="hurt" from="Hurtbox" to="." method="_on_hurtbox_hurt"]
