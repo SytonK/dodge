@@ -62,15 +62,23 @@ func _on_level_timer_timeout() -> void:
 func _next_difficulty() -> void:
 	match current_difficulty:
 		EASY:
-			current_difficulty = NORMAL
-			time_label.modulate = Color(1,1,0)
-			time_left = normal_time
+			_to_normal()
 		NORMAL:
-			current_difficulty = HARD
-			time_label.modulate = Color(1,0,0)
-			time_left = hard_time
+			_to_hard()
 		HARD:
 			print('open next level')
+
+
+func _to_normal() -> void:
+	current_difficulty = NORMAL
+	time_label.modulate = Color(1,1,0)
+	time_left = normal_time
+
+func _to_hard() -> void:
+	current_difficulty = HARD
+	time_label.modulate = Color(1,0,0)
+	time_left = hard_time
+
 
 func _on_game_over() -> void:
 	game_over_menu.visible = true
