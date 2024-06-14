@@ -14,6 +14,7 @@ var player: Player
 const LEVEL_UI = preload("res://UI/level UI/level_ui.tscn")
 var game_over_menu: Control
 var pause_menu: Control
+var time_label: Label 
 
 
 func _ready() -> void:
@@ -32,6 +33,7 @@ func _add_level_ui() -> void:
 	add_child(LEVEL_UI.instantiate())
 	game_over_menu = $LevelUI/GameOverMenu
 	pause_menu = $LevelUI/PauseMenu
+	time_label = $LevelUI/TimeLabel
 
 
 func _add_level_timer() -> void:
@@ -40,10 +42,12 @@ func _add_level_timer() -> void:
 	level_timer.timeout.connect(_on_level_timer_timeout)
 	add_child(level_timer)
 	time_left = easy_time
+	time_label.text = str(time_left)
 
 
 func _on_level_timer_timeout() -> void:
 	time_left -= 1
+	time_label.text = str(time_left)
 
 func _on_game_over() -> void:
 	game_over_menu.visible = true
