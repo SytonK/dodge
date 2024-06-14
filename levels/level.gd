@@ -22,11 +22,13 @@ var game_over_menu: Control
 var pause_menu: Control
 var time_label: Label 
 
+var music_player: MusicPlayer
 
 func _ready() -> void:
 	_add_player()
 	_add_level_ui()
 	_add_level_timer()
+	_add_music_player()
 
 
 func _add_player() -> void:
@@ -73,11 +75,18 @@ func _to_normal() -> void:
 	current_difficulty = NORMAL
 	time_label.modulate = Color(1,1,0)
 	time_left = normal_time
+	music_player.set_music(MusicPlayer.MUSIC_LEVEL.NORMAL)
 
 func _to_hard() -> void:
 	current_difficulty = HARD
 	time_label.modulate = Color(1,0,0)
 	time_left = hard_time
+	music_player.set_music(MusicPlayer.MUSIC_LEVEL.HARD)
+
+
+func _add_music_player() -> void:
+	music_player = MusicPlayer.new()
+	add_child(music_player)
 
 
 func _on_game_over() -> void:
