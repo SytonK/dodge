@@ -7,6 +7,8 @@ enum {
 	HARD
 }
 
+const LEVEL_WALLS = preload("res://levels/envierment/level_walls.tscn")
+
 @export var easy_time: int
 @export var normal_time: int
 @export var hard_time: int
@@ -25,11 +27,19 @@ var time_label: Label
 var music_player: MusicPlayer
 
 func _ready() -> void:
+	_add_level_envierments()
+	_add_camera()
 	_add_player()
 	_add_level_ui()
 	_add_level_timer()
 	_add_music_player()
 
+
+func _add_level_envierments() -> void:
+	add_child(LEVEL_WALLS.instantiate())
+
+func _add_camera() -> void:
+	add_child(Camera2D.new())
 
 func _add_player() -> void:
 	player = PLAYER.instantiate()
