@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://1wd7qbioc1h5"]
+
+[ext_resource type="Script" path="res://levels/level 1/level_1.gd" id="1_nakhy"]
+
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_nakhy")
+easy_time = 10
+normal_time = 15
+hard_time = 25
