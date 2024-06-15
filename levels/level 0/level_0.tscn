@@ -4,3 +4,6 @@
 
 [node name="Level0" type="Node2D"]
 script = ExtResource("1_vbexb")
+easy_time = 10
+normal_time = 25
+hard_time = 25
