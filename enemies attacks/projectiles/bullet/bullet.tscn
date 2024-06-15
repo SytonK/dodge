@@ -3,12 +3,15 @@
 [ext_resource type="Script" path="res://enemies attacks/projectiles/bullet/bullet.gd" id="1_6ijeu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2xhtv"]
-size = Vector2(64, 16)
+size = Vector2(32, 8)
 
 [node name="Bullet" type="Area2D"]
 script = ExtResource("1_6ijeu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_2xhtv")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+polygon = PackedVector2Array(16, -4, 16, 4, -16, 4, -16, -4)
 
 [connection signal="hit" from="." to="." method="_on_hit"]
