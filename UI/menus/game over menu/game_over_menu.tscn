@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dep5y2rjemfn8"]
+[gd_scene load_steps=4 format=3 uid="uid://dep5y2rjemfn8"]
 
 [ext_resource type="Script" path="res://UI/components/quit button/quit_button.gd" id="1_dhh0a"]
 [ext_resource type="Script" path="res://UI/components/new scene button/new_scene_button.gd" id="1_scolw"]
+[ext_resource type="Script" path="res://UI/components/reload button/reload_button.gd" id="2_jrqd7"]
 
 [node name="GameOverMenu" type="VBoxContainer"]
 process_mode = 3
@@ -28,6 +29,11 @@ layout_mode = 2
 text = "main menu"
 script = ExtResource("1_scolw")
 file_path = "res://UI/menus/main menu/main_menu.tscn"
+
+[node name="ReloadButton" type="Button" parent="."]
+layout_mode = 2
+text = "reload"
+script = ExtResource("2_jrqd7")
 
 [node name="QuitButton" type="Button" parent="."]
 layout_mode = 2
