@@ -24,6 +24,11 @@ func _spawn_bullet() -> void:
 	new_bullet.movment_speed = speed
 	new_bullet.position = Screen.get_random_position_on_screen_edge()
 	new_bullet.direction = PlayerRef.player_ref.position - new_bullet.position
+	new_bullet.modulate = Color(
+		0.9,
+		0.9 - Colors.MODULATE_FACTOR * speed,
+		0.9 - Colors.MODULATE_FACTOR * speed
+	)
 	add_child(new_bullet)
 
 func _set_frequency(new_frequency: float) -> void:
