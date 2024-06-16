@@ -1,10 +1,11 @@
+class_name GlobalBulletTargetPlayer
 extends Node2D
 
 
 const BULLET = preload("res://enemies attacks/projectiles/bullet/bullet.tscn")
 
 @export var speed: float
-@export var frequency: float
+@export var frequency: float = 0 : set = _set_frequency
 @onready var timer: Timer
 
 
@@ -24,3 +25,9 @@ func _spawn_bullet() -> void:
 	new_bullet.position = Screen.get_random_position_on_screen_edge()
 	new_bullet.direction = PlayerRef.player_ref.position - new_bullet.position
 	add_child(new_bullet)
+
+func _set_frequency(new_frequency: float) -> void:
+	frequency = new_frequency
+	if timer && new_frequency > 0:
+		timer.wait_time = frequency
+		timer.start()

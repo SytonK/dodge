@@ -1,9 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://8lgjouoqk0dh"]
+[gd_scene load_steps=3 format=3 uid="uid://8lgjouoqk0dh"]
 
 [ext_resource type="Script" path="res://levels/level 0/level_0.gd" id="1_vbexb"]
+[ext_resource type="PackedScene" uid="uid://cior0vm42r3eg" path="res://enemies/global enemies/bullet target player/global_bullet_target_player.tscn" id="2_111hl"]
 
 [node name="Level0" type="Node2D"]
 script = ExtResource("1_vbexb")
-easy_time = 10
-normal_time = 25
+easy_time = 15
+normal_time = 20
 hard_time = 25
+
+[node name="global_bullet_target_player" parent="." instance=ExtResource("2_111hl")]
+speed = 300.0
+frequency = 5.0
