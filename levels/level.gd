@@ -26,6 +26,10 @@ var time_label: Label
 
 var music_player: MusicPlayer
 
+const LOSE_SOUND = preload("res://assets/sounds/lose sound.mp3")
+var audio_stream_player: AudioStreamPlayer
+
+
 func _ready() -> void:
 	_add_level_envierments()
 	_add_camera()
@@ -33,6 +37,7 @@ func _ready() -> void:
 	_add_level_ui()
 	_add_level_timer()
 	_add_music_player()
+	_add_level_sounds()
 
 
 func _add_level_envierments() -> void:
@@ -99,7 +104,14 @@ func _add_music_player() -> void:
 	add_child(music_player)
 
 
+func _add_level_sounds() -> void:
+	audio_stream_player = AudioStreamPlayer.new()
+	audio_stream_player.stream = LOSE_SOUND
+	audio_stream_player.process_mode = Node.PROCESS_MODE_ALWAYS
+	add_child(audio_stream_player)
+
 func _on_game_over() -> void:
 	game_over_menu.visible = true
+	audio_stream_player.play()
 	get_tree().paused = true
 	pause_menu.process_mode = Node.PROCESS_MODE_DISABLED
