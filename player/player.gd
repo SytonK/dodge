@@ -10,6 +10,7 @@ signal game_over
 @onready var health: int = max_health
 @onready var health_ui: HealthUI = $CanvasLayer/HealthUI
 
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
 func _ready() -> void:
 	PlayerRef.player_ref = self
@@ -28,6 +29,7 @@ func _move() -> void:
 
 func _on_hurtbox_hurt() -> void:
 	health -= 1
+	audio_stream_player.play()
 	health_ui.update_health(health)
 	if health <= 0:
 		_game_over()

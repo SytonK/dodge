@@ -11,4 +11,4 @@ hard_time = 25
 
 [node name="global_bullet_target_player" parent="." instance=ExtResource("2_111hl")]
 speed = 300.0
-frequency = 5.0
+frequency = 0.6
