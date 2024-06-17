@@ -5,7 +5,7 @@ extends Node2D
 const BULLET = preload("res://enemies attacks/projectiles/bullet/bullet.tscn")
 
 @export var speed: float
-@export var frequency: float = 0 : set = _set_frequency
+@export var frequency: float : set = _set_frequency
 @onready var timer: Timer
 
 

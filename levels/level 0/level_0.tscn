@@ -18,7 +18,11 @@ frequency = 0.6
 [node name="TargetPlayerTowerLeft" parent="." instance=ExtResource("3_yenbu")]
 position = Vector2(-650, 0)
 disabled = true
+speed = 500.0
+frequency = 1.0
 
 [node name="TargetPlayerTowerRight" parent="." instance=ExtResource("3_yenbu")]
 position = Vector2(650, 0)
 disabled = true
+speed = 500.0
+frequency = 1.0
