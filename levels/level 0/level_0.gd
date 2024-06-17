@@ -1,7 +1,7 @@
 extends Level
 
 
-@onready var global_bullet_target_player: GlobalBulletTargetPlayer = $global_bullet_target_player
+@onready var global_bullet_target_player: GlobalBulletTargetPlayer = $GlobalBulletTargetPlayer
 
 
 func _to_normal() -> void:

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://8lgjouoqk0dh"]
+[gd_scene load_steps=4 format=3 uid="uid://8lgjouoqk0dh"]
 
 [ext_resource type="Script" path="res://levels/level 0/level_0.gd" id="1_vbexb"]
 [ext_resource type="Script" path="res://enemies/global enemies/bullet target player/global_bullet_target_player.gd" id="2_aqt3a"]
+[ext_resource type="PackedScene" uid="uid://hm1pwd5uc2b4" path="res://enemies/towers/target player tower/target_player_tower.tscn" id="3_yenbu"]
 
 [node name="Level0" type="Node2D"]
 script = ExtResource("1_vbexb")
@@ -13,3 +14,9 @@ hard_time = 20
 script = ExtResource("2_aqt3a")
 speed = 300.0
 frequency = 0.6
+
+[node name="TargetPlayerTowerLeft" parent="." instance=ExtResource("3_yenbu")]
+position = Vector2(-650, 0)
+
+[node name="TargetPlayerTowerRight" parent="." instance=ExtResource("3_yenbu")]
+position = Vector2(650, 0)
