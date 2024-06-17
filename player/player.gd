@@ -12,6 +12,8 @@ signal game_over
 
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+
 func _ready() -> void:
 	PlayerRef.player_ref = self
 
@@ -30,6 +32,7 @@ func _move() -> void:
 func _on_hurtbox_hurt() -> void:
 	health -= 1
 	audio_stream_player.play()
+	animation_player.play('invulnerable')
 	health_ui.update_health(health)
 	if health <= 0:
 		_game_over()
