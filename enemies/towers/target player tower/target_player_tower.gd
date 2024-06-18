@@ -19,7 +19,7 @@ func _ready() -> void:
 func _set_disabled(new_disabled: bool) -> void:
 	disabled = new_disabled
 	if polygon_2d:
-		polygon_2d.color = Color(0.2, 0.2, 0.2) if disabled else Color(0.9, 0.9, 0.9)
+		polygon_2d.color = Color(0.2, 0, 0) if disabled else Color(0.9, 0.1, 0.1)
 	if timer:
 		if disabled:
 			timer.stop()
