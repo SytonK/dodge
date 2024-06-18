@@ -24,3 +24,9 @@ static func get_random_position_on_screen_edge() -> Vector2:
 			return Vector2(randf_range(-X_SIZE, X_SIZE), Y_SIZE)
 	
 	return Vector2.ZERO
+
+static func get_paralel_direction(position: Vector2) -> Vector2:
+	if abs(position.x) == X_SIZE:
+		return Vector2(-position.x, 0)
+	else:
+		return Vector2(0,-position.y)

@@ -1,4 +1,4 @@
-class_name GlobalBulletTargetPlayer
+class_name GlobalBulletParallalDirection
 extends Node2D
 
 
@@ -26,10 +26,10 @@ func _spawn_bullet() -> void:
 	var new_bullet = BULLET.instantiate()
 	new_bullet.movment_speed = speed
 	new_bullet.position = Screen.get_random_position_on_screen_edge()
-	new_bullet.direction = PlayerRef.player_ref.position - new_bullet.position
+	new_bullet.direction = Screen.get_paralel_direction(new_bullet.position)
 	new_bullet.modulate = Color(
 		0.9,
-		0.9 - Colors.MODULATE_FACTOR * speed,
+		0.9,
 		0.9 - Colors.MODULATE_FACTOR * speed
 	)
 	add_child(new_bullet)
