@@ -11,6 +11,11 @@ easy_time = 10
 normal_time = 15
 hard_time = 25
 
+[node name="ParallalTower" parent="." instance=ExtResource("4_ldb0h")]
+disabled = true
+speed = 300.0
+frequency = 1.5
+
 [node name="GlobalBulletParallalDirection" type="Node2D" parent="."]
 script = ExtResource("2_esjvs")
 speed = 300.0
@@ -21,8 +26,3 @@ script = ExtResource("3_o3bey")
 speed = 450.0
 frequency = 1.0
 disabled = true
-
-[node name="ParallalTower" parent="." instance=ExtResource("4_ldb0h")]
-disabled = true
-speed = 300.0
-frequency = 1.5

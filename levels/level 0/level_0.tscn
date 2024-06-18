@@ -10,11 +10,6 @@ easy_time = 10
 normal_time = 15
 hard_time = 20
 
-[node name="GlobalBulletTargetPlayer" type="Node2D" parent="."]
-script = ExtResource("2_aqt3a")
-speed = 300.0
-frequency = 0.6
-
 [node name="TargetPlayerTowerLeft" parent="." instance=ExtResource("3_yenbu")]
 position = Vector2(-650, 0)
 disabled = true
@@ -26,6 +21,11 @@ position = Vector2(650, 0)
 disabled = true
 speed = 500.0
 frequency = 1.0
+
+[node name="GlobalBulletTargetPlayer" type="Node2D" parent="."]
+script = ExtResource("2_aqt3a")
+speed = 300.0
+frequency = 0.6
 
 [node name="FastGlobalBulletTargetPlayer" type="Node2D" parent="."]
 script = ExtResource("2_aqt3a")
