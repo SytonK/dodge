@@ -19,4 +19,4 @@ func _to_hard() -> void:
 	target_player_tower_left.speed = 650
 	target_player_tower_right.speed = 650
 	global_bullet_target_player.frequency = 0.3
-	fast_global_bullet_target_player.frequency = 0.5
+	fast_global_bullet_target_player.disabled = false
