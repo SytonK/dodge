@@ -61,7 +61,7 @@ func _add_level_ui() -> void:
 
 
 func _add_level_timer() -> void:
-	level_timer = Timer.new()
+	level_timer = Timer.new() 
 	level_timer.autostart = true
 	level_timer.timeout.connect(_on_level_timer_timeout)
 	add_child(level_timer)

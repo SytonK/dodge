@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cpw5rkjet4364"]
 
 [ext_resource type="Script" path="res://levels/level.gd" id="1_tvtlc"]
-[ext_resource type="Script" path="res://enemies/global enemies/bullet parallal direction/global_bullet_parallal_direction.gd" id="2_6cw3a"]
+[ext_resource type="PackedScene" uid="uid://bi8ccuhy8gxha" path="res://enemies/towers/parallal tower/parallal_tower.tscn" id="2_3cjqv"]
 
 [node name="Sandbox" type="Node2D"]
 script = ExtResource("1_tvtlc")
@@ -9,7 +9,6 @@ easy_time = 1
 normal_time = 1
 hard_time = 1
 
-[node name="GlobalBulletParallalDirection" type="Node2D" parent="."]
-script = ExtResource("2_6cw3a")
+[node name="ParallalTower" parent="." instance=ExtResource("2_3cjqv")]
 speed = 300.0
-frequency = 0.5
+frequency = 1.0
