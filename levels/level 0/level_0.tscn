@@ -26,3 +26,9 @@ position = Vector2(650, 0)
 disabled = true
 speed = 500.0
 frequency = 1.0
+
+[node name="FastGlobalBulletTargetPlayer" type="Node2D" parent="."]
+script = ExtResource("2_aqt3a")
+speed = 500.0
+frequency = 0.5
+disabled = true

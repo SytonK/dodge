@@ -8,9 +8,11 @@ const BULLET = preload("res://enemies attacks/projectiles/bullet/bullet.tscn")
 @export var frequency: float : set = _set_frequency
 @onready var timer: Timer
 
+@export var disabled: bool = false : set = _set_disabled
 
 func _ready() -> void:
 	_init_timer()
+	_set_disabled(disabled)
 
 func _init_timer() -> void:
 	timer = Timer.new()
@@ -36,3 +38,12 @@ func _set_frequency(new_frequency: float) -> void:
 	if timer && new_frequency > 0:
 		timer.wait_time = frequency
 		timer.start()
+
+
+func _set_disabled(new_disabled: bool) -> void:
+	disabled = new_disabled
+	if timer:
+		if disabled:
+			timer.stop()
+		else:
+			timer.start()
