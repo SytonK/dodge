@@ -18,7 +18,7 @@ frequency = 0.3
 
 [node name="GlobalBulletTargetPlayer" type="Node2D" parent="."]
 script = ExtResource("3_o3bey")
-speed = 500.0
+speed = 450.0
 frequency = 1.0
 disabled = true
 
