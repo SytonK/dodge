@@ -24,7 +24,7 @@ layout_mode = 2
 text = "game over"
 horizontal_alignment = 1
 
-[node name="ChangeSceneButton" type="Button" parent="."]
+[node name="MainMenuButton" type="Button" parent="."]
 layout_mode = 2
 text = "main menu"
 script = ExtResource("1_scolw")

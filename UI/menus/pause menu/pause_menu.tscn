@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://btg6r1ilc3tjr"]
+[gd_scene load_steps=5 format=3 uid="uid://btg6r1ilc3tjr"]
 
 [ext_resource type="Script" path="res://UI/menus/pause menu/pause_menu.gd" id="1_5oiht"]
 [ext_resource type="Script" path="res://UI/components/reload button/reload_button.gd" id="2_n34io"]
 [ext_resource type="Script" path="res://UI/components/quit button/quit_button.gd" id="2_uh438"]
+[ext_resource type="Script" path="res://UI/components/new scene button/new_scene_button.gd" id="3_w3rxs"]
 
 [node name="PauseMenu" type="VBoxContainer"]
 process_mode = 3
@@ -34,6 +35,12 @@ text = "unpause
 layout_mode = 2
 text = "reload"
 script = ExtResource("2_n34io")
+
+[node name="MainMenuButton" type="Button" parent="."]
+layout_mode = 2
+text = "main menu"
+script = ExtResource("3_w3rxs")
+file_path = "res://UI/menus/main menu/main_menu.tscn"
 
 [node name="QuitButton" type="Button" parent="."]
 layout_mode = 2
