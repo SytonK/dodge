@@ -4,7 +4,8 @@ extends Node2D
 enum {
 	EASY,
 	NORMAL,
-	HARD
+	HARD,
+	ENDLESEE
 }
 
 const LEVEL_WALLS = preload("res://levels/envierment/level_walls.tscn")
@@ -70,7 +71,7 @@ func _add_level_timer() -> void:
 
 
 func _on_level_timer_timeout() -> void:
-	time_left -= 1
+	time_left = time_left + (1 if current_difficulty == ENDLESEE else -1)
 	if time_left < 0:
 		_next_difficulty()
 	time_label.text = str(time_left)
@@ -83,7 +84,7 @@ func _next_difficulty() -> void:
 		NORMAL:
 			_to_hard()
 		HARD:
-			print('open next level')
+			_to_endless()
 
 
 func _to_normal() -> void:
@@ -97,6 +98,11 @@ func _to_hard() -> void:
 	time_label.modulate = Color(1,0,0)
 	time_left = hard_time
 	music_player.set_music(MusicPlayer.MUSIC_LEVEL.HARD)
+
+func _to_endless() -> void:
+	current_difficulty = ENDLESEE
+	time_label.modulate = Color(1,0.9,0.5)
+	time_left = 0
 
 
 func _add_music_player() -> void:
