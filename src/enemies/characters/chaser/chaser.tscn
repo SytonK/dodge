@@ -53,6 +53,7 @@ collision_layer = 0
 collision_mask = 0
 motion_mode = 1
 script = ExtResource("1_48q38")
+is_recovering = true
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 visible = false
@@ -64,6 +65,7 @@ polygon = PackedVector2Array(21, 0, -13, -13, -13, 13)
 
 [node name="Hitbox" type="Area2D" parent="."]
 visible = false
+monitorable = false
 script = ExtResource("1_y8442")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox"]
@@ -74,4 +76,9 @@ libraries = {
 "": SubResource("AnimationLibrary_114cg")
 }
 
+[node name="FiretrailTimer" type="Timer" parent="."]
+wait_time = 0.1
+autostart = true
+
 [connection signal="hit" from="Hitbox" to="." method="_on_hitbox_hit"]
+[connection signal="timeout" from="FiretrailTimer" to="." method="_on_firetrail_timer_timeout"]
