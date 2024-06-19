@@ -1,0 +1,46 @@
+[gd_scene load_steps=3 format=3 uid="uid://3swy431y7di3"]
+
+[ext_resource type="Script" path="res://src/UI/components/level selector/level_selector.gd" id="1_8godn"]
+[ext_resource type="Script" path="res://src/UI/components/new scene button/new_scene_button.gd" id="2_vwwec"]
+
+[node name="LevelSelector" type="VBoxContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -23.5
+offset_top = -20.0
+offset_right = 23.5
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8godn")
+
+[node name="ScoreLabel" type="Label" parent="."]
+visible = false
+layout_mode = 2
+text = "score: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 2
+alignment = 1
+
+[node name="ButtonLeft" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "<"
+
+[node name="ChangeSceneButton" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "level 0"
+script = ExtResource("2_vwwec")
+file_path = "res://src/levels/level 0/level_0.tscn"
+
+[node name="ButtonRight" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = ">"
+
+[connection signal="pressed" from="HBoxContainer/ButtonLeft" to="." method="_on_button_left_pressed"]
+[connection signal="pressed" from="HBoxContainer/ButtonRight" to="." method="_on_button_right_pressed"]

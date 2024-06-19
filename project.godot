@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="Dodge"
-run/main_scene="res://UI/menus/main menu/main_menu.tscn"
+run/main_scene="res://src/UI/menus/main menu/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-PlayerRef="*res://globals/player_ref.gd"
+PlayerRef="*res://src/globals/player_ref.gd"
 
 [display]
 

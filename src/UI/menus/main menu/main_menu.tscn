@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://dy71k0weyketa"]
+
+[ext_resource type="PackedScene" uid="uid://3swy431y7di3" path="res://src/UI/components/level selector/level_selector.tscn" id="1_mym05"]
+[ext_resource type="Script" path="res://src/UI/components/new scene button/new_scene_button.gd" id="1_qusho"]
+[ext_resource type="Script" path="res://src/UI/components/quit button/quit_button.gd" id="2_mxf2y"]
+
+[node name="MainMenu" type="VBoxContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -37.5
+offset_top = -46.5
+offset_right = 37.5
+offset_bottom = 46.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="GameTitle" type="Label" parent="."]
+layout_mode = 2
+text = "Dodge"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LevelSelector" parent="." instance=ExtResource("1_mym05")]
+layout_mode = 2
+
+[node name="ChangeSceneButton" type="Button" parent="."]
+layout_mode = 2
+text = "Sandbox
+"
+script = ExtResource("1_qusho")
+file_path = "res://src/levels/sandbox.tscn"
+
+[node name="QuitButton" type="Button" parent="."]
+layout_mode = 2
+text = "Quit"
+script = ExtResource("2_mxf2y")
