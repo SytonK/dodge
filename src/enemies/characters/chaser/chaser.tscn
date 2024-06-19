@@ -50,6 +50,7 @@ _data = {
 
 [node name="chaser" type="CharacterBody2D"]
 collision_layer = 0
+collision_mask = 0
 motion_mode = 1
 script = ExtResource("1_48q38")
 
