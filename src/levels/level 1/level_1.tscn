@@ -19,10 +19,10 @@ frequency = 1.5
 [node name="GlobalBulletParallalDirection" type="Node2D" parent="."]
 script = ExtResource("2_esjvs")
 speed = 300.0
-frequency = 0.3
+frequency = 0.25
 
 [node name="GlobalBulletTargetPlayer" type="Node2D" parent="."]
 script = ExtResource("3_o3bey")
 speed = 450.0
-frequency = 1.0
+frequency = 0.5
 disabled = true
