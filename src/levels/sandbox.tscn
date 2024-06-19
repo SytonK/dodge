@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cpw5rkjet4364"]
 
 [ext_resource type="Script" path="res://src/levels/level.gd" id="1_tvtlc"]
-[ext_resource type="PackedScene" uid="uid://bi8ccuhy8gxha" path="res://src/enemies/towers/parallal tower/parallal_tower.tscn" id="2_3cjqv"]
+[ext_resource type="PackedScene" uid="uid://b2h0vcalj77yu" path="res://src/enemies/characters/chaser/chaser.tscn" id="2_opk18"]
 
 [node name="Sandbox" type="Node2D"]
 script = ExtResource("1_tvtlc")
@@ -9,6 +9,6 @@ easy_time = 1
 normal_time = 1
 hard_time = 1
 
-[node name="ParallalTower" parent="." instance=ExtResource("2_3cjqv")]
-speed = 300.0
-frequency = 1.0
+[node name="chaser" parent="." instance=ExtResource("2_opk18")]
+position = Vector2(-615, -130)
+movement_speed = 300.0
