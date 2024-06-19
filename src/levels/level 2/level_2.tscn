@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://b4ofrvqn40um6"]
+[gd_scene load_steps=7 format=3 uid="uid://b4ofrvqn40um6"]
 
 [ext_resource type="Script" path="res://src/levels/level 2/level_2.gd" id="1_5125k"]
 [ext_resource type="PackedScene" uid="uid://b2h0vcalj77yu" path="res://src/enemies/characters/chaser/chaser.tscn" id="2_rn1v3"]
+[ext_resource type="PackedScene" uid="uid://bi8ccuhy8gxha" path="res://src/enemies/towers/parallal tower/parallal_tower.tscn" id="2_x6cjw"]
+[ext_resource type="PackedScene" uid="uid://hm1pwd5uc2b4" path="res://src/enemies/towers/target player tower/target_player_tower.tscn" id="3_0aq8e"]
 [ext_resource type="Script" path="res://src/enemies/global enemies/bullet parallal direction/global_bullet_parallal_direction.gd" id="3_dq00r"]
 [ext_resource type="Script" path="res://src/enemies/global enemies/bullet target player/global_bullet_target_player.gd" id="4_e34xa"]
 
@@ -10,6 +12,23 @@ script = ExtResource("1_5125k")
 easy_time = 10
 normal_time = 10
 hard_time = 15
+
+[node name="ParallalTower" parent="." instance=ExtResource("2_x6cjw")]
+disabled = true
+speed = 400.0
+frequency = 1.0
+
+[node name="TargetPlayerTowerLeft" parent="." instance=ExtResource("3_0aq8e")]
+position = Vector2(-450, 0)
+disabled = true
+speed = 300.0
+frequency = 0.5
+
+[node name="TargetPlayerTowerRight" parent="." instance=ExtResource("3_0aq8e")]
+position = Vector2(450, 0)
+disabled = true
+speed = 600.0
+frequency = 1.0
 
 [node name="chaser" parent="." instance=ExtResource("2_rn1v3")]
 position = Vector2(-500, -200)
