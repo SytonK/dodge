@@ -1,6 +1,26 @@
-[gd_scene load_steps=2 format=3 uid="uid://b4ofrvqn40um6"]
+[gd_scene load_steps=5 format=3 uid="uid://b4ofrvqn40um6"]
 
 [ext_resource type="Script" path="res://src/levels/level 2/level_2.gd" id="1_5125k"]
+[ext_resource type="PackedScene" uid="uid://b2h0vcalj77yu" path="res://src/enemies/characters/chaser/chaser.tscn" id="2_rn1v3"]
+[ext_resource type="Script" path="res://src/enemies/global enemies/bullet parallal direction/global_bullet_parallal_direction.gd" id="3_dq00r"]
+[ext_resource type="Script" path="res://src/enemies/global enemies/bullet target player/global_bullet_target_player.gd" id="4_e34xa"]
 
 [node name="Level2" type="Node2D"]
 script = ExtResource("1_5125k")
+easy_time = 10
+normal_time = 10
+hard_time = 15
+
+[node name="chaser" parent="." instance=ExtResource("2_rn1v3")]
+position = Vector2(-500, -200)
+movement_speed = 250.0
+
+[node name="GlobalBulletParallalDirection" type="Node2D" parent="."]
+script = ExtResource("3_dq00r")
+speed = 350.0
+frequency = 0.8
+
+[node name="GlobalBulletTargetPlayer" type="Node2D" parent="."]
+script = ExtResource("4_e34xa")
+speed = 500.0
+frequency = 2.0
