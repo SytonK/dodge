@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bh04udeltrs4p"]
+
+[ext_resource type="Script" path="res://src/components/hitbox and hurtbox/hitbox/hitbox.gd" id="1_a4yqh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u4jqp"]
+size = Vector2(24, 24)
+
+[node name="Fire" type="Area2D"]
+script = ExtResource("1_a4yqh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_u4jqp")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.784314, 0.117647, 0.117647, 0.686275)
+polygon = PackedVector2Array(12, -12, 12, 12, -12, 12, -12, -12)
