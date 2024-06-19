@@ -19,7 +19,7 @@ func _to_normal() -> void:
 
 func _to_hard() -> void:
 	super._to_hard()
-	global_bullet_parallal_direction.frequency = 0.1
+	global_bullet_parallal_direction.frequency = 0.15
 	global_bullet_target_player.speed = 700
-	parallal_tower.frequency = 0.45
+	parallal_tower.frequency = 0.4
 	parallal_tower.speed = 550
