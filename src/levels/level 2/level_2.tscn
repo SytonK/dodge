@@ -11,7 +11,7 @@
 script = ExtResource("1_5125k")
 easy_time = 10
 normal_time = 10
-hard_time = 15
+hard_time = 20
 
 [node name="ParallalTower" parent="." instance=ExtResource("2_x6cjw")]
 disabled = true
@@ -34,7 +34,7 @@ frequency = 1.0
 position = Vector2(-500, -200)
 movement_speed = 250.0
 is_recovering = false
-leavse_fire_trail = true
+trail_duration = 3.0
 
 [node name="GlobalBulletParallalDirection" type="Node2D" parent="."]
 script = ExtResource("3_dq00r")

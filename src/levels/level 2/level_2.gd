@@ -26,13 +26,14 @@ func _to_normal() -> void:
 
 func _to_hard() -> void:
 	super._to_hard()
-	chaser.movement_speed = 440
+	chaser.movement_speed = 400
 	global_bullet_parallal_direction.frequency = 0.25
 	global_bullet_parallal_direction.speed = 450
-	global_bullet_target_player.frequency = 0.5
-	global_bullet_target_player.speed = 650
-	parallal_tower.frequency = 0.7
+	global_bullet_target_player.frequency = 0.6
+	global_bullet_target_player.speed = 600
+	parallal_tower.frequency = 0.8
 	parallal_tower.speed = 500 
-	target_player_tower_left.frequency = 0.25
-	target_player_tower_right.speed = 750
+	target_player_tower_left.frequency = 0.3
+	target_player_tower_right.speed = 700
+	chaser.leavse_fire_trail = true
 	
