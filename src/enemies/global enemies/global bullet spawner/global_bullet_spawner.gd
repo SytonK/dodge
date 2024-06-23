@@ -12,6 +12,7 @@ const BULLET = preload("res://src/enemies attacks/projectiles/bullet/bullet.tscn
 
 var bullet_color: Color = Color(1, 0, 0)
 
+
 func _ready() -> void:
 	_init_timer()
 	_set_disabled(disabled)
