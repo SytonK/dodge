@@ -1,4 +1,4 @@
-class_name bullet
+class_name Bullet
 extends Hitbox
 
 

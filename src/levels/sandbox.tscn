@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cpw5rkjet4364"]
 
 [ext_resource type="Script" path="res://src/levels/level.gd" id="1_tvtlc"]
-[ext_resource type="PackedScene" uid="uid://b2h0vcalj77yu" path="res://src/enemies/characters/chaser/chaser.tscn" id="2_opk18"]
+[ext_resource type="Script" path="res://src/enemies/global enemies/global bullet spawner/global_bullet_spawner.gd" id="2_8ivtt"]
 
 [node name="Sandbox" type="Node2D"]
 script = ExtResource("1_tvtlc")
@@ -9,6 +9,28 @@ easy_time = 1
 normal_time = 1
 hard_time = 1
 
-[node name="chaser" parent="." instance=ExtResource("2_opk18")]
-position = Vector2(-615, -130)
-movement_speed = 300.0
+[node name="GlobalBulletSpawner" type="Node2D" parent="."]
+script = ExtResource("2_8ivtt")
+speed = 500.0
+frequency = 1.0
+bullet_color = Color(1, 1, 0.0156863, 1)
+
+[node name="GlobalBulletSpawner3" type="Node2D" parent="."]
+script = ExtResource("2_8ivtt")
+speed = 800.0
+frequency = 1.0
+bullet_color = Color(0, 1, 0, 1)
+
+[node name="GlobalBulletSpawner2" type="Node2D" parent="."]
+script = ExtResource("2_8ivtt")
+speed = 100.0
+frequency = 1.0
+target_player = true
+bullet_color = Color(1, 0, 0, 1)
+
+[node name="GlobalBulletSpawner4" type="Node2D" parent="."]
+script = ExtResource("2_8ivtt")
+speed = 500.0
+frequency = 1.0
+target_player = true
+bullet_color = Color(1, 0, 0, 1)
