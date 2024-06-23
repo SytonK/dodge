@@ -22,6 +22,8 @@ const DIRECTIONS: Array[Vector2] = [
 @export var frequency: float
 @onready var timer: Timer
 
+var bullet_color: Color = Color(1, 1, 0)
+
 
 func _ready() -> void:
 	_init_timer()
@@ -55,11 +57,7 @@ func _spawn_bullet_with_direction(direction: Vector2) -> void:
 	var new_bullet = BULLET.instantiate()
 	new_bullet.movment_speed = speed
 	new_bullet.direction = direction
-	new_bullet.modulate = Color(
-		0.9,
-		0.9,
-		0.9 - Colors.MODULATE_FACTOR * speed
-	)
+	new_bullet.modulate = Colors.get_bullet_color(new_bullet, bullet_color)
 	add_child(new_bullet)
 
 func _set_frequency(new_frequency: float) -> void:
