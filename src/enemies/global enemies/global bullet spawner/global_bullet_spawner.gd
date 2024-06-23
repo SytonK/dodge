@@ -28,7 +28,7 @@ func _spawn_bullet() -> void:
 	new_bullet.movment_speed = speed
 	new_bullet.position = Screen.get_random_position_on_screen_edge()
 	new_bullet.direction = _get_bullet_direction(new_bullet)
-	new_bullet.modulate = _get_bullet_color(new_bullet)
+	new_bullet.modulate = Colors.get_bullet_color(new_bullet, bullet_color)
 	add_child(new_bullet)
 
 func _set_frequency(new_frequency: float) -> void:
@@ -39,9 +39,6 @@ func _set_frequency(new_frequency: float) -> void:
 
 func _get_bullet_direction(new_bullet: Bullet) -> Vector2:
 	return PlayerRef.player_ref.position - new_bullet.position
-
-func _get_bullet_color(new_bullet: Bullet) -> Color:
-	return Color(bullet_color * ((600 + new_bullet.movment_speed) / 1800), 1)
 
 func _set_disabled(new_disabled: bool) -> void:
 	disabled = new_disabled
