@@ -10,7 +10,7 @@ const BULLET = preload("res://src/enemies attacks/projectiles/bullet/bullet.tscn
 
 @export var disabled: bool = false : set = _set_disabled
 
-@export var bullet_color: Color
+var bullet_color: Color = Color(1, 0, 0)
 
 func _ready() -> void:
 	_init_timer()

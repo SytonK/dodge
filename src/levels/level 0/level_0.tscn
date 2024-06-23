@@ -26,11 +26,9 @@ frequency = 1.0
 script = ExtResource("3_2ckwp")
 speed = 300.0
 frequency = 0.6
-bullet_color = Color(1, 0, 0, 1)
 
 [node name="FastGlobalBulletSpawner" type="Node2D" parent="."]
 script = ExtResource("3_2ckwp")
 speed = 500.0
 frequency = 0.5
 disabled = true
-bullet_color = Color(1, 0, 0, 1)

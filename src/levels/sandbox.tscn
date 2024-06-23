@@ -14,10 +14,8 @@ hard_time = 1
 script = ExtResource("2_8ivtt")
 speed = 300.0
 frequency = 1.0
-bullet_color = Color(1, 0, 0, 1)
 
 [node name="GlobalBulletSpawnerParallalDirection" type="Node2D" parent="."]
 script = ExtResource("3_d2cys")
 speed = 300.0
 frequency = 1.0
-bullet_color = Color(1, 1, 0, 1)
