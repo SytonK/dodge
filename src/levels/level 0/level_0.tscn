@@ -32,4 +32,5 @@ bullet_color = Color(1, 0, 0, 1)
 script = ExtResource("3_2ckwp")
 speed = 500.0
 frequency = 0.5
+disabled = true
 bullet_color = Color(1, 0, 0, 1)
