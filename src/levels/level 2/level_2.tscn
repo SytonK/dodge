@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://b2h0vcalj77yu" path="res://src/enemies/characters/chaser/chaser.tscn" id="2_rn1v3"]
 [ext_resource type="PackedScene" uid="uid://bi8ccuhy8gxha" path="res://src/enemies/towers/parallal tower/parallal_tower.tscn" id="2_x6cjw"]
 [ext_resource type="PackedScene" uid="uid://hm1pwd5uc2b4" path="res://src/enemies/towers/target player tower/target_player_tower.tscn" id="3_0aq8e"]
-[ext_resource type="Script" path="res://src/enemies/global enemies/bullet parallal direction/global_bullet_parallal_direction.gd" id="3_dq00r"]
-[ext_resource type="Script" path="res://src/enemies/global enemies/bullet target player/global_bullet_target_player.gd" id="4_e34xa"]
+[ext_resource type="Script" path="res://src/enemies/global enemies/global bullet spawner/parallal/global_bullet_spawner_parallal_direction.gd" id="5_8nyrd"]
+[ext_resource type="Script" path="res://src/enemies/global enemies/global bullet spawner/global_bullet_spawner.gd" id="7_3qgto"]
 
 [node name="Level2" type="Node2D"]
 script = ExtResource("1_5125k")
@@ -22,12 +22,12 @@ frequency = 1.0
 position = Vector2(-450, 0)
 disabled = true
 speed = 300.0
-frequency = 0.5
+frequency = 0.4
 
 [node name="TargetPlayerTowerRight" parent="." instance=ExtResource("3_0aq8e")]
 position = Vector2(450, 0)
 disabled = true
-speed = 600.0
+speed = 675.0
 frequency = 1.0
 
 [node name="chaser" parent="." instance=ExtResource("2_rn1v3")]
@@ -36,12 +36,12 @@ movement_speed = 250.0
 is_recovering = false
 trail_duration = 3.0
 
-[node name="GlobalBulletParallalDirection" type="Node2D" parent="."]
-script = ExtResource("3_dq00r")
-speed = 350.0
-frequency = 0.8
+[node name="GlobalBulletSpawnerParallalDirection" type="Node2D" parent="."]
+script = ExtResource("5_8nyrd")
+speed = 300.0
+frequency = 1.0
 
-[node name="GlobalBulletTargetPlayer" type="Node2D" parent="."]
-script = ExtResource("4_e34xa")
+[node name="GlobalBulletSpawner" type="Node2D" parent="."]
+script = ExtResource("7_3qgto")
 speed = 500.0
 frequency = 2.0
