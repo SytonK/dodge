@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://src/levels/level 0/level_0.gd" id="1_wr4gx"]
 [ext_resource type="PackedScene" uid="uid://hm1pwd5uc2b4" path="res://src/enemies/towers/target player tower/target_player_tower.tscn" id="2_hde1d"]
-[ext_resource type="Script" path="res://src/enemies/global enemies/bullet target player/global_bullet_target_player.gd" id="3_b5wyf"]
+[ext_resource type="Script" path="res://src/enemies/global enemies/global bullet spawner/global_bullet_spawner.gd" id="3_2ckwp"]
 
 [node name="Level0" type="Node2D"]
 script = ExtResource("1_wr4gx")
@@ -22,13 +22,15 @@ disabled = true
 speed = 500.0
 frequency = 1.0
 
-[node name="GlobalBulletTargetPlayer" type="Node2D" parent="."]
-script = ExtResource("3_b5wyf")
+[node name="GlobalBulletSpawner" type="Node2D" parent="."]
+script = ExtResource("3_2ckwp")
 speed = 300.0
 frequency = 0.6
+target_player = true
+bullet_color = Color(1, 0, 0, 1)
 
-[node name="FastGlobalBulletTargetPlayer" type="Node2D" parent="."]
-script = ExtResource("3_b5wyf")
+[node name="FastGlobalBulletSpawner" type="Node2D" parent="."]
+script = ExtResource("3_2ckwp")
 speed = 500.0
 frequency = 0.5
-disabled = true
+bullet_color = Color(1, 0, 0, 1)
