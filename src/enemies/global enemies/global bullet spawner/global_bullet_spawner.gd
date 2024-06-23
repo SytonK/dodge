@@ -10,8 +10,6 @@ const BULLET = preload("res://src/enemies attacks/projectiles/bullet/bullet.tscn
 
 @export var disabled: bool = false : set = _set_disabled
 
-@export var target_player: bool = false
-
 @export var bullet_color: Color
 
 func _ready() -> void:
@@ -29,7 +27,7 @@ func _spawn_bullet() -> void:
 	var new_bullet = BULLET.instantiate()
 	new_bullet.movment_speed = speed
 	new_bullet.position = Screen.get_random_position_on_screen_edge()
-	new_bullet.direction = _get_player_direction(new_bullet) if target_player else Screen.get_paralel_direction(new_bullet.position)
+	new_bullet.direction = _get_bullet_direction(new_bullet)
 	new_bullet.modulate = _get_bullet_color(new_bullet)
 	add_child(new_bullet)
 
@@ -39,7 +37,7 @@ func _set_frequency(new_frequency: float) -> void:
 		timer.wait_time = frequency
 		timer.start()
 
-func _get_player_direction(new_bullet: Bullet) -> Vector2:
+func _get_bullet_direction(new_bullet: Bullet) -> Vector2:
 	return PlayerRef.player_ref.position - new_bullet.position
 
 func _get_bullet_color(new_bullet: Bullet) -> Color:

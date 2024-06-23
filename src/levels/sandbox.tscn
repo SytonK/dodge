@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cpw5rkjet4364"]
+[gd_scene load_steps=4 format=3 uid="uid://cpw5rkjet4364"]
 
 [ext_resource type="Script" path="res://src/levels/level.gd" id="1_tvtlc"]
 [ext_resource type="Script" path="res://src/enemies/global enemies/global bullet spawner/global_bullet_spawner.gd" id="2_8ivtt"]
+[ext_resource type="Script" path="res://src/enemies/global enemies/global bullet spawner/parallal/global_bullet_spawner_parallal_direction.gd" id="3_d2cys"]
 
 [node name="Sandbox" type="Node2D"]
 script = ExtResource("1_tvtlc")
@@ -11,26 +12,12 @@ hard_time = 1
 
 [node name="GlobalBulletSpawner" type="Node2D" parent="."]
 script = ExtResource("2_8ivtt")
-speed = 500.0
+speed = 300.0
 frequency = 1.0
-bullet_color = Color(1, 1, 0.0156863, 1)
-
-[node name="GlobalBulletSpawner3" type="Node2D" parent="."]
-script = ExtResource("2_8ivtt")
-speed = 800.0
-frequency = 1.0
-bullet_color = Color(0, 1, 0, 1)
-
-[node name="GlobalBulletSpawner2" type="Node2D" parent="."]
-script = ExtResource("2_8ivtt")
-speed = 100.0
-frequency = 1.0
-target_player = true
 bullet_color = Color(1, 0, 0, 1)
 
-[node name="GlobalBulletSpawner4" type="Node2D" parent="."]
-script = ExtResource("2_8ivtt")
-speed = 500.0
+[node name="GlobalBulletSpawnerParallalDirection" type="Node2D" parent="."]
+script = ExtResource("3_d2cys")
+speed = 300.0
 frequency = 1.0
-target_player = true
-bullet_color = Color(1, 0, 0, 1)
+bullet_color = Color(1, 1, 0, 1)
