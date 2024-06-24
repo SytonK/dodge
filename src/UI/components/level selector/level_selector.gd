@@ -13,6 +13,9 @@ var level: int = 0: set = _set_level
 @onready var change_scene_button: ChangeSceneButton = $HBoxContainer/ChangeSceneButton
 
 
+func _ready() -> void:
+	change_scene_button.grab_focus()
+
 func _set_level(new_level: int) -> void:
 	level = clamp(new_level, 0, MAX_LEVEL)
 	if change_scene_button:
