@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ybfx2sl8mxrp"]
+
+[ext_resource type="Script" path="res://src/levels/level.gd" id="1_2yc20"]
+[ext_resource type="Script" path="res://src/enemies/global enemies/lava spawner/lava_spawner.gd" id="2_22c3k"]
+
+[node name="Level3" type="Node2D"]
+script = ExtResource("1_2yc20")
+
+[node name="LavaSpawner" type="Node2D" parent="."]
+script = ExtResource("2_22c3k")
+lava_polygon = PackedVector2Array(45, 45, 45, -45, -45, -45, -45, 45)
+lava_lifetime = 6.0
+setup_time = 1.0
+frequency = 1.0

@@ -28,6 +28,7 @@ func _spawn_lava() -> void:
 	new_lava.polygon_packed_vector_array = lava_polygon
 	new_lava.polygon_color = Color(0.8, 0.4, 0.1, 0.9)
 	new_lava.setup_time = setup_time
+	new_lava.position = PlayerRef.player_ref.position
 	add_child(new_lava)
 
 
