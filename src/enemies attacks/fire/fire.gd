@@ -8,6 +8,7 @@ var curr_lifetime: float = 0
 @export var polygon_packed_vector_array: PackedVector2Array
 @export var polygon_color: Color
 
+var polygon: Polygon2D
 
 func _ready() -> void:
 	_init_collision_polygon()
@@ -25,7 +26,7 @@ func _init_collision_polygon() -> void:
 	add_child(new_collision_polygon)
 
 func _init_polygon() -> void:
-	var new_polygon = Polygon2D.new()
-	new_polygon.polygon = polygon_packed_vector_array
-	new_polygon.color = polygon_color
-	add_child(new_polygon)
+	polygon = Polygon2D.new()
+	polygon.polygon = polygon_packed_vector_array
+	polygon.color = polygon_color
+	add_child(polygon)
