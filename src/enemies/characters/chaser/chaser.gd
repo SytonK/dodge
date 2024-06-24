@@ -7,9 +7,9 @@ extends CharacterBody2D
 @export var is_recovering: bool = false
 @onready var animation_player = $AnimationPlayer
 
-const FIRE = preload("res://src/enemies attacks/fire/fire.tscn")
 @export var leavse_fire_trail: bool = false
 @export var trail_duration: float
+@export var trail_polygon: PackedVector2Array
 
 
 func _process(_delta: float) -> void:
@@ -28,10 +28,12 @@ func _on_hitbox_hit():
 
 
 func _leave_fire_trial() -> void:
-	var new_fire: Fire = FIRE.instantiate()
+	var new_fire: Fire = Fire.new()
 	new_fire.top_level = true
 	new_fire.lifetime = trail_duration
 	new_fire.position = position
+	new_fire.polygon_packed_vector_array = trail_polygon
+	new_fire.polygon_color = Color(0.7, 0.1, 0.1)
 	add_child(new_fire)
 
 
