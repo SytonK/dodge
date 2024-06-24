@@ -23,6 +23,7 @@ func _chase_player() -> void:
 
 
 func _on_hitbox_hit():
+	print('recover')
 	animation_player.play("recover")
 
 

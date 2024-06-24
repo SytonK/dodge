@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cpw5rkjet4364"]
+[gd_scene load_steps=3 format=3 uid="uid://cpw5rkjet4364"]
 
 [ext_resource type="Script" path="res://src/levels/level.gd" id="1_tvtlc"]
-[ext_resource type="Script" path="res://src/enemies/global enemies/global bullet spawner/global_bullet_spawner.gd" id="2_8ivtt"]
-[ext_resource type="Script" path="res://src/enemies/global enemies/global bullet spawner/parallal/global_bullet_spawner_parallal_direction.gd" id="3_d2cys"]
+[ext_resource type="PackedScene" uid="uid://b2h0vcalj77yu" path="res://src/enemies/characters/chaser/chaser.tscn" id="2_273q1"]
 
 [node name="Sandbox" type="Node2D"]
 script = ExtResource("1_tvtlc")
@@ -10,12 +9,7 @@ easy_time = 1
 normal_time = 1
 hard_time = 1
 
-[node name="GlobalBulletSpawner" type="Node2D" parent="."]
-script = ExtResource("2_8ivtt")
-speed = 300.0
-frequency = 1.0
-
-[node name="GlobalBulletSpawnerParallalDirection" type="Node2D" parent="."]
-script = ExtResource("3_d2cys")
-speed = 300.0
-frequency = 1.0
+[node name="chaser" parent="." instance=ExtResource("2_273q1")]
+position = Vector2(112, 103)
+movement_speed = 300.0
+is_recovering = false
