@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cpw5rkjet4364"]
 
 [ext_resource type="Script" path="res://src/levels/level.gd" id="1_tvtlc"]
-[ext_resource type="PackedScene" uid="uid://b2h0vcalj77yu" path="res://src/enemies/characters/chaser/chaser.tscn" id="2_273q1"]
+[ext_resource type="Script" path="res://src/enemies/global enemies/lava spawner/lava_spawner.gd" id="2_0dyhb"]
 
 [node name="Sandbox" type="Node2D"]
 script = ExtResource("1_tvtlc")
@@ -9,7 +9,6 @@ easy_time = 1
 normal_time = 1
 hard_time = 1
 
-[node name="chaser" parent="." instance=ExtResource("2_273q1")]
-position = Vector2(112, 103)
-movement_speed = 300.0
-is_recovering = false
+[node name="LavaSpawner" type="Node2D" parent="."]
+script = ExtResource("2_0dyhb")
+frequency = 1.0
