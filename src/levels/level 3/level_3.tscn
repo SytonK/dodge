@@ -13,7 +13,7 @@ hard_time = 15
 
 [node name="LavaSpawner" type="Node2D" parent="."]
 script = ExtResource("2_22c3k")
-lava_polygon = PackedVector2Array(45, 45, 45, -45, -45, -45, -45, 45)
+lava_polygon = PackedVector2Array(35, 35, 35, -35, -35, -35, -35, 35)
 lava_lifetime = 5.0
 setup_time = 0.7
 frequency = 1.25

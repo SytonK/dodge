@@ -10,8 +10,10 @@ func _to_normal() -> void:
 	super._to_normal()
 	lava_spawner.frequency = 0.75
 	lava_spawner.lava_lifetime = 6
+	lava_spawner.lava_polygon = [Vector2(40,40), Vector2(40,-40), Vector2(-40,-40), Vector2(-40,40)]
 	global_bullet_spawner.frequency = 0.2
 	global_bullet_spawner_parallal_direction.speed = 725
+	
 
 func _to_hard() -> void:
 	super._to_hard()
