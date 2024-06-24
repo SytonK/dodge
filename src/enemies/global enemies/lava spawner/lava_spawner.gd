@@ -2,6 +2,7 @@ class_name LavaSpawner
 extends Node2D
 
 
+@export var radius: Vector2
 @export var frequency: float : set = _set_frequency
 @onready var timer: Timer
 
@@ -19,8 +20,8 @@ func _init_timer() -> void:
 	timer.autostart = true
 	add_child(timer)
 
-func _spawn_lava() -> void: 
-	print('spawn lava')
+func _spawn_lava() -> void:
+	add_child(Lava.new(Vector2(radius)))
 
 
 func _set_frequency(new_frequency: float) -> void:
