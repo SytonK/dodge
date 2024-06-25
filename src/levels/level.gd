@@ -53,13 +53,11 @@ func _add_player() -> void:
 	add_child(player)
 	player.game_over.connect(_on_game_over)
 
-
 func _add_level_ui() -> void:
 	add_child(LEVEL_UI.instantiate())
 	game_over_menu = $LevelUI/GameOverMenu
 	pause_menu = $LevelUI/PauseMenu
 	time_label = $LevelUI/TimeLabel
-
 
 func _add_level_timer() -> void:
 	level_timer = Timer.new() 
@@ -70,6 +68,16 @@ func _add_level_timer() -> void:
 	time_label.text = str(time_left)
 	time_label.modulate = Color(0,1,0)
 
+func _add_music_player() -> void:
+	music_player = MusicPlayer.new()
+	add_child(music_player)
+
+func _add_level_sounds() -> void:
+	audio_stream_player = AudioStreamPlayer.new()
+	audio_stream_player.stream = LOSE_SOUND
+	audio_stream_player.process_mode = Node.PROCESS_MODE_ALWAYS
+	add_child(audio_stream_player)
+
 
 func _on_level_timer_timeout() -> void:
 	time_left = time_left + (1 if current_difficulty == ENDLESEE else -1)
@@ -78,10 +86,16 @@ func _on_level_timer_timeout() -> void:
 	_music_down()
 	time_label.text = str(time_left)
 
+
 func _music_down() -> void:
 	if time_left == 2 && current_difficulty != ENDLESEE && current_difficulty != HARD:
 		var tween = get_tree().create_tween()
 		tween.tween_property(music_player, "volume_db", -15, 2)
+
+func _music_up() -> void:
+	if current_difficulty != ENDLESEE:
+		var tween = get_tree().create_tween()
+		tween.tween_property(music_player, "volume_db", 0, 2)
 
 
 func _next_difficulty() -> void:
@@ -94,10 +108,6 @@ func _next_difficulty() -> void:
 			_to_endless()
 	_music_up()
 
-func _music_up() -> void:
-	if current_difficulty != ENDLESEE:
-		var tween = get_tree().create_tween()
-		tween.tween_property(music_player, "volume_db", 0, 2)
 
 
 func _to_normal() -> void:
@@ -117,17 +127,6 @@ func _to_endless() -> void:
 	time_label.modulate = Color(0.2,0.9,0.7)
 	time_left = 0
 
-
-func _add_music_player() -> void:
-	music_player = MusicPlayer.new()
-	add_child(music_player)
-
-
-func _add_level_sounds() -> void:
-	audio_stream_player = AudioStreamPlayer.new()
-	audio_stream_player.stream = LOSE_SOUND
-	audio_stream_player.process_mode = Node.PROCESS_MODE_ALWAYS
-	add_child(audio_stream_player)
 
 func _on_game_over() -> void:
 	game_over_menu.visible = true
