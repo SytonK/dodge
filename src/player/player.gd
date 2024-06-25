@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 
 signal game_over
+signal hurt
 
 @export var movement_speed: float = 500
 
@@ -41,6 +42,8 @@ func _on_hurtbox_hurt() -> void:
 	health_ui.update_health(health)
 	if health <= 0:
 		_game_over()
+	else:
+		hurt.emit()
 
 func _game_over() -> void:
 	game_over.emit()

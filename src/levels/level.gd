@@ -25,6 +25,8 @@ var current_difficulty: int = EASY
 var level_timer: Timer
 var time_left: int
 
+var camera: Camera
+
 const PLAYER = preload("res://src/player/player.tscn")
 var player: Player
 
@@ -54,12 +56,14 @@ func _add_level_envierments() -> void:
 	add_child(LEVEL_WALLS.instantiate())
 
 func _add_camera() -> void:
-	add_child(Camera2D.new())
+	camera = Camera.new()
+	add_child(camera)
 
 func _add_player() -> void:
 	player = PLAYER.instantiate()
-	add_child(player)
 	player.game_over.connect(_on_game_over)
+	player.hurt.connect(camera.shake)
+	add_child(player)
 
 func _add_level_ui() -> void:
 	add_child(LEVEL_UI.instantiate())
