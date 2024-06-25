@@ -8,6 +8,14 @@ enum {
 	ENDLESEE
 }
 
+const EASY_COLOR: Color = Color(0,1,0)
+const NORMAL_COLOR: Color = Color(1,1,0)
+const HARD_COLOR: Color = Color(1,0,0)
+const ENDLESS_COLOR: Color = Color(0.2,0.9,0.7)
+
+const MUSIC_VOLUME_DIM_DURATION: float = 2
+const MUSIC_VOLUME_DIM_VALUE: float = -15
+
 const LEVEL_WALLS = preload("res://src/levels/envierment/level_walls.tscn")
 
 @export var easy_time: int
@@ -66,7 +74,7 @@ func _add_level_timer() -> void:
 	add_child(level_timer)
 	time_left = easy_time
 	time_label.text = str(time_left)
-	time_label.modulate = Color(0,1,0)
+	time_label.modulate = EASY_COLOR
 
 func _add_music_player() -> void:
 	music_player = MusicPlayer.new()
@@ -90,12 +98,12 @@ func _on_level_timer_timeout() -> void:
 func _music_down() -> void:
 	if time_left == 2 && current_difficulty != ENDLESEE && current_difficulty != HARD:
 		var tween = get_tree().create_tween()
-		tween.tween_property(music_player, "volume_db", -15, 2)
+		tween.tween_property(music_player, "volume_db", MUSIC_VOLUME_DIM_VALUE, MUSIC_VOLUME_DIM_DURATION)
 
 func _music_up() -> void:
 	if current_difficulty != ENDLESEE:
 		var tween = get_tree().create_tween()
-		tween.tween_property(music_player, "volume_db", 0, 2)
+		tween.tween_property(music_player, "volume_db", 0, MUSIC_VOLUME_DIM_DURATION)
 
 
 func _next_difficulty() -> void:
@@ -112,19 +120,19 @@ func _next_difficulty() -> void:
 
 func _to_normal() -> void:
 	current_difficulty = NORMAL
-	time_label.modulate = Color(1,1,0)
+	time_label.modulate = NORMAL_COLOR
 	time_left = normal_time
 	music_player.set_music(MusicPlayer.MUSIC_LEVEL.NORMAL)
 
 func _to_hard() -> void:
 	current_difficulty = HARD
-	time_label.modulate = Color(1,0,0)
+	time_label.modulate = HARD_COLOR
 	time_left = hard_time
 	music_player.set_music(MusicPlayer.MUSIC_LEVEL.HARD)
 
 func _to_endless() -> void:
 	current_difficulty = ENDLESEE
-	time_label.modulate = Color(0.2,0.9,0.7)
+	time_label.modulate = EASY_COLOR
 	time_left = 0
 
 
