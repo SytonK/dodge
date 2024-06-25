@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://ybfx2sl8mxrp"]
+[gd_scene load_steps=6 format=3 uid="uid://ybfx2sl8mxrp"]
 
 [ext_resource type="Script" path="res://src/levels/level 3/level_3.gd" id="1_53vhh"]
 [ext_resource type="Script" path="res://src/enemies/global enemies/lava spawner/lava_spawner.gd" id="2_22c3k"]
+[ext_resource type="Script" path="res://src/enemies/global enemies/lava spawner/random position/lava_spawner_random_position.gd" id="3_agqof"]
 [ext_resource type="Script" path="res://src/enemies/global enemies/global bullet spawner/global_bullet_spawner.gd" id="3_sn0tj"]
 [ext_resource type="Script" path="res://src/enemies/global enemies/global bullet spawner/parallal/global_bullet_spawner_parallal_direction.gd" id="4_l5ngj"]
 
@@ -17,6 +18,14 @@ lava_polygon = PackedVector2Array(35, 35, 35, -35, -35, -35, -35, 35)
 lava_lifetime = 5.0
 setup_time = 0.7
 frequency = 1.25
+
+[node name="LavaSpawnerRandomPosition" type="Node2D" parent="."]
+script = ExtResource("3_agqof")
+lava_polygon = PackedVector2Array(25, 25, 25, -25, -25, -25, -25, 25)
+lava_lifetime = 4.0
+setup_time = 1.0
+frequency = 1.0
+disabled = true
 
 [node name="GlobalBulletSpawner" type="Node2D" parent="."]
 script = ExtResource("3_sn0tj")

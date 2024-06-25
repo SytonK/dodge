@@ -30,3 +30,6 @@ static func get_paralel_direction(position: Vector2) -> Vector2:
 		return Vector2(-position.x, 0)
 	else:
 		return Vector2(0,-position.y)
+
+static func get_random_position() -> Vector2:
+	return Vector2(randf_range(-X_SIZE,X_SIZE), randf_range(-Y_SIZE,Y_SIZE))
