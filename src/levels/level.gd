@@ -29,6 +29,7 @@ var camera: Camera
 
 const PLAYER = preload("res://src/player/player.tscn")
 var player: Player
+@export var player_start_position: Vector2 = Vector2(0, 0)
 
 const LEVEL_UI = preload("res://src/UI/level UI/level_ui.tscn")
 
@@ -61,6 +62,7 @@ func _add_camera() -> void:
 
 func _add_player() -> void:
 	player = PLAYER.instantiate()
+	player.position = player_start_position
 	player.game_over.connect(_on_game_over)
 	player.hurt.connect(camera.shake)
 	add_child(player)

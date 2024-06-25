@@ -9,11 +9,6 @@ extends Level
 @onready var target_player_tower_right: TargetPlayerTower = $TargetPlayerTowerRight
 
 
-func _ready() -> void:
-	super._ready()
-	player.position = Vector2(0, 150)
-
-
 func _to_normal() -> void:
 	super._to_normal()
 	chaser.movement_speed = 320
