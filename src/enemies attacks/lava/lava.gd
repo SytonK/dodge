@@ -9,7 +9,7 @@ var setup_timer: Timer
 func _ready() -> void:
 	super._ready()
 	_init_setup()
-	polygon.color = Color(polygon_color, 0.1)
+	polygon.color = Color(polygon_color, 0.2)
 	monitorable = false
 
 func _init_setup() -> void:

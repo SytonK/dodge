@@ -2,6 +2,8 @@ class_name LavaSpawner
 extends Node2D
 
 
+const LAVA_COLOR: Color = Color(0.85, 0.35, 0.15)
+
 @export var lava_polygon: PackedVector2Array
 @export var lava_lifetime: float
 @export var setup_time: float
@@ -26,7 +28,7 @@ func _spawn_lava() -> void:
 	var new_lava = Lava.new()
 	new_lava.lifetime = lava_lifetime
 	new_lava.polygon_packed_vector_array = lava_polygon
-	new_lava.polygon_color = Color(0.8, 0.4, 0.1, 0.9)
+	new_lava.polygon_color = LAVA_COLOR
 	new_lava.setup_time = setup_time
 	new_lava.position = _get_position()
 	add_child(new_lava)
