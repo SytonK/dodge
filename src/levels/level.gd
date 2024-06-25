@@ -75,7 +75,13 @@ func _on_level_timer_timeout() -> void:
 	time_left = time_left + (1 if current_difficulty == ENDLESEE else -1)
 	if time_left < 0:
 		_next_difficulty()
+	_music_down()
 	time_label.text = str(time_left)
+
+func _music_down() -> void:
+	if time_left == 2 && current_difficulty != ENDLESEE && current_difficulty != HARD:
+		var tween = get_tree().create_tween()
+		tween.tween_property(music_player, "volume_db", -15, 2)
 
 
 func _next_difficulty() -> void:
@@ -86,6 +92,12 @@ func _next_difficulty() -> void:
 			_to_hard()
 		HARD:
 			_to_endless()
+	_music_up()
+
+func _music_up() -> void:
+	if current_difficulty != ENDLESEE:
+		var tween = get_tree().create_tween()
+		tween.tween_property(music_player, "volume_db", 0, 2)
 
 
 func _to_normal() -> void:
