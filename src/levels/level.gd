@@ -114,7 +114,7 @@ func _to_hard() -> void:
 
 func _to_endless() -> void:
 	current_difficulty = ENDLESEE
-	time_label.modulate = Color(1,0.9,0.5)
+	time_label.modulate = Color(0.2,0.9,0.7)
 	time_left = 0
 
 
