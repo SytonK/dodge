@@ -42,6 +42,7 @@ var music_player: MusicPlayer
 const LOSE_SOUND = preload("res://assets/sounds/lose sound.mp3")
 var audio_stream_player: AudioStreamPlayer
 
+var game_over: bool = false
 
 func _ready() -> void:
 	_add_level_envierments()
@@ -51,6 +52,9 @@ func _ready() -> void:
 	_add_level_timer()
 	_add_music_player()
 	_add_level_sounds()
+
+func _process(_delta: float) -> void:
+	_slow_engine_on_game_over()
 
 
 func _add_level_envierments() -> void:
@@ -143,7 +147,20 @@ func _to_endless() -> void:
 
 
 func _on_game_over() -> void:
-	game_over_menu.visible = true
 	audio_stream_player.play()
-	get_tree().paused = true
+	game_over = true
+
+func _slow_engine_on_game_over() -> void:
+	if !game_over:
+		return
+	
+	Engine.time_scale = lerpf(Engine.time_scale, 0, 0.03)
+	if Engine.time_scale <= 0.05:
+		game_over = false
+		Engine.time_scale = 1
+		_on_finish_game_over()
+
+func _on_finish_game_over() -> void:
+	game_over_menu.visible = true
 	pause_menu.process_mode = Node.PROCESS_MODE_DISABLED
+	get_tree().paused = true

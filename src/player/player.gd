@@ -29,6 +29,9 @@ func _physics_process(_delta: float) -> void:
 
 
 func _move() -> void:
+	if health <= 0:
+		return
+	
 	velocity = Vector2(
 			Input.get_action_strength("move_right") - Input.get_action_strength("move_left"),
 			Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
