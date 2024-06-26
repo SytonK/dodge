@@ -9,7 +9,7 @@
 script = ExtResource("1_nakhy")
 easy_time = 10
 normal_time = 15
-hard_time = 25
+hard_time = 15
 
 [node name="ParallalTower" parent="." instance=ExtResource("4_ldb0h")]
 disabled = true
