@@ -40,10 +40,9 @@ func _on_hurtbox_hurt() -> void:
 	audio_stream_player.play()
 	animation_player.play('invulnerable')
 	health_ui.update_health(health)
+	hurt.emit()
 	if health <= 0:
 		_game_over()
-	else:
-		hurt.emit()
 
 func _game_over() -> void:
 	game_over.emit()

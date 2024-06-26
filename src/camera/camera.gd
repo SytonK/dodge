@@ -9,6 +9,9 @@ extends Camera2D
 var curr_shake_strength: float = 0
 
 
+func _init() -> void:
+	process_mode = Node.PROCESS_MODE_ALWAYS
+
 func _process(delta: float) -> void:
 	if curr_shake_strength > 0:
 		curr_shake_strength = lerpf(curr_shake_strength, 0, shake_fade * delta)
