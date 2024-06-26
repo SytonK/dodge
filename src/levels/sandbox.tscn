@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://cpw5rkjet4364"]
+[gd_scene load_steps=3 format=3 uid="uid://cpw5rkjet4364"]
 
 [ext_resource type="Script" path="res://src/levels/level.gd" id="1_tvtlc"]
-[ext_resource type="Script" path="res://src/enemies/global enemies/lava spawner/random position/lava_spawner_random_position.gd" id="2_kx40h"]
 [ext_resource type="Script" path="res://src/enemies/global enemies/lava spawner/lava_spawner.gd" id="3_3exx6"]
 
 [node name="Sandbox" type="Node2D"]
@@ -10,16 +9,9 @@ easy_time = 5
 normal_time = 5
 hard_time = 5
 
-[node name="LavaSpawnerRandomPosition" type="Node2D" parent="."]
-script = ExtResource("2_kx40h")
-lava_polygon = PackedVector2Array(10, 10, 10, -10, -10, -10, -10, 10)
-lava_lifetime = 4.0
-setup_time = 1.0
-frequency = 1.0
-
 [node name="LavaSpawner" type="Node2D" parent="."]
 script = ExtResource("3_3exx6")
-lava_polygon = PackedVector2Array(10, 10, 20, 20, 0, 0)
+lava_polygon = PackedVector2Array(40, 40, 40, -40, -40, -40, -40, 40)
 lava_lifetime = 4.0
 setup_time = 1.0
 frequency = 1.0

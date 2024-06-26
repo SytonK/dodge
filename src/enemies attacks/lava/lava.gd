@@ -11,6 +11,7 @@ func _ready() -> void:
 	_init_setup()
 	polygon.color = Color(polygon_color, 0.2)
 	monitorable = false
+	monitoring = false
 
 func _init_setup() -> void:
 	setup_timer = Timer.new()
@@ -23,3 +24,4 @@ func _init_setup() -> void:
 func _finish_setup() -> void:
 	polygon.color = polygon_color
 	monitorable = true
+	monitoring = true
