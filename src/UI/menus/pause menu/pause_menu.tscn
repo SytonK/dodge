@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://btg6r1ilc3tjr"]
+[gd_scene load_steps=6 format=3 uid="uid://btg6r1ilc3tjr"]
 
 [ext_resource type="Script" path="res://src/UI/menus/pause menu/pause_menu.gd" id="1_x2u21"]
+[ext_resource type="Theme" uid="uid://bgdcd6x4oip32" path="res://resources/base_theme.tres" id="1_yhmnt"]
 [ext_resource type="Script" path="res://src/UI/components/reload button/reload_button.gd" id="2_56x2q"]
 [ext_resource type="Script" path="res://src/UI/components/new scene button/new_scene_button.gd" id="3_twfhd"]
 [ext_resource type="Script" path="res://src/UI/components/quit button/quit_button.gd" id="4_vg5ho"]
@@ -19,6 +20,7 @@ offset_right = 48.0
 offset_bottom = 29.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_yhmnt")
 script = ExtResource("1_x2u21")
 
 [node name="Label" type="Label" parent="."]

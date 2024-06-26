@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dy71k0weyketa"]
+[gd_scene load_steps=5 format=3 uid="uid://dy71k0weyketa"]
 
+[ext_resource type="Theme" uid="uid://bgdcd6x4oip32" path="res://resources/base_theme.tres" id="1_3yqal"]
 [ext_resource type="PackedScene" uid="uid://3swy431y7di3" path="res://src/UI/components/level selector/level_selector.tscn" id="1_mym05"]
 [ext_resource type="Script" path="res://src/UI/components/new scene button/new_scene_button.gd" id="1_qusho"]
 [ext_resource type="Script" path="res://src/UI/components/quit button/quit_button.gd" id="2_mxf2y"]
@@ -16,6 +17,7 @@ offset_right = 37.5
 offset_bottom = 46.5
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_3yqal")
 alignment = 1
 
 [node name="GameTitle" type="Label" parent="."]
