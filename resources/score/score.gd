@@ -5,6 +5,7 @@ extends Resource
 const PATH: String = "user://score.tres"
 
 @export var stars: Array[int] = [0, 0, 0, 0]
+@export var score: Array[int] = [0, 0, 0, 0]
 
 
 func save() -> void:
@@ -19,3 +20,7 @@ static func load() -> Score:
 
 func set_stars(level_number: int, level_stars: int) -> void:
 	stars[level_number] = clamp(level_stars, stars[level_number], 3)
+
+
+func set_score(level_number: int, level_score: int) -> void:
+	score[level_number] = max(level_score, stars[level_number])

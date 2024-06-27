@@ -11,6 +11,7 @@ script = ExtResource("1_53vhh")
 easy_time = 10
 normal_time = 15
 hard_time = 15
+level_number = 3
 
 [node name="LavaSpawner" type="Node2D" parent="."]
 script = ExtResource("2_22c3k")

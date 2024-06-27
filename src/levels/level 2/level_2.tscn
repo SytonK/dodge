@@ -13,6 +13,7 @@ easy_time = 10
 normal_time = 15
 hard_time = 15
 player_start_position = Vector2(0, 150)
+level_number = 2
 
 [node name="ParallalTower" parent="." instance=ExtResource("2_x6cjw")]
 disabled = true

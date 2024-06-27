@@ -170,5 +170,8 @@ func _on_finish_game_over() -> void:
 func _save_player_score() -> void:
 	var save_score: Score = Score.load()
 	print(save_score.stars)
+	print(save_score.score)
 	save_score.set_stars(level_number, current_difficulty)
+	if current_difficulty == ENDLESEE:
+		save_score.set_score(level_number, time_left)
 	save_score.save()
