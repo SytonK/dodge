@@ -27,7 +27,6 @@ func _ready() -> void:
 
 func _physics_process(_delta: float) -> void:
 	_move()
-	move_and_slide()
 
 
 func _move() -> void:
@@ -38,6 +37,8 @@ func _move() -> void:
 			Input.get_action_strength("move_right") - Input.get_action_strength("move_left"),
 			Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
 	).normalized() * movement_speed
+	
+	move_and_slide()
 
 
 func _on_hurtbox_hurt() -> void:
