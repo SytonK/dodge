@@ -93,6 +93,33 @@ shape = SubResource("RectangleShape2D_xnu0d")
 rotation = 0.785398
 polygon = PackedVector2Array(16, -16, 16, 16, -16, 16, -16, -16)
 
+[node name="Health" type="Node2D" parent="."]
+
+[node name="Health1" type="Polygon2D" parent="Health"]
+position = Vector2(0, -10)
+rotation = 0.785398
+scale = Vector2(1, 1)
+color = Color(0, 1, 0, 1)
+polygon = PackedVector2Array(6, 6, 6, -6, -6, -6, -6, 6)
+
+[node name="Health2" type="Polygon2D" parent="Health"]
+position = Vector2(10, 0)
+rotation = 0.785398
+color = Color(0, 1, 0, 1)
+polygon = PackedVector2Array(6, 6, 6, -6, -6, -6, -6, 6)
+
+[node name="Health3" type="Polygon2D" parent="Health"]
+position = Vector2(0, 10)
+rotation = 0.785398
+color = Color(0, 1, 0, 1)
+polygon = PackedVector2Array(6, 6, 6, -6, -6, -6, -6, 6)
+
+[node name="Health4" type="Polygon2D" parent="Health"]
+position = Vector2(-10, 0)
+rotation = 0.785398
+color = Color(0, 1, 0, 1)
+polygon = PackedVector2Array(6, 6, 6, -6, -6, -6, -6, 6)
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 process_mode = 3
 stream = ExtResource("4_e4i7w")

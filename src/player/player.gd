@@ -9,6 +9,8 @@ signal hurt
 
 @export var max_health: int = 4
 @onready var health: int = max_health
+@onready var health_polygons: Array[Polygon2D] = [$Health/Health1, $Health/Health2, $Health/Health3, $Health/Health4]
+const NO_HEALTH_COLOR: Color = Color(0.15, 0.3, 0.15)
 @onready var health_ui: HealthUI = $CanvasLayer/HealthUI
 
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
@@ -42,10 +44,15 @@ func _on_hurtbox_hurt() -> void:
 	health -= 1
 	audio_stream_player.play()
 	animation_player.play('invulnerable')
+	_update_health_ui()
 	health_ui.update_health(health)
 	hurt.emit()
 	if health <= 0:
 		_game_over()
+
+func _update_health_ui() -> void:
+	health_polygons[max_health - health - 1].color = NO_HEALTH_COLOR
+
 
 func _game_over() -> void:
 	game_over.emit()
