@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dep5y2rjemfn8"]
 
-[ext_resource type="Theme" uid="uid://bgdcd6x4oip32" path="res://resources/base_theme.tres" id="1_5ggyk"]
+[ext_resource type="Theme" uid="uid://bgdcd6x4oip32" path="res://resources/theme/base_theme.tres" id="1_5ggyk"]
 [ext_resource type="Script" path="res://src/UI/menus/game over menu/game_over_menu.gd" id="1_my75g"]
 [ext_resource type="Script" path="res://src/UI/components/new scene button/new_scene_button.gd" id="1_sc3k0"]
 [ext_resource type="Script" path="res://src/UI/components/reload button/reload_button.gd" id="2_24hqb"]

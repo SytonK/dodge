@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://btg6r1ilc3tjr" path="res://src/UI/menus/pause menu/pause_menu.tscn" id="1_belwy"]
 [ext_resource type="PackedScene" uid="uid://dep5y2rjemfn8" path="res://src/UI/menus/game over menu/game_over_menu.tscn" id="2_tplo0"]
-[ext_resource type="Theme" uid="uid://bgdcd6x4oip32" path="res://resources/base_theme.tres" id="3_o1igt"]
+[ext_resource type="Theme" uid="uid://bgdcd6x4oip32" path="res://resources/theme/base_theme.tres" id="3_o1igt"]
 
 [node name="LevelUI" type="CanvasLayer"]
 
