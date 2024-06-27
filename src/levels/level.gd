@@ -42,6 +42,7 @@ var music_player: MusicPlayer
 const LOSE_SOUND = preload("res://assets/sounds/lose sound.mp3")
 var audio_stream_player: AudioStreamPlayer
 
+@export var level_number: int
 var game_over: bool = false
 
 func _ready() -> void:
@@ -161,6 +162,13 @@ func _slow_engine_on_game_over() -> void:
 		_on_finish_game_over()
 
 func _on_finish_game_over() -> void:
+	_save_player_score()
 	game_over_menu.visible = true
 	pause_menu.process_mode = Node.PROCESS_MODE_DISABLED
 	get_tree().paused = true
+
+func _save_player_score() -> void:
+	var save_score: Score = Score.load()
+	print(save_score.stars)
+	save_score.set_stars(level_number, current_difficulty)
+	save_score.save()
