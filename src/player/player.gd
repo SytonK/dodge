@@ -8,7 +8,7 @@ signal hurt
 @export var movement_speed: float = 500
 
 @export var max_health: int = 4
-@onready var health: int = max_health
+@onready var health: int = max_health : set = _set_health
 @onready var health_polygons: Array[Polygon2D] = [$Health/Health1, $Health/Health2, $Health/Health3, $Health/Health4]
 const NO_HEALTH_COLOR: Color = Color(0.15, 0.3, 0.15)
 
@@ -48,6 +48,9 @@ func _on_hurtbox_hurt() -> void:
 	hurt.emit()
 	if health <= 0:
 		_game_over()
+
+func _set_health(new_health: int) -> void:
+	health = clamp(new_health, 0, max_health)
 
 func _update_health_ui() -> void:
 	health_polygons[max_health - health - 1].color = NO_HEALTH_COLOR
