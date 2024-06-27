@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bfasxqcvma3xo"]
+
+[ext_resource type="Texture2D" uid="uid://cwg8cbqjt73qi" path="res://assets/UI/stars/empty_star.png" id="1_i2lcb"]
+[ext_resource type="Script" path="res://src/UI/level UI/stars/stars.gd" id="1_vlk8y"]
+
+[node name="Stars" type="HBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_vlk8y")
+
+[node name="Star2" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_i2lcb")
+
+[node name="Star1" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_i2lcb")
+
+[node name="Star0" type="TextureRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_i2lcb")

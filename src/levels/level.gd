@@ -35,7 +35,8 @@ const LEVEL_UI = preload("res://src/UI/level UI/level_ui.tscn")
 
 var game_over_menu: Control
 var pause_menu: Control
-var time_label: Label 
+var time_label: Label
+var stars: Stars
 
 var music_player: MusicPlayer
 
@@ -77,6 +78,7 @@ func _add_level_ui() -> void:
 	game_over_menu = $LevelUI/GameOverMenu
 	pause_menu = $LevelUI/PauseMenu
 	time_label = $LevelUI/TimeLabel
+	stars = $LevelUI/Stars
 
 func _add_level_timer() -> void:
 	level_timer = Timer.new() 
@@ -118,6 +120,7 @@ func _music_up() -> void:
 
 
 func _next_difficulty() -> void:
+	stars.add_star(current_difficulty)
 	match current_difficulty:
 		EASY:
 			_to_normal()
