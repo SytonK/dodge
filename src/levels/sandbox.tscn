@@ -1,17 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://cpw5rkjet4364"]
+[gd_scene load_steps=2 format=3 uid="uid://cpw5rkjet4364"]
 
 [ext_resource type="Script" path="res://src/levels/level.gd" id="1_tvtlc"]
-[ext_resource type="Script" path="res://src/enemies/global enemies/lava spawner/lava_spawner.gd" id="3_3exx6"]
 
 [node name="Sandbox" type="Node2D"]
 script = ExtResource("1_tvtlc")
-easy_time = 5
+easy_time = 300
 normal_time = 5
 hard_time = 5
-
-[node name="LavaSpawner" type="Node2D" parent="."]
-script = ExtResource("3_3exx6")
-lava_polygon = PackedVector2Array(40, 40, 40, -40, -40, -40, -40, 40)
-lava_lifetime = 4.0
-setup_time = 1.0
-frequency = 1.0

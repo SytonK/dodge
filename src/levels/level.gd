@@ -91,6 +91,7 @@ func _add_level_timer() -> void:
 
 func _add_music_player() -> void:
 	music_player = MusicPlayer.new()
+	music_player.process_mode = Node.PROCESS_MODE_ALWAYS
 	add_child(music_player)
 
 func _add_level_sounds() -> void:
@@ -152,6 +153,7 @@ func _to_endless() -> void:
 
 func _on_game_over() -> void:
 	audio_stream_player.play()
+	_music_down()
 	game_over = true
 
 func _slow_engine_on_game_over() -> void:
