@@ -5,7 +5,31 @@
 [ext_resource type="Script" path="res://src/UI/components/new scene button/new_scene_button.gd" id="1_qusho"]
 [ext_resource type="Script" path="res://src/UI/components/quit button/quit_button.gd" id="2_mxf2y"]
 
-[node name="MainMenu" type="VBoxContainer"]
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_3yqal")
+
+[node name="GameTitle" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -126.0
+offset_top = 200.0
+offset_right = 126.0
+offset_bottom = 231.0
+grow_horizontal = 2
+text = "Dodge"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MainMenu" type="VBoxContainer" parent="."]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -17,26 +41,19 @@ offset_right = 37.5
 offset_bottom = 46.5
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_3yqal")
 alignment = 1
 
-[node name="GameTitle" type="Label" parent="."]
-layout_mode = 2
-text = "Dodge"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="LevelSelector" parent="." instance=ExtResource("1_mym05")]
+[node name="LevelSelector" parent="MainMenu" instance=ExtResource("1_mym05")]
 layout_mode = 2
 
-[node name="ChangeSceneButton" type="Button" parent="."]
+[node name="ChangeSceneButton" type="Button" parent="MainMenu"]
 layout_mode = 2
 text = "Sandbox
 "
 script = ExtResource("1_qusho")
 file_path = "res://src/levels/sandbox.tscn"
 
-[node name="QuitButton" type="Button" parent="."]
+[node name="QuitButton" type="Button" parent="MainMenu"]
 layout_mode = 2
 text = "Quit"
 script = ExtResource("2_mxf2y")

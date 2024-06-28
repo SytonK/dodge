@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://3swy431y7di3"]
+[gd_scene load_steps=4 format=3 uid="uid://3swy431y7di3"]
 
 [ext_resource type="Script" path="res://src/UI/components/level selector/level_selector.gd" id="1_8godn"]
+[ext_resource type="Texture2D" uid="uid://cwg8cbqjt73qi" path="res://assets/UI/stars/empty_star.png" id="2_te5m0"]
 [ext_resource type="Script" path="res://src/UI/components/new scene button/new_scene_button.gd" id="2_vwwec"]
 
 [node name="LevelSelector" type="VBoxContainer"]
@@ -17,12 +18,21 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8godn")
 
-[node name="ScoreLabel" type="Label" parent="."]
-visible = false
+[node name="ScoreUI" type="HBoxContainer" parent="."]
 layout_mode = 2
-text = "score: 0"
-horizontal_alignment = 1
-vertical_alignment = 1
+alignment = 1
+
+[node name="Star0" type="TextureRect" parent="ScoreUI"]
+layout_mode = 2
+texture = ExtResource("2_te5m0")
+
+[node name="Star1" type="TextureRect" parent="ScoreUI"]
+layout_mode = 2
+texture = ExtResource("2_te5m0")
+
+[node name="Star2" type="TextureRect" parent="ScoreUI"]
+layout_mode = 2
+texture = ExtResource("2_te5m0")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 2
