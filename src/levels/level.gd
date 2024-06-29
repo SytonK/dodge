@@ -13,7 +13,8 @@ const NORMAL_COLOR: Color = Color(1,1,0)
 const HARD_COLOR: Color = Color(1,0,0)
 const ENDLESS_COLOR: Color = Color(0.2,0.9,0.7)
 
-const MUSIC_VOLUME_DIM_DURATION: float = 2
+const MUSIC_VOLUME_DIM_WEIGTH: float = 2
+const MUSIC_VOLUME_DIM_WEIGTH_GAME_OVER: float = 0.2
 const MUSIC_VOLUME_DIM_VALUE: float = -15
 
 const LEVEL_WALLS = preload("res://src/levels/envierment/level_walls.tscn")
@@ -108,16 +109,16 @@ func _on_level_timer_timeout() -> void:
 	_music_down()
 	time_label.text = str(time_left)
 
-
 func _music_down() -> void:
-	if time_left == 2 && current_difficulty != ENDLESEE && current_difficulty != HARD:
+	if game_over || (time_left == 2 && current_difficulty != ENDLESEE && current_difficulty != HARD):
 		var tween = get_tree().create_tween()
-		tween.tween_property(music_player, "volume_db", MUSIC_VOLUME_DIM_VALUE, MUSIC_VOLUME_DIM_DURATION)
+		tween.tween_property(music_player, "volume_db", MUSIC_VOLUME_DIM_VALUE, 
+			MUSIC_VOLUME_DIM_WEIGTH_GAME_OVER if game_over else MUSIC_VOLUME_DIM_WEIGTH)
 
 func _music_up() -> void:
 	if current_difficulty != ENDLESEE:
 		var tween = get_tree().create_tween()
-		tween.tween_property(music_player, "volume_db", 0, MUSIC_VOLUME_DIM_DURATION)
+		tween.tween_property(music_player, "volume_db", 0, MUSIC_VOLUME_DIM_WEIGTH)
 
 
 func _next_difficulty() -> void:
@@ -153,8 +154,8 @@ func _to_endless() -> void:
 
 func _on_game_over() -> void:
 	audio_stream_player.play()
-	_music_down()
 	game_over = true
+	_music_down()
 
 func _slow_engine_on_game_over() -> void:
 	if !game_over:
