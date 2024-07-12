@@ -41,6 +41,7 @@ offset_right = 37.5
 offset_bottom = 46.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 8
 alignment = 1
 
 [node name="LevelSelector" parent="MainMenu" instance=ExtResource("1_mym05")]
@@ -52,6 +53,12 @@ text = "Sandbox
 "
 script = ExtResource("1_qusho")
 file_path = "res://src/levels/sandbox.tscn"
+
+[node name="SettingsMenu" type="Button" parent="MainMenu"]
+layout_mode = 2
+text = "settings"
+script = ExtResource("1_qusho")
+file_path = "res://src/UI/menus/settings/settings_menu.tscn"
 
 [node name="QuitButton" type="Button" parent="MainMenu"]
 layout_mode = 2
