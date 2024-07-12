@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0f7wp658evg6"]
+[gd_scene load_steps=4 format=3 uid="uid://d0f7wp658evg6"]
 
 [ext_resource type="Theme" uid="uid://bgdcd6x4oip32" path="res://resources/theme/base_theme.tres" id="1_1t4q4"]
+[ext_resource type="Script" path="res://src/UI/menus/settings/audio/audio slider/audio_slider.gd" id="2_ayami"]
 [ext_resource type="PackedScene" uid="uid://cwjr4tughu8j3" path="res://src/UI/menus/settings/audio/mute button/mute_button.tscn" id="2_ds4v7"]
 
 [node name="AudioMenu" type="Control"]
@@ -24,12 +25,22 @@ alignment = 1
 
 [node name="Master" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_constants/separation = 64
 
 [node name="Label" type="Label" parent="VBoxContainer/Master"]
-custom_minimum_size = Vector2(400, 0)
+custom_minimum_size = Vector2(350, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 64
 text = "master"
+
+[node name="AudioSlider" type="HSlider" parent="VBoxContainer/Master"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = -30.0
+max_value = 10.0
+script = ExtResource("2_ayami")
+bus_name = "Master"
 
 [node name="MuteButton" parent="VBoxContainer/Master" instance=ExtResource("2_ds4v7")]
 layout_mode = 2
@@ -37,12 +48,22 @@ bus_name = "Master"
 
 [node name="Music" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_constants/separation = 64
 
 [node name="Label" type="Label" parent="VBoxContainer/Music"]
-custom_minimum_size = Vector2(400, 0)
+custom_minimum_size = Vector2(350, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 64
 text = "music"
+
+[node name="AudioSlider" type="HSlider" parent="VBoxContainer/Music"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = -30.0
+max_value = 10.0
+script = ExtResource("2_ayami")
+bus_name = "Music"
 
 [node name="MuteButton" parent="VBoxContainer/Music" instance=ExtResource("2_ds4v7")]
 layout_mode = 2
@@ -50,12 +71,22 @@ bus_name = "Music"
 
 [node name="SFX" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_constants/separation = 64
 
 [node name="Label" type="Label" parent="VBoxContainer/SFX"]
-custom_minimum_size = Vector2(400, 0)
+custom_minimum_size = Vector2(350, 0)
 layout_mode = 2
 theme_override_font_sizes/font_size = 64
 text = "effects"
+
+[node name="AudioSlider" type="HSlider" parent="VBoxContainer/SFX"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = -30.0
+max_value = 10.0
+script = ExtResource("2_ayami")
+bus_name = "SFX"
 
 [node name="MuteButton" parent="VBoxContainer/SFX" instance=ExtResource("2_ds4v7")]
 layout_mode = 2
