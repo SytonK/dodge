@@ -97,6 +97,7 @@ func _add_music_player() -> void:
 
 func _add_level_sounds() -> void:
 	audio_stream_player = AudioStreamPlayer.new()
+	audio_stream_player.bus = 'SFX'
 	audio_stream_player.stream = LOSE_SOUND
 	audio_stream_player.process_mode = Node.PROCESS_MODE_ALWAYS
 	add_child(audio_stream_player)

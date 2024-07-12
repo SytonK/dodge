@@ -14,7 +14,8 @@ enum MUSIC_LEVEL {
 }
 
 
-func _ready() -> void: 
+func _ready() -> void:
+	bus = 'Music'
 	set_music(MUSIC_LEVEL.EASY)
 
 
