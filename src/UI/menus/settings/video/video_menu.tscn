@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://hr45rmwyom6f"]
+
+[ext_resource type="Texture2D" uid="uid://clhxqjd0cmg7h" path="res://assets/icons/unchecked.png" id="1_c34w7"]
+[ext_resource type="Theme" uid="uid://bgdcd6x4oip32" path="res://resources/theme/base_theme.tres" id="1_uwrts"]
+[ext_resource type="Script" path="res://src/UI/menus/settings/video/video_menu.gd" id="2_0t02f"]
+[ext_resource type="Texture2D" uid="uid://bfmq10ffonh1f" path="res://assets/icons/checked.png" id="2_ucs11"]
+
+[node name="VideoMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_uwrts")
+script = ExtResource("2_0t02f")
+
+[node name="ScreenShake" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 32
+
+[node name="Label" type="Label" parent="ScreenShake"]
+layout_mode = 2
+text = "screen shake"
+
+[node name="ScreenShakeButton" type="TextureButton" parent="ScreenShake"]
+layout_mode = 2
+toggle_mode = true
+texture_normal = ExtResource("1_c34w7")
+texture_pressed = ExtResource("2_ucs11")
+
+[connection signal="pressed" from="ScreenShake/ScreenShakeButton" to="." method="_on_screen_shake_button_pressed"]
