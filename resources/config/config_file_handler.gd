@@ -44,7 +44,7 @@ func _load_audio_settings() -> void:
 
 
 func _set_default_video_settings() -> void:
-	config_file.set_value("video", "screen_shake", false)
+	config_file.set_value("video", "screen_shake", true)
 
 func save_video_settings(key: String, value):
 	config_file.set_value('video', key, value)

@@ -20,5 +20,6 @@ func _process(delta: float) -> void:
 
 
 func shake() -> void:
-	curr_shake_strength = shake_strength
+	if ConfigFileHandler.screen_shake:
+		curr_shake_strength = shake_strength
 
