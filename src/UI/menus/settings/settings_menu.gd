@@ -6,6 +6,12 @@ extends Control
 
 @onready var curr_settings_menu: Control = audio_menu : set = _set_curr_settings_menu
 
+@onready var audio_button: Button = $VBoxContainer/SettingsSelector/AudioButton
+
+
+func _ready() -> void:
+	audio_button.grab_focus()
+
 
 func _on_audio_button_pressed() -> void:
 	curr_settings_menu = audio_menu
