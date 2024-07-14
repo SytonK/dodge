@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://c4ijp0jd2r1y2"]
+[gd_scene load_steps=4 format=3 uid="uid://c4ijp0jd2r1y2"]
 
 [ext_resource type="Script" path="res://src/enemies attacks/projectiles/bullet/bullet.gd" id="1_gv3sv"]
+[ext_resource type="Texture2D" uid="uid://jaachtep2ksv" path="res://assets/in game/bullet.png" id="2_fenar"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2xhtv"]
 size = Vector2(32, 8)
@@ -8,10 +9,11 @@ size = Vector2(32, 8)
 [node name="Bullet" type="Area2D"]
 script = ExtResource("1_gv3sv")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("2_fenar")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_2xhtv")
-
-[node name="Polygon2D" type="Polygon2D" parent="."]
-polygon = PackedVector2Array(16, -4, 16, 4, -16, 4, -16, -4)
 
 [connection signal="hit" from="." to="." method="_on_hit"]
