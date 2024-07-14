@@ -22,7 +22,7 @@ const DIRECTIONS: Array[Vector2] = [
 @export var frequency: float
 @onready var timer: Timer
 
-var bullet_color: Color = Color(1, 1, 0)
+var bullet_color: Color = Color(0.9, 0.9, 0)
 
 
 func _ready() -> void:
