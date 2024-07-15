@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://cpw5rkjet4364"]
+[gd_scene load_steps=3 format=3 uid="uid://cpw5rkjet4364"]
 
 [ext_resource type="Script" path="res://src/levels/level.gd" id="1_tvtlc"]
-[ext_resource type="Texture2D" uid="uid://jaachtep2ksv" path="res://assets/in game/bullet.png" id="2_n3v8e"]
 
 [sub_resource type="Environment" id="Environment_pqxxa"]
 background_mode = 3
@@ -16,8 +15,3 @@ hard_time = 5
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_pqxxa")
-
-[node name="Bullet" type="Sprite2D" parent="."]
-modulate = Color(1.2, 0.2, 0.3, 1)
-position = Vector2(543, 466)
-texture = ExtResource("2_n3v8e")
