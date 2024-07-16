@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://src/enemies/characters/chaser/chaser.gd" id="1_48q38"]
 [ext_resource type="Script" path="res://src/components/hitbox and hurtbox/hitbox/hitbox.gd" id="1_y8442"]
-[ext_resource type="Texture2D" uid="uid://bnemfbyvswhrx" path="res://assets/in game/tringle.png" id="2_auyk6"]
+[ext_resource type="Texture2D" uid="uid://bnemfbyvswhrx" path="res://assets/in game/chaser.png" id="2_auyk6"]
 
 [sub_resource type="Animation" id="Animation_21pnn"]
 length = 0.001
