@@ -19,7 +19,7 @@ func _to_normal() -> void:
 
 func _to_hard() -> void:
 	super._to_hard()
-	lava_spawner.frequency = 0.25
+	lava_spawner.frequency = 0.35
 	lava_spawner_random_position.lava_polygon = [Vector2(0,30), Vector2(20,20), Vector2(30,0), Vector2(20,-20)
 		,Vector2(0,-30), Vector2(-20,-20), Vector2(-30,0), Vector2(-20,20)]
 	lava_spawner_random_position.frequency = 0.5
