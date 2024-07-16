@@ -17,7 +17,7 @@ const MUSIC_VOLUME_DIM_WEIGTH: float = 2
 const MUSIC_VOLUME_DIM_WEIGTH_GAME_OVER: float = 0.2
 const MUSIC_VOLUME_DIM_VALUE: float = -15
 
-const LEVEL_WALLS = preload("res://src/levels/envierment/level_walls.tscn")
+const LEVEL_ENVIERMENT = preload("res://src/levels/envierment/level_envierment.tscn")
 
 @export var easy_time: int
 @export var normal_time: int
@@ -61,9 +61,9 @@ func _process(_delta: float) -> void:
 
 
 func _add_level_envierments() -> void:
-	var level_env = LEVEL_WALLS.instantiate()
-	add_child(level_env)
-	move_child(level_env, 0)
+	var level_envierment = LEVEL_ENVIERMENT.instantiate()
+	add_child(level_envierment)
+	move_child(level_envierment, 0)
 
 func _add_camera() -> void:
 	camera = Camera.new()
