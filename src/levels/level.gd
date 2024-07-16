@@ -61,7 +61,9 @@ func _process(_delta: float) -> void:
 
 
 func _add_level_envierments() -> void:
-	add_child(LEVEL_WALLS.instantiate())
+	var level_env = LEVEL_WALLS.instantiate()
+	add_child(level_env)
+	move_child(level_env, 0)
 
 func _add_camera() -> void:
 	camera = Camera.new()
