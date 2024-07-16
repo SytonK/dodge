@@ -3,9 +3,12 @@ extends StaticBody2D
 
 
 const BULLET = preload("res://src/enemies attacks/projectiles/bullet/bullet.tscn")
+const DISABLED_COLOR: Color = Color(0.3, 0.05, 0.05)
+const ACTIVE_COLOR: Color = Color(0.8, 0.15, 0.15)
+
 
 @export var disabled: bool = false : set = _set_disabled
-@onready var polygon_2d: Polygon2D = $Polygon2D
+@onready var sprite_2d: Sprite2D = $Sprite2D
 
 @export var speed: float
 @export var frequency: float
@@ -21,8 +24,8 @@ func _ready() -> void:
 
 func _set_disabled(new_disabled: bool) -> void:
 	disabled = new_disabled
-	if polygon_2d:
-		polygon_2d.color = Color(0.2, 0, 0) if disabled else Color(0.9, 0.1, 0.1)
+	if sprite_2d:
+		sprite_2d.modulate = DISABLED_COLOR if disabled else ACTIVE_COLOR
 	if timer:
 		if disabled:
 			timer.stop()
