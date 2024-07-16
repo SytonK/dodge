@@ -3,6 +3,7 @@ extends StaticBody2D
 
 
 const BULLET = preload("res://src/enemies attacks/projectiles/bullet/bullet.tscn")
+
 const DISABLED_COLOR: Color = Color(0.3, 0.05, 0.05)
 const ACTIVE_COLOR: Color = Color(0.8, 0.15, 0.15)
 
