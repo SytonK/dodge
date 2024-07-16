@@ -1,7 +1,7 @@
 [gd_resource type="Theme" load_steps=2 format=3 uid="uid://bgdcd6x4oip32"]
 
-[ext_resource type="FontFile" uid="uid://jfnqa1o5kioc" path="res://assets/UI/fonts/Neon machine.ttf" id="1_xos2r"]
+[ext_resource type="FontFile" uid="uid://clnx34h455dph" path="res://assets/UI/fonts/default font.ttf" id="1_28brm"]
 
 [resource]
-default_font = ExtResource("1_xos2r")
+default_font = ExtResource("1_28brm")
 default_font_size = 28

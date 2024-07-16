@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://jfnqa1o5kioc"
-path="res://.godot/imported/Neon machine.ttf-f41cfc69e2a33c597dd14522ac5e70d2.fontdata"
+uid="uid://clnx34h455dph"
+path="res://.godot/imported/default font.ttf-b13694c2c8dff79ace3ab3cce0a82f2b.fontdata"
 
 [deps]
 
-source_file="res://assets/UI/fonts/Neon machine.ttf"
-dest_files=["res://.godot/imported/Neon machine.ttf-f41cfc69e2a33c597dd14522ac5e70d2.fontdata"]
+source_file="res://assets/UI/fonts/default font.ttf"
+dest_files=["res://.godot/imported/default font.ttf-b13694c2c8dff79ace3ab3cce0a82f2b.fontdata"]
 
 [params]
 
