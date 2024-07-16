@@ -7,8 +7,8 @@
 [node name="Level0" type="Node2D"]
 script = ExtResource("1_wr4gx")
 easy_time = 10
-normal_time = 10
-hard_time = 15
+normal_time = 15
+hard_time = 20
 
 [node name="TargetPlayerTowerLeft" parent="." instance=ExtResource("2_hde1d")]
 position = Vector2(-650, 0)
