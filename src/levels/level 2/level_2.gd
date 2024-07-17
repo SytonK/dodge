@@ -22,6 +22,7 @@ func _to_normal() -> void:
 func _to_hard() -> void:
 	super._to_hard()
 	chaser.movement_speed = 400
+	chaser.leavse_spike_trail = true
 	global_bullet_spawner_parallal_direction.frequency = 0.3
 	global_bullet_spawner_parallal_direction.speed = 450
 	global_bullet_spawner.frequency = 0.7
@@ -30,5 +31,4 @@ func _to_hard() -> void:
 	parallal_tower.speed = 500 
 	target_player_tower_left.frequency = 0.25
 	target_player_tower_right.speed = 750
-	chaser.leavse_fire_trail = true
 	

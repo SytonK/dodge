@@ -2,15 +2,21 @@ class_name Chaser
 extends CharacterBody2D
 
 
+const SPIKE = preload("res://src/enemies attacks/spike/spike.tscn")
+
 @export var movement_speed: float
 
 @export var is_recovering: bool = false
 @onready var animation_player = $AnimationPlayer
 
-@export var leavse_fire_trail: bool = false
+@export var leavse_spike_trail: bool = false
 @export var trail_duration: float
-@export var trail_polygon: PackedVector2Array
+@export var trail_frequency: float = 0
+var spiketrail_timer: Timer
 
+
+func _ready() -> void:
+	_init_spike()
 
 func _process(_delta: float) -> void:
 	if !is_recovering:
@@ -23,20 +29,21 @@ func _chase_player() -> void:
 
 
 func _on_hitbox_hit():
-	print('recover')
 	animation_player.play("recover")
 
 
-func _leave_fire_trial() -> void:
-	var new_fire: Fire = Fire.new()
-	new_fire.top_level = true
-	new_fire.lifetime = trail_duration
-	new_fire.position = position
-	new_fire.polygon_packed_vector_array = trail_polygon
-	new_fire.polygon_color = Color(0.7, 0.1, 0.1)
-	add_child(new_fire)
+func _init_spike() -> void:
+	if trail_frequency > 0:
+		spiketrail_timer = Timer.new()
+		spiketrail_timer.wait_time = trail_frequency
+		spiketrail_timer.timeout.connect(_on_spiketrail_timer_timeout)
+		add_child(spiketrail_timer)
+		spiketrail_timer.start()
 
-
-func _on_firetrail_timer_timeout() -> void:
-	if leavse_fire_trail:
-		_leave_fire_trial()
+func _on_spiketrail_timer_timeout() -> void:
+	if leavse_spike_trail:
+		var new_spike: Spike = SPIKE.instantiate()
+		new_spike.top_level = true
+		new_spike.lifetime = trail_duration
+		new_spike.position = position
+		add_child(new_spike)

@@ -35,8 +35,8 @@ frequency = 1.0
 [node name="chaser" parent="." instance=ExtResource("2_rn1v3")]
 position = Vector2(-500, -200)
 movement_speed = 250.0
-trail_duration = 3.0
-trail_polygon = PackedVector2Array(10, -10, 10, 10, -10, 10, -10, -10)
+trail_duration = 4.0
+trail_frequency = 0.15
 
 [node name="GlobalBulletSpawnerParallalDirection" type="Node2D" parent="."]
 script = ExtResource("5_8nyrd")
