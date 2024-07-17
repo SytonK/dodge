@@ -91,4 +91,7 @@ libraries = {
 "": SubResource("AnimationLibrary_114cg")
 }
 
+[node name="SpikeMarker" type="Marker2D" parent="."]
+position = Vector2(-28, 0)
+
 [connection signal="hit" from="Hitbox" to="." method="_on_hitbox_hit"]

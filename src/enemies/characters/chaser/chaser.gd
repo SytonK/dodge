@@ -13,6 +13,7 @@ const SPIKE = preload("res://src/enemies attacks/spike/spike.tscn")
 @export var trail_duration: float
 @export var trail_frequency: float = 0
 var spiketrail_timer: Timer
+@onready var spike_marker: Marker2D = $SpikeMarker
 
 
 func _ready() -> void:
@@ -45,5 +46,5 @@ func _on_spiketrail_timer_timeout() -> void:
 		var new_spike: Spike = SPIKE.instantiate()
 		new_spike.top_level = true
 		new_spike.lifetime = trail_duration
-		new_spike.position = position
+		new_spike.position = spike_marker.global_position
 		add_child(new_spike)
