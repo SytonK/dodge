@@ -12,3 +12,5 @@ func _process(delta: float) -> void:
 		queue_free()
 
 
+func _on_hit() -> void:
+	queue_free()
