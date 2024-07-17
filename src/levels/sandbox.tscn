@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cpw5rkjet4364"]
+[gd_scene load_steps=4 format=3 uid="uid://cpw5rkjet4364"]
 
 [ext_resource type="Script" path="res://src/levels/level.gd" id="1_tvtlc"]
+[ext_resource type="PackedScene" uid="uid://bi8ccuhy8gxha" path="res://src/enemies/towers/parallal tower/parallal_tower.tscn" id="2_wt0gg"]
 
 [sub_resource type="Environment" id="Environment_pqxxa"]
 background_mode = 3
@@ -15,3 +16,7 @@ hard_time = 5
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_pqxxa")
+
+[node name="ParallalTower" parent="." instance=ExtResource("2_wt0gg")]
+speed = 300.0
+frequency = 1.0

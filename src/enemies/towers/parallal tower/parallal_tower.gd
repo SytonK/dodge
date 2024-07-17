@@ -8,14 +8,12 @@ const DISABLED_COLOR: Color = Color(0.25, 0.25, 0.05)
 const ACTIVE_COLOR: Color = Color(0.8, 0.8, 0.15)
 
 const DIRECTIONS: Array[Vector2] = [
+	Vector2(1, 0),
 	Vector2(1, -2),
-	Vector2(2, -1),
-	Vector2(2, 1),
-	Vector2(1, 2),
+	Vector2(-1, -2),
+	Vector2(-1, 0),
 	Vector2(-1, 2),
-	Vector2(-2, 1),
-	Vector2(-2, -1),
-	Vector2(-1, -2)
+	Vector2(1, 2),
 ]
 
 @export var disabled: bool = false : set = _set_disabled
