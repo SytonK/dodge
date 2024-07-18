@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cpw5rkjet4364"]
+[gd_scene load_steps=4 format=3 uid="uid://cpw5rkjet4364"]
 
 [ext_resource type="Script" path="res://src/levels/level.gd" id="1_tvtlc"]
 [ext_resource type="Script" path="res://src/enemies/global enemies/global hazard spawner/global_hazard_spawner.gd" id="2_xiddm"]
+[ext_resource type="Script" path="res://src/enemies/global enemies/global bullet spawner/global_bullet_spawner.gd" id="3_24eyn"]
 
 [node name="Sandbox" type="Node2D"]
 script = ExtResource("1_tvtlc")
@@ -14,3 +15,8 @@ script = ExtResource("2_xiddm")
 frequency = 3.0
 lifetime = 10.0
 setup_time = 2.0
+
+[node name="GlobalBulletSpawner" type="Node2D" parent="."]
+script = ExtResource("3_24eyn")
+speed = 300.0
+frequency = 0.5

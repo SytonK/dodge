@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://ybfx2sl8mxrp"]
+[gd_scene load_steps=5 format=3 uid="uid://ybfx2sl8mxrp"]
 
 [ext_resource type="Script" path="res://src/levels/level 3/level_3.gd" id="1_53vhh"]
+[ext_resource type="Script" path="res://src/enemies/global enemies/global hazard spawner/global_hazard_spawner.gd" id="2_5sgdb"]
+[ext_resource type="Script" path="res://src/enemies/global enemies/global bullet spawner/global_bullet_spawner.gd" id="3_oaoxg"]
+[ext_resource type="Script" path="res://src/enemies/global enemies/global bullet spawner/parallal/global_bullet_spawner_parallal_direction.gd" id="4_a5j0l"]
 
 [node name="Level3" type="Node2D"]
 script = ExtResource("1_53vhh")
@@ -8,3 +11,19 @@ easy_time = 20
 normal_time = 25
 hard_time = 25
 level_number = 3
+
+[node name="GlobalHazardSpawner" type="Node2D" parent="."]
+script = ExtResource("2_5sgdb")
+frequency = 2.0
+lifetime = 6.0
+setup_time = 1.0
+
+[node name="GlobalBulletSpawner" type="Node2D" parent="."]
+script = ExtResource("3_oaoxg")
+speed = 400.0
+frequency = 0.3
+
+[node name="GlobalBulletSpawnerParallalDirection" type="Node2D" parent="."]
+script = ExtResource("4_a5j0l")
+speed = 300.0
+frequency = 0.2
