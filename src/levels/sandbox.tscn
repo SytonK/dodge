@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://cpw5rkjet4364"]
 
 [ext_resource type="Script" path="res://src/levels/level.gd" id="1_tvtlc"]
-[ext_resource type="PackedScene" uid="uid://b2h0vcalj77yu" path="res://src/enemies/characters/chaser/chaser.tscn" id="2_dguxn"]
+[ext_resource type="PackedScene" uid="uid://byb65lbpo2jm0" path="res://src/enemies attacks/attack with lifetime/hazard/hazard.tscn" id="2_6552w"]
 
 [node name="Sandbox" type="Node2D"]
 script = ExtResource("1_tvtlc")
@@ -9,8 +9,7 @@ easy_time = 5
 normal_time = 5
 hard_time = 5
 
-[node name="chaser" parent="." instance=ExtResource("2_dguxn")]
-movement_speed = 200.0
-leavse_spike_trail = true
-trail_duration = 5.0
-trail_frequency = 0.5
+[node name="hazard" parent="." instance=ExtResource("2_6552w")]
+position = Vector2(202, -147)
+setup_time = 5.0
+lifetime = 10.0
