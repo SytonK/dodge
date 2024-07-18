@@ -1,4 +1,4 @@
-class_name Spike
+class_name LifetimeAttack
 extends Hitbox
 
 
@@ -10,7 +10,3 @@ func _process(delta: float) -> void:
 	curr_lifetime += delta
 	if curr_lifetime > lifetime:
 		queue_free()
-
-
-func _on_hit() -> void:
-	queue_free()

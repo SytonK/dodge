@@ -2,7 +2,7 @@ class_name Chaser
 extends CharacterBody2D
 
 
-const SPIKE = preload("res://src/enemies attacks/spike/spike.tscn")
+const SPIKE = preload("res://src/enemies attacks/attack with lifetime/spike/spike.tscn")
 
 @export var movement_speed: float
 
