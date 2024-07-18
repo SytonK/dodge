@@ -1,7 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://byb65lbpo2jm0"]
+[gd_scene load_steps=4 format=3 uid="uid://byb65lbpo2jm0"]
 
 [ext_resource type="Script" path="res://src/enemies attacks/attack with lifetime/hazard/hazard.gd" id="1_qm4lu"]
 [ext_resource type="Texture2D" uid="uid://bpm3njr60dgyh" path="res://assets/in game/hazard.png" id="2_vd1bv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ai04r"]
+radius = 60.0
 
 [node name="hazard" type="Area2D"]
 monitoring = false
@@ -13,5 +16,5 @@ self_modulate = Color(0.3, 0.9, 0.2, 0)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_vd1bv")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(54, 0, 60, 28, 48, 47, 22, 56, 0, 41, -21, 56, -49, 47, -60, 28, -54, 0, -30, -11, -34, -36, -11, -57, 12, -57, 33, -37, 30, -11)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ai04r")
