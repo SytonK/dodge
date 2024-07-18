@@ -1,8 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://ybfx2sl8mxrp"]
+[gd_scene load_steps=2 format=3 uid="uid://ybfx2sl8mxrp"]
 
 [ext_resource type="Script" path="res://src/levels/level 3/level_3.gd" id="1_53vhh"]
-[ext_resource type="Script" path="res://src/enemies/global enemies/global bullet spawner/global_bullet_spawner.gd" id="3_sn0tj"]
-[ext_resource type="Script" path="res://src/enemies/global enemies/global bullet spawner/parallal/global_bullet_spawner_parallal_direction.gd" id="4_l5ngj"]
 
 [node name="Level3" type="Node2D"]
 script = ExtResource("1_53vhh")
@@ -10,13 +8,3 @@ easy_time = 20
 normal_time = 25
 hard_time = 25
 level_number = 3
-
-[node name="GlobalBulletSpawner" type="Node2D" parent="."]
-script = ExtResource("3_sn0tj")
-speed = 300.0
-frequency = 0.3
-
-[node name="GlobalBulletSpawnerParallalDirection" type="Node2D" parent="."]
-script = ExtResource("4_l5ngj")
-speed = 600.0
-frequency = 1.0
