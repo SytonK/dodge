@@ -9,14 +9,9 @@ monitorable = false
 script = ExtResource("1_qm4lu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-self_modulate = Color(0.3, 0.6, 0.1, 0)
+self_modulate = Color(0.3, 0.9, 0.2, 0)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_vd1bv")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(54, 0, 60, 28, 48, 47, 22, 56, 0, 41, -21, 56, -49, 47, -60, 28, -54, 0, -30, -11, -34, -36, -11, -57, 12, -57, 33, -37, 30, -11)
-
-[node name="SetupTimer" type="Timer" parent="."]
-autostart = true
-
-[connection signal="timeout" from="SetupTimer" to="." method="_on_setup_timer_timeout"]
