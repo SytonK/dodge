@@ -15,9 +15,11 @@ script = ExtResource("2_xiddm")
 frequency = 3.0
 lifetime = 10.0
 setup_time = 2.0
+hazard_scale = Vector2(2, 2)
 
 [node name="GlobalRandomPositionHazardSpawner" type="Node2D" parent="."]
 script = ExtResource("3_hq8y2")
 frequency = 1.0
 lifetime = 10.0
 setup_time = 1.0
+hazard_scale = Vector2(0.5, 1)
