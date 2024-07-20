@@ -3,12 +3,14 @@
 [ext_resource type="Script" path="res://src/enemies/timed attacker/towers/parallal tower/parallal_tower.gd" id="1_dw2c0"]
 [ext_resource type="Texture2D" uid="uid://dirlfr4yhxppt" path="res://assets/in game/parallal tower.png" id="2_xtvhq"]
 
-[node name="ParallalTower" type="StaticBody2D"]
+[node name="ParallalTower" type="Node2D"]
 script = ExtResource("1_dw2c0")
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(0, -26, 22, -12, 22, 12, 0, 26, -22, 12, -22, -12)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.125, 0.125)
 texture = ExtResource("2_xtvhq")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(0, -26, 22, -12, 22, 12, 0, 26, -22, 12, -22, -12)
