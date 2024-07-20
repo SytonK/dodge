@@ -18,4 +18,12 @@ func _to_normal() -> void:
 
 func _to_hard() -> void:
 	super._to_hard()
+	global_hazard_spawner.frequency = 0.5
+	global_random_position_hazard_spawner.frequency = 1.5
+	global_random_position_hazard_spawner.hazard_scale = Vector2(0.75, 0.75)
+	global_bullet_spawner.frequency = 0.3
+	global_bullet_spawner.speed = 450
+	fast_global_bullet_spawner.speed = 850
+	fast_global_bullet_spawner.frequency = 0.4
+	global_bullet_spawner_parallal_direction.frequency = 0.25
 

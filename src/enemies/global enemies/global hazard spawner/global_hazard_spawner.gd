@@ -5,7 +5,7 @@ extends Node2D
 const HAZARD = preload("res://src/enemies attacks/attack with lifetime/hazard/hazard.tscn")
 
 
-@export var frequency: float
+@export var frequency: float : set = _set_frequency
 var timer: Timer
 @export var lifetime: float
 @export var setup_time: float
@@ -24,7 +24,7 @@ func _init_timer() -> void:
 	timer = Timer.new()
 	timer.wait_time = frequency
 	timer.timeout.connect(_on_timer_timeout)
-	add_child(timer )
+	add_child(timer)
 	timer.start()
 
 
@@ -33,7 +33,7 @@ func _on_timer_timeout() -> void:
 	new_hazard.lifetime = lifetime
 	new_hazard.setup_time = setup_time
 	new_hazard.position = _get_new_hazard_position()
-	new_hazard.scale = Vector2(hazard_scale)
+	new_hazard.scale = hazard_scale
 	add_child(new_hazard)
 
 func _get_new_hazard_position() -> Vector2:
@@ -46,3 +46,9 @@ func _set_disabled(new_disabled: bool) -> void:
 			timer.stop()
 		else:
 			timer.start()
+
+func _set_frequency(new_frequency: float) -> void:
+	frequency = new_frequency
+	if timer && new_frequency > 0:
+		timer.wait_time = frequency
+		timer.start()
