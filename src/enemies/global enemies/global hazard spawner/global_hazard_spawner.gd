@@ -12,9 +12,12 @@ var timer: Timer
 
 @export var hazard_scale: Vector2 = Vector2(1,1)
 
+@export var disabled: bool = false : set = _set_disabled
+
 
 func _ready() -> void:
 	_init_timer()
+	_set_disabled(disabled)
 
 
 func _init_timer() -> void:
@@ -35,3 +38,11 @@ func _on_timer_timeout() -> void:
 
 func _get_new_hazard_position() -> Vector2:
 	return PlayerRef.player_ref.position
+
+func _set_disabled(new_disabled: bool) -> void:
+	disabled = new_disabled
+	if timer:
+		if disabled:
+			timer.stop()
+		else:
+			timer.start()
