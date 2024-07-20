@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://cpw5rkjet4364"]
 
 [ext_resource type="Script" path="res://src/levels/level.gd" id="1_tvtlc"]
-[ext_resource type="Script" path="res://src/enemies/global enemies/global hazard spawner/global_hazard_spawner.gd" id="2_xiddm"]
-[ext_resource type="Script" path="res://src/enemies/global enemies/global hazard spawner/random position/global_random_position_hazard_spawner.gd" id="3_hq8y2"]
+[ext_resource type="Script" path="res://src/enemies/timed attacker/global enemies/global hazard spawner/global_hazard_spawner.gd" id="2_xiddm"]
+[ext_resource type="Script" path="res://src/enemies/timed attacker/global enemies/global hazard spawner/random position/global_random_position_hazard_spawner.gd" id="3_hq8y2"]
 
 [node name="Sandbox" type="Node2D"]
 script = ExtResource("1_tvtlc")

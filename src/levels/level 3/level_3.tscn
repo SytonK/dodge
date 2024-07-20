@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://ybfx2sl8mxrp"]
 
 [ext_resource type="Script" path="res://src/levels/level 3/level_3.gd" id="1_53vhh"]
-[ext_resource type="Script" path="res://src/enemies/global enemies/global hazard spawner/global_hazard_spawner.gd" id="2_5sgdb"]
-[ext_resource type="Script" path="res://src/enemies/global enemies/global hazard spawner/random position/global_random_position_hazard_spawner.gd" id="3_ma6fv"]
-[ext_resource type="Script" path="res://src/enemies/global enemies/global bullet spawner/global_bullet_spawner.gd" id="3_oaoxg"]
-[ext_resource type="Script" path="res://src/enemies/global enemies/global bullet spawner/parallal/global_bullet_spawner_parallal_direction.gd" id="4_a5j0l"]
+[ext_resource type="Script" path="res://src/enemies/timed attacker/global enemies/global hazard spawner/global_hazard_spawner.gd" id="2_5sgdb"]
+[ext_resource type="Script" path="res://src/enemies/timed attacker/global enemies/global hazard spawner/random position/global_random_position_hazard_spawner.gd" id="3_ma6fv"]
+[ext_resource type="Script" path="res://src/enemies/timed attacker/global enemies/global bullet spawner/global_bullet_spawner.gd" id="3_oaoxg"]
+[ext_resource type="Script" path="res://src/enemies/timed attacker/global enemies/global bullet spawner/parallal/global_bullet_spawner_parallal_direction.gd" id="4_a5j0l"]
 
 [node name="Level3" type="Node2D"]
 script = ExtResource("1_53vhh")

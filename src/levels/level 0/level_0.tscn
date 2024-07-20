@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://8lgjouoqk0dh"]
 
 [ext_resource type="Script" path="res://src/levels/level 0/level_0.gd" id="1_wr4gx"]
-[ext_resource type="PackedScene" uid="uid://hm1pwd5uc2b4" path="res://src/enemies/towers/target player tower/target_player_tower.tscn" id="2_hde1d"]
-[ext_resource type="Script" path="res://src/enemies/global enemies/global bullet spawner/global_bullet_spawner.gd" id="3_2ckwp"]
+[ext_resource type="PackedScene" uid="uid://hm1pwd5uc2b4" path="res://src/enemies/timed attacker/towers/target player tower/target_player_tower.tscn" id="2_hde1d"]
+[ext_resource type="Script" path="res://src/enemies/timed attacker/global enemies/global bullet spawner/global_bullet_spawner.gd" id="3_2ckwp"]
 
 [node name="Level0" type="Node2D"]
 script = ExtResource("1_wr4gx")
