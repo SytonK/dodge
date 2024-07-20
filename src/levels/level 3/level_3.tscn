@@ -15,16 +15,16 @@ level_number = 3
 
 [node name="GlobalHazardSpawner" type="Node2D" parent="."]
 script = ExtResource("2_5sgdb")
-frequency = 2.0
 lifetime = 6.0
 setup_time = 1.0
+frequency = 2.0
 
 [node name="GlobalRandomPositionHazardSpawner" type="Node2D" parent="."]
 script = ExtResource("3_ma6fv")
-frequency = 2.0
 lifetime = 5.0
 setup_time = 1.0
 hazard_scale = Vector2(0.5, 0.5)
+frequency = 2.0
 disabled = true
 
 [node name="GlobalBulletSpawner" type="Node2D" parent="."]

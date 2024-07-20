@@ -1,34 +1,20 @@
 class_name GlobalHazardSpawner
-extends Node2D
+extends TimedAttacker
 
 
 const HAZARD = preload("res://src/enemies attacks/attack with lifetime/hazard/hazard.tscn")
 
 
-@export var frequency: float : set = _set_frequency
-var timer: Timer
 @export var lifetime: float
 @export var setup_time: float
 
 @export var hazard_scale: Vector2 = Vector2(1,1)
 
-@export var disabled: bool = false : set = _set_disabled
-
-
-func _ready() -> void:
-	_init_timer()
-	_set_disabled(disabled)
-
-
-func _init_timer() -> void:
-	timer = Timer.new()
-	timer.wait_time = frequency
-	timer.timeout.connect(_on_timer_timeout)
-	add_child(timer)
-	timer.start()
-
 
 func _on_timer_timeout() -> void:
+	_spawn_hazard()
+
+func _spawn_hazard() -> void:
 	var new_hazard: Hazard = HAZARD.instantiate()
 	new_hazard.lifetime = lifetime
 	new_hazard.setup_time = setup_time
@@ -38,17 +24,3 @@ func _on_timer_timeout() -> void:
 
 func _get_new_hazard_position() -> Vector2:
 	return PlayerRef.player_ref.position
-
-func _set_disabled(new_disabled: bool) -> void:
-	disabled = new_disabled
-	if timer:
-		if disabled:
-			timer.stop()
-		else:
-			timer.start()
-
-func _set_frequency(new_frequency: float) -> void:
-	frequency = new_frequency
-	if timer && new_frequency > 0:
-		timer.wait_time = frequency
-		timer.start()
