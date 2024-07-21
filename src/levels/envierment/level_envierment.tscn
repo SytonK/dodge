@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cy0r1nnyfoc00"]
+[gd_scene load_steps=6 format=3 uid="uid://cy0r1nnyfoc00"]
 
 [ext_resource type="Texture2D" uid="uid://b21w4viiqyp86" path="res://assets/background/background.jpg" id="1_dwcps"]
+[ext_resource type="PackedScene" uid="uid://5lgnpekb1gx3" path="res://src/levels/envierment/path follower/path_follower.tscn" id="2_xbsvb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i0424"]
 size = Vector2(1920, 32)
@@ -10,7 +11,7 @@ size = Vector2(32, 1080)
 
 [sub_resource type="Curve2D" id="Curve2D_uojn5"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 860, -440, 0, 0, 0, 0, 860, 440, 0, 0, 0, 0, -860, 440, 0, 0, 0, 0, -860, -440, 0, 0, 0, 0, 860, -440)
+"points": PackedVector2Array(0, 0, 35, 45, 860, -440, 35, -45, -35, 45, 860, 440, 35, 45, -35, -45, -860, 440, -35, 45, 35, -45, -860, -440, -35, -45, 0, 0, 860, -440)
 }
 point_count = 5
 
@@ -45,4 +46,10 @@ shape = SubResource("RectangleShape2D_fuhpf")
 curve = SubResource("Curve2D_uojn5")
 
 [node name="Line2D" type="Line2D" parent="Path2D"]
+visible = false
 points = PackedVector2Array(860, -440, 860, 440, -860, 440, -860, -440, 860, -440)
+
+[node name="PathFollower" parent="Path2D" instance=ExtResource("2_xbsvb")]
+position = Vector2(860, -440)
+rotation = 0.909753
+speed = 0.2
