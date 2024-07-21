@@ -11,9 +11,9 @@ size = Vector2(32, 1080)
 
 [sub_resource type="Curve2D" id="Curve2D_uojn5"]
 _data = {
-"points": PackedVector2Array(0, 0, 35, 45, 860, -440, 35, -45, -35, 45, 860, 440, 35, 45, -35, -45, -860, 440, -35, 45, 35, -45, -860, -440, -35, -45, 0, 0, 860, -440)
+"points": PackedVector2Array(0, 0, 0, 0, 860, -440, 0, 0, 0, 0, 860, 440, 0, 0, 0, 0, -860, 440, 0, 0, 0, 0, -860, -440, 0, 0, 0, 0, 860, -440.563, -35, -45, 0, 0, 860, -440)
 }
-point_count = 5
+point_count = 6
 
 [node name="LevelEnvierment" type="StaticBody2D"]
 
@@ -46,10 +46,10 @@ shape = SubResource("RectangleShape2D_fuhpf")
 curve = SubResource("Curve2D_uojn5")
 
 [node name="Line2D" type="Line2D" parent="Path2D"]
-visible = false
-points = PackedVector2Array(860, -440, 860, 440, -860, 440, -860, -440, 860, -440)
+points = PackedVector2Array(860, -440, 860, 440, -860, 440, -860, -440, 865, -440)
+default_color = Color(0.25, 0.25, 0.25, 0.5)
 
 [node name="PathFollower" parent="Path2D" instance=ExtResource("2_xbsvb")]
 position = Vector2(860, -440)
-rotation = 0.909753
+rotation = 1.5708
 speed = 0.2

@@ -1,10 +1,27 @@
-[gd_scene load_steps=3 format=3 uid="uid://5lgnpekb1gx3"]
+[gd_scene load_steps=6 format=3 uid="uid://5lgnpekb1gx3"]
 
 [ext_resource type="Script" path="res://src/levels/envierment/path follower/path_follower.gd" id="1_kmryg"]
 [ext_resource type="Texture2D" uid="uid://b4gm63i2w3sj2" path="res://icon.svg" id="2_x0miw"]
+[ext_resource type="Script" path="res://src/levels/envierment/path follower/trail/trail.gd" id="3_brycy"]
+
+[sub_resource type="Curve" id="Curve_o2dlb"]
+_data = [Vector2(0, 0.846154), 0.0, 0.0, 0, 0, Vector2(0.148718, 1), 0.0, 0.0, 0, 0, Vector2(0.502564, 0.747253), 0.0, 0.0, 0, 0, Vector2(1, 0.747253), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Gradient" id="Gradient_h32g0"]
+offsets = PackedFloat32Array(0, 0.354839, 0.709677, 1)
+colors = PackedColorArray(0.55, 0.85, 0.65, 1, 0.6, 0.7, 0.6, 1, 0.3, 0.5, 0.5, 0.5, 0.2, 0.65, 0.4, 0)
 
 [node name="PathFollower" type="PathFollow2D"]
 script = ExtResource("1_kmryg")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
 texture = ExtResource("2_x0miw")
+
+[node name="Trail" type="Line2D" parent="."]
+top_level = true
+width_curve = SubResource("Curve_o2dlb")
+gradient = SubResource("Gradient_h32g0")
+script = ExtResource("3_brycy")
+max_length = 120
