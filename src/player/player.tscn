@@ -86,27 +86,28 @@ visible = false
 shape = SubResource("RectangleShape2D_xnu0d")
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.1, 0.6, 0.7, 1)
 polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
 
 [node name="Health" type="Node2D" parent="."]
 
 [node name="Health1" type="Polygon2D" parent="Health"]
-color = Color(0, 1, 0, 1)
+color = Color(0.15, 0.8, 0.15, 1)
 polygon = PackedVector2Array(-12, 8, -12, -18, -18, -18, -18, 8)
 
 [node name="Health2" type="Polygon2D" parent="Health"]
 rotation = 1.5708
-color = Color(0, 1, 0, 1)
+color = Color(0.15, 0.8, 0.15, 1)
 polygon = PackedVector2Array(-12, 8, -12, -18, -18, -18, -18, 8)
 
 [node name="Health3" type="Polygon2D" parent="Health"]
 rotation = 3.14159
-color = Color(0, 1, 0, 1)
+color = Color(0.15, 0.8, 0.15, 1)
 polygon = PackedVector2Array(-12, 8, -12, -18, -18, -18, -18, 8)
 
 [node name="Health4" type="Polygon2D" parent="Health"]
 rotation = 4.71239
-color = Color(0, 1, 0, 1)
+color = Color(0.15, 0.8, 0.15, 1)
 polygon = PackedVector2Array(-12, 8, -12, -18, -18, -18, -18, 8)
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

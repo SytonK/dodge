@@ -2,7 +2,7 @@ class_name Player
 extends CharacterBody2D
 
 
-const NO_HEALTH_COLOR: Color = Color(0.15, 0.3, 0.15)
+const NO_HEALTH_COLOR: Color = Color(0.1, 0.2, 0.1)
 
 
 signal game_over
