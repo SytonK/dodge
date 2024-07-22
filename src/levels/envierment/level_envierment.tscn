@@ -46,7 +46,7 @@ shape = SubResource("RectangleShape2D_fuhpf")
 curve = SubResource("Curve2D_uojn5")
 
 [node name="Line2D" type="Line2D" parent="Path2D"]
-points = PackedVector2Array(860, -440, 860, 440, -860, 440, -860, -440, 865, -440)
+points = PackedVector2Array(860, -435, 860, 440, -860, 440, -860, -440, 865, -440)
 default_color = Color(0.25, 0.25, 0.25, 0.5)
 
 [node name="PathFollower" parent="Path2D" instance=ExtResource("2_xbsvb")]

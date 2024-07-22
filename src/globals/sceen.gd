@@ -4,8 +4,11 @@ class_name Screen
 const X: float = 1920
 const Y: float = 1080
 
-const X_SIZE: float = X/2 + 64 
-const Y_SIZE: float = Y/2 + 64
+const X_SIZE: float = X/2
+const Y_SIZE: float = Y/2
+
+const GAMEPLAY_X: float = 855
+const GAMEPLAY_Y: float = 435
 
 enum SIDE { left, right, top, bottom }
 
@@ -32,4 +35,4 @@ static func get_paralel_direction(position: Vector2) -> Vector2:
 		return Vector2(0,-position.y)
 
 static func get_random_position() -> Vector2:
-	return Vector2(randf_range(-X_SIZE,X_SIZE), randf_range(-Y_SIZE,Y_SIZE))
+	return Vector2(randf_range(-GAMEPLAY_X,GAMEPLAY_X), randf_range(-GAMEPLAY_Y,GAMEPLAY_Y))
