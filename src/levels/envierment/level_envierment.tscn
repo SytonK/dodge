@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cy0r1nnyfoc00"]
+[gd_scene load_steps=8 format=3 uid="uid://cy0r1nnyfoc00"]
 
 [ext_resource type="Texture2D" uid="uid://b21w4viiqyp86" path="res://assets/background/background.jpg" id="1_dwcps"]
 [ext_resource type="PackedScene" uid="uid://5lgnpekb1gx3" path="res://src/levels/envierment/path follower/path_follower.tscn" id="2_xbsvb"]
@@ -14,6 +14,12 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 860, -440, 0, 0, 0, 0, 860, 440, 0, 0, 0, 0, -860, 440, 0, 0, 0, 0, -860, -440, 0, 0, 0, 0, 860, -440.563, -35, -45, 0, 0, 860, -440)
 }
 point_count = 6
+
+[sub_resource type="Gradient" id="Gradient_xtdlb"]
+colors = PackedColorArray(0.3, 0.8, 0.2, 1, 0.25, 0.75, 0.5, 1)
+
+[sub_resource type="Gradient" id="Gradient_ovxy5"]
+colors = PackedColorArray(0.85, 0.85, 0.15, 1, 0.75, 0.7, 0.35, 1)
 
 [node name="LevelEnvierment" type="StaticBody2D"]
 
@@ -53,3 +59,11 @@ default_color = Color(0.25, 0.25, 0.25, 0.5)
 position = Vector2(860, -440)
 rotation = 1.5708
 speed = 0.2
+gradiant = SubResource("Gradient_xtdlb")
+
+[node name="PathFollower2" parent="Path2D" instance=ExtResource("2_xbsvb")]
+position = Vector2(-860.218, 439.832)
+rotation = -2.96537
+progress = 2600.28
+speed = 0.2
+gradiant = SubResource("Gradient_ovxy5")
