@@ -47,6 +47,8 @@ var audio_stream_player: AudioStreamPlayer
 @export var level_number: int
 var game_over: bool = false
 
+@export var level_envierment: LevelEnvierment
+
 func _ready() -> void:
 	_add_level_envierments()
 	_add_camera()
@@ -61,7 +63,7 @@ func _process(_delta: float) -> void:
 
 
 func _add_level_envierments() -> void:
-	var level_envierment = LEVEL_ENVIERMENT.instantiate()
+	level_envierment = LEVEL_ENVIERMENT.instantiate()
 	add_child(level_envierment)
 	move_child(level_envierment, 0)
 
@@ -133,6 +135,7 @@ func _next_difficulty() -> void:
 			_to_hard()
 		HARD:
 			_to_endless()
+	level_envierment.change_difficulty(current_difficulty)
 	_music_up()
 
 

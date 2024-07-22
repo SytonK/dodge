@@ -1,7 +1,27 @@
-[gd_scene load_steps=8 format=3 uid="uid://cy0r1nnyfoc00"]
+[gd_scene load_steps=15 format=3 uid="uid://cy0r1nnyfoc00"]
 
 [ext_resource type="Texture2D" uid="uid://b21w4viiqyp86" path="res://assets/background/background.jpg" id="1_dwcps"]
+[ext_resource type="Script" path="res://src/levels/envierment/level_envierment.gd" id="1_ro7al"]
 [ext_resource type="PackedScene" uid="uid://5lgnpekb1gx3" path="res://src/levels/envierment/path follower/path_follower.tscn" id="2_xbsvb"]
+
+[sub_resource type="Gradient" id="Gradient_o4as6"]
+colors = PackedColorArray(0.3, 0.8, 0.2, 1, 0.35, 0.7, 0.6, 1)
+
+[sub_resource type="Gradient" id="Gradient_3xkub"]
+colors = PackedColorArray(0.9, 0.9, 0.1, 1, 0.45, 0.75, 0.7, 1)
+
+[sub_resource type="Gradient" id="Gradient_3qft0"]
+colors = PackedColorArray(0.9, 0.1, 0.1, 1, 0.9, 0.4, 0.7, 1)
+
+[sub_resource type="Gradient" id="Gradient_2qo4f"]
+colors = PackedColorArray(0.3, 0.3, 0.8, 1, 0.4, 0.7, 0.7, 1)
+
+[sub_resource type="Gradient" id="Gradient_ogvdj"]
+colors = PackedColorArray(0.8, 0.3, 0.6, 1, 0.6, 0.35, 0.8, 1)
+
+[sub_resource type="Gradient" id="Gradient_75ws0"]
+offsets = PackedFloat32Array(0.00480769, 1)
+colors = PackedColorArray(0.35, 0.1, 0.45, 1, 0.4, 0, 0.2, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i0424"]
 size = Vector2(1920, 32)
@@ -16,12 +36,15 @@ _data = {
 point_count = 6
 
 [sub_resource type="Gradient" id="Gradient_xtdlb"]
-colors = PackedColorArray(0.3, 0.8, 0.2, 1, 0.25, 0.75, 0.5, 1)
+colors = PackedColorArray(0.3, 0.8, 0.2, 1, 0.5, 0.6, 0.7, 1)
 
 [sub_resource type="Gradient" id="Gradient_ovxy5"]
-colors = PackedColorArray(0.85, 0.85, 0.15, 1, 0.75, 0.7, 0.35, 1)
+colors = PackedColorArray(0.4, 0.6, 0.9, 1, 0.8, 0.65, 0.75, 1)
 
 [node name="LevelEnvierment" type="StaticBody2D"]
+script = ExtResource("1_ro7al")
+gradiants1 = Array[Gradient]([SubResource("Gradient_o4as6"), SubResource("Gradient_3xkub"), SubResource("Gradient_3qft0"), null])
+gradiants2 = Array[Gradient]([SubResource("Gradient_2qo4f"), SubResource("Gradient_ogvdj"), SubResource("Gradient_75ws0"), null])
 
 [node name="TextureRect" type="TextureRect" parent="."]
 self_modulate = Color(0.5, 0.5, 0.5, 1)
