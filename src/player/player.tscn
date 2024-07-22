@@ -86,7 +86,7 @@ visible = false
 shape = SubResource("RectangleShape2D_xnu0d")
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
-color = Color(0.1, 0.6, 0.7, 1)
+color = Color(0.2, 0.2, 0.6, 1)
 polygon = PackedVector2Array(8, -8, 8, 8, -8, 8, -8, -8)
 
 [node name="Health" type="Node2D" parent="."]
