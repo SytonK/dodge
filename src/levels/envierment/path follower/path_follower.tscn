@@ -5,8 +5,8 @@
 [ext_resource type="Script" path="res://src/levels/envierment/path follower/trail/trail.gd" id="3_brycy"]
 
 [sub_resource type="Curve" id="Curve_o2dlb"]
-_data = [Vector2(0, 0.846154), 0.0, 0.0, 0, 0, Vector2(0.148718, 1), 0.0, 0.0, 0, 0, Vector2(0.502564, 0.747253), 0.0, 0.0, 0, 0, Vector2(1, 0.747253), 0.0, 0.0, 0, 0]
-point_count = 4
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [sub_resource type="Gradient" id="Gradient_h32g0"]
 offsets = PackedFloat32Array(0, 0.354839, 0.709677, 1)
