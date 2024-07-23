@@ -109,6 +109,8 @@ func _add_level_sounds() -> void:
 
 func _on_level_timer_timeout() -> void:
 	time_left = time_left + (1 if current_difficulty == ENDLESEE else -1)
+	if current_difficulty != ENDLESEE:
+		level_envierment.set_new_speed(time_left)
 	if time_left < 0:
 		_next_difficulty()
 	_music_down()

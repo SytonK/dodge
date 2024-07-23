@@ -85,8 +85,8 @@ speed = 0.2
 gradiant = SubResource("Gradient_xtdlb")
 
 [node name="PathFollower2" parent="Path2D" instance=ExtResource("2_xbsvb")]
-position = Vector2(-860.218, 439.832)
-rotation = -2.96537
+position = Vector2(-860.215, 439.835)
+rotation = -2.96826
 progress = 2600.28
 speed = 0.2
 gradiant = SubResource("Gradient_ovxy5")
