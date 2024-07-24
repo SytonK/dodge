@@ -4,7 +4,7 @@ extends StaticBody2D
 
 const MAX_SPEED: float = 0.7
 const MAX_SPEED_REDUCE: float = 0.6
-const MAX_SECONDS_FOR_REDUCE: int = 30
+const MAX_SECONDS_FOR_REDUCE: int = 15
 
 
 @export var gradiants1: Array[Gradient]
