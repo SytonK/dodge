@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://cy0r1nnyfoc00"]
 
-[ext_resource type="Texture2D" uid="uid://b21w4viiqyp86" path="res://assets/background/background.jpg" id="1_dwcps"]
 [ext_resource type="Script" path="res://src/levels/envierment/level_envierment.gd" id="1_ro7al"]
+[ext_resource type="Texture2D" uid="uid://chdqju1vhyomv" path="res://assets/background/backgroung.png" id="2_nvt56"]
 [ext_resource type="PackedScene" uid="uid://5lgnpekb1gx3" path="res://src/levels/envierment/path follower/path_follower.tscn" id="2_xbsvb"]
 
 [sub_resource type="Gradient" id="Gradient_o4as6"]
@@ -47,13 +47,14 @@ gradiants1 = Array[Gradient]([SubResource("Gradient_o4as6"), SubResource("Gradie
 gradiants2 = Array[Gradient]([SubResource("Gradient_2qo4f"), SubResource("Gradient_ogvdj"), SubResource("Gradient_75ws0"), null])
 
 [node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.5, 0.5, 0.5, 1)
 self_modulate = Color(0.5, 0.5, 0.5, 1)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_dwcps")
+texture = ExtResource("2_nvt56")
 
 [node name="Up" type="CollisionShape2D" parent="."]
 position = Vector2(0, -451)
