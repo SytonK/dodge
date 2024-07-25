@@ -49,18 +49,18 @@ alignment = 1
 [node name="LevelSelector" parent="MainMenu" instance=ExtResource("1_mym05")]
 layout_mode = 2
 
-[node name="ChangeSceneButton" type="Button" parent="MainMenu"]
-layout_mode = 2
-text = "Sandbox
-"
-script = ExtResource("1_qusho")
-file_path = "res://src/levels/sandbox.tscn"
-
 [node name="SettingsMenu" type="Button" parent="MainMenu"]
 layout_mode = 2
 text = "settings"
 script = ExtResource("1_qusho")
 file_path = "res://src/UI/menus/settings/settings_menu.tscn"
+
+[node name="SandboxButton" type="Button" parent="MainMenu"]
+layout_mode = 2
+text = "Sandbox
+"
+script = ExtResource("1_qusho")
+file_path = "res://src/levels/sandbox.tscn"
 
 [node name="QuitButton" type="Button" parent="MainMenu"]
 layout_mode = 2
