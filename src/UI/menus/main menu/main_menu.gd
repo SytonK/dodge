@@ -13,7 +13,7 @@ func _on_settings_menu_pressed() -> void:
 	settings_menu.visible = true
 
 
-func _on_main_menu_button_pressed() -> void:
+func _on_return_button_pressed() -> void:
 	game_title.visible = true
 	main_menu_v_box.visible = true
 	settings_menu.visible = false

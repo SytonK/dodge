@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://b5ulac8xhrgtl"]
+[gd_scene load_steps=6 format=3 uid="uid://b5ulac8xhrgtl"]
 
 [ext_resource type="Theme" uid="uid://bgdcd6x4oip32" path="res://resources/theme/base_theme.tres" id="1_d8h0i"]
 [ext_resource type="PackedScene" uid="uid://d0f7wp658evg6" path="res://src/UI/menus/settings/audio/audio_menu.tscn" id="1_ow27w"]
-[ext_resource type="Script" path="res://src/UI/components/new scene button/new_scene_button.gd" id="2_751ie"]
 [ext_resource type="Script" path="res://src/UI/menus/settings/settings_menu.gd" id="2_d041f"]
 [ext_resource type="ButtonGroup" uid="uid://kthvjb3g1u03" path="res://src/UI/menus/settings/settings_button_group.tres" id="3_n8pld"]
 [ext_resource type="PackedScene" uid="uid://hr45rmwyom6f" path="res://src/UI/menus/settings/video/video_menu.tscn" id="4_tajr2"]
@@ -54,12 +53,10 @@ visible = false
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="MainMenuButton" type="Button" parent="VBoxContainer"]
+[node name="ReturnButton" type="Button" parent="VBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 64
-text = "main menu"
-script = ExtResource("2_751ie")
-file_path = "res://src/UI/menus/main menu/main_menu.tscn"
 
 [connection signal="pressed" from="VBoxContainer/SettingsSelector/AudioButton" to="." method="_on_audio_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/SettingsSelector/VideoButton" to="." method="_on_video_button_pressed"]
