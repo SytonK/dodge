@@ -1,7 +1,9 @@
-extends VBoxContainer
+extends Control
 
 
-@onready var unpause_button: Button = $UnpauseButton
+@onready var unpause_button: Button = $PauseMenuVBox/UnpauseButton
+@onready var pause_menu_v_box: VBoxContainer = $PauseMenuVBox
+@onready var settings_menu: Control = $SettingsMenu
 
 
 func _input(event: InputEvent) -> void:
@@ -18,3 +20,13 @@ func _toggle_pause() -> void:
 
 func _on_unpause_button_pressed() -> void:
 	_toggle_pause()
+
+
+func _on_settings_button_pressed() -> void:
+	pause_menu_v_box.visible = false
+	settings_menu.visible = true
+
+
+func _on_return_button_pressed() -> void:
+	pause_menu_v_box.visible = true
+	settings_menu.visible = false

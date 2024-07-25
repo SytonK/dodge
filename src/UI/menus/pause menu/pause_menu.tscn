@@ -1,14 +1,27 @@
-[gd_scene load_steps=6 format=3 uid="uid://btg6r1ilc3tjr"]
+[gd_scene load_steps=8 format=3 uid="uid://btg6r1ilc3tjr"]
 
 [ext_resource type="Script" path="res://src/UI/menus/pause menu/pause_menu.gd" id="1_x2u21"]
 [ext_resource type="Theme" uid="uid://bgdcd6x4oip32" path="res://resources/theme/base_theme.tres" id="1_yhmnt"]
 [ext_resource type="Script" path="res://src/UI/components/reload button/reload_button.gd" id="2_56x2q"]
 [ext_resource type="Script" path="res://src/UI/components/new scene button/new_scene_button.gd" id="3_twfhd"]
 [ext_resource type="Script" path="res://src/UI/components/quit button/quit_button.gd" id="4_vg5ho"]
+[ext_resource type="PackedScene" uid="uid://b5ulac8xhrgtl" path="res://src/UI/menus/settings/settings_menu.tscn" id="6_p1dnb"]
 
-[node name="PauseMenu" type="VBoxContainer"]
+[sub_resource type="ButtonGroup" id="ButtonGroup_nj0ce"]
+
+[node name="PauseMenu" type="Control"]
 process_mode = 3
 visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x2u21")
+
+[node name="PauseMenuVBox" type="VBoxContainer" parent="."]
+layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -21,32 +34,53 @@ offset_bottom = 29.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_yhmnt")
-script = ExtResource("1_x2u21")
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="PauseMenuVBox"]
 layout_mode = 2
 text = "pause menu
 "
 
-[node name="UnpauseButton" type="Button" parent="."]
+[node name="UnpauseButton" type="Button" parent="PauseMenuVBox"]
 layout_mode = 2
 text = "unpause
 "
 
-[node name="ReloadButton" type="Button" parent="."]
+[node name="ReloadButton" type="Button" parent="PauseMenuVBox"]
 layout_mode = 2
 text = "reload"
 script = ExtResource("2_56x2q")
 
-[node name="MainMenuButton" type="Button" parent="."]
+[node name="SettingsButton" type="Button" parent="PauseMenuVBox"]
+layout_mode = 2
+text = "settings"
+
+[node name="MainMenuButton" type="Button" parent="PauseMenuVBox"]
 layout_mode = 2
 text = "main menu"
 script = ExtResource("3_twfhd")
 file_path = "res://src/UI/menus/main menu/main_menu.tscn"
 
-[node name="QuitButton" type="Button" parent="."]
+[node name="QuitButton" type="Button" parent="PauseMenuVBox"]
 layout_mode = 2
 text = "quit"
 script = ExtResource("4_vg5ho")
 
-[connection signal="pressed" from="UnpauseButton" to="." method="_on_unpause_button_pressed"]
+[node name="SettingsMenu" parent="." instance=ExtResource("6_p1dnb")]
+visible = false
+layout_mode = 1
+
+[node name="AudioButton" parent="SettingsMenu/VBoxContainer/SettingsSelector" index="0"]
+button_group = SubResource("ButtonGroup_nj0ce")
+
+[node name="VideoButton" parent="SettingsMenu/VBoxContainer/SettingsSelector" index="1"]
+button_group = SubResource("ButtonGroup_nj0ce")
+
+[node name="ReturnButton" parent="SettingsMenu/VBoxContainer" index="3"]
+visible = true
+text = "return"
+
+[connection signal="pressed" from="PauseMenuVBox/UnpauseButton" to="PauseMenuVBox" method="_on_unpause_button_pressed"]
+[connection signal="pressed" from="PauseMenuVBox/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="SettingsMenu/VBoxContainer/ReturnButton" to="." method="_on_return_button_pressed"]
+
+[editable path="SettingsMenu"]
