@@ -23,6 +23,7 @@ buses/default_bus_layout="res://resources/audio/default_bus_layout.tres"
 
 PlayerRef="*res://src/globals/player_ref.gd"
 ConfigFileHandler="*res://resources/config/config_file_handler.gd"
+CurrentLevel="*res://src/globals/current_level.gd"
 
 [display]
 

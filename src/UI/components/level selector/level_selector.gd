@@ -9,7 +9,8 @@ const LEVEL_PATH2: String = '.tscn'
 
 const MAX_LEVEL: int = 3
 
-var level: int = 0: set = _set_level
+
+@onready var level: int: set = _set_level
 @onready var select_level_button: ChangeSceneButton = $HBoxContainer/SelectLevelButton
 
 const EMPTY_STAR = preload("res://assets/UI/stars/empty_star.png")
@@ -20,9 +21,11 @@ var score: Score
 func _ready() -> void:
 	select_level_button.grab_focus()
 	_init_score()
+	level = CurrentLevel.current_level
 
 func _set_level(new_level: int) -> void:
 	level = clamp(new_level, 0, MAX_LEVEL)
+	CurrentLevel.current_level = level
 	_set_stars()
 	if select_level_button:
 		select_level_button.text = BUTTON_TEXT + str(level)
