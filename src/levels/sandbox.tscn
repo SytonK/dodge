@@ -4,6 +4,6 @@
 
 [node name="Sandbox" type="Node2D"]
 script = ExtResource("1_tvtlc")
-easy_time = 30
-normal_time = 30
-hard_time = 30
+easy_time = 5
+normal_time = 5
+hard_time = 5
