@@ -79,7 +79,7 @@ button_group = SubResource("ButtonGroup_nj0ce")
 visible = true
 text = "return"
 
-[connection signal="pressed" from="PauseMenuVBox/UnpauseButton" to="PauseMenuVBox" method="_on_unpause_button_pressed"]
+[connection signal="pressed" from="PauseMenuVBox/UnpauseButton" to="." method="_on_unpause_button_pressed"]
 [connection signal="pressed" from="PauseMenuVBox/SettingsButton" to="." method="_on_settings_button_pressed"]
 [connection signal="pressed" from="SettingsMenu/VBoxContainer/ReturnButton" to="." method="_on_return_button_pressed"]
 
