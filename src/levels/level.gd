@@ -57,6 +57,7 @@ func _ready() -> void:
 	_add_level_timer()
 	_add_music_player()
 	_add_level_sounds()
+	DisplayServer.mouse_set_mode(DisplayServer.MOUSE_MODE_HIDDEN)
 
 func _process(_delta: float) -> void:
 	_slow_engine_on_game_over()
@@ -179,6 +180,7 @@ func _on_finish_game_over() -> void:
 	_save_player_score()
 	game_over_menu.visible = true
 	pause_menu.process_mode = Node.PROCESS_MODE_DISABLED
+	DisplayServer.mouse_set_mode(DisplayServer.MOUSE_MODE_VISIBLE)
 	get_tree().paused = true
 
 func _save_player_score() -> void:

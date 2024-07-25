@@ -18,6 +18,9 @@ func _toggle_pause() -> void:
 		unpause_button.grab_focus()
 		pause_menu_v_box.visible = true
 		settings_menu.visible = false
+		DisplayServer.mouse_set_mode(DisplayServer.MOUSE_MODE_VISIBLE)
+	else:
+		DisplayServer.mouse_set_mode(DisplayServer.MOUSE_MODE_HIDDEN)
 
 
 func _on_unpause_button_pressed() -> void:
