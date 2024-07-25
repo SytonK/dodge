@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dy71k0weyketa"]
+[gd_scene load_steps=10 format=3 uid="uid://dy71k0weyketa"]
 
 [ext_resource type="Theme" uid="uid://bgdcd6x4oip32" path="res://resources/theme/base_theme.tres" id="1_3yqal"]
 [ext_resource type="PackedScene" uid="uid://3swy431y7di3" path="res://src/UI/components/level selector/level_selector.tscn" id="1_mym05"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://src/UI/components/quit button/quit_button.gd" id="2_mxf2y"]
 [ext_resource type="PackedScene" uid="uid://dil4wgq461fem" path="res://src/UI/background/background.tscn" id="2_uj0rf"]
 [ext_resource type="PackedScene" uid="uid://b5ulac8xhrgtl" path="res://src/UI/menus/settings/settings_menu.tscn" id="6_blkap"]
+[ext_resource type="AudioStream" uid="uid://ijq1ivh54fat" path="res://assets/music/theme.wav" id="8_0v6dj"]
 
 [sub_resource type="ButtonGroup" id="ButtonGroup_4bv8f"]
 
@@ -88,6 +89,11 @@ button_group = SubResource("ButtonGroup_4bv8f")
 [node name="ReturnButton" parent="SettingsMenu/VBoxContainer" index="3"]
 visible = true
 text = "main menu"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_0v6dj")
+autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="MainMenuVBox/SettingsMenu" to="." method="_on_settings_menu_pressed"]
 [connection signal="pressed" from="SettingsMenu/VBoxContainer/ReturnButton" to="." method="_on_return_button_pressed"]
