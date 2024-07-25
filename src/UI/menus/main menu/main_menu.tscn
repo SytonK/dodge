@@ -51,6 +51,7 @@ layout_mode = 2
 
 [node name="SettingsMenu" type="Button" parent="MainMenu"]
 layout_mode = 2
+focus_neighbor_top = NodePath("../LevelSelector/HBoxContainer/SelectLevelButton")
 text = "settings"
 script = ExtResource("1_qusho")
 file_path = "res://src/UI/menus/settings/settings_menu.tscn"
