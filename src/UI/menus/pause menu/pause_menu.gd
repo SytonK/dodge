@@ -16,6 +16,8 @@ func _toggle_pause() -> void:
 	visible = get_tree().paused
 	if get_tree().paused == true:
 		unpause_button.grab_focus()
+		pause_menu_v_box.visible = true
+		settings_menu.visible = false
 
 
 func _on_unpause_button_pressed() -> void:
