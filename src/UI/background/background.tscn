@@ -1,0 +1,125 @@
+[gd_scene load_steps=13 format=3 uid="uid://dil4wgq461fem"]
+
+[ext_resource type="Texture2D" uid="uid://chdqju1vhyomv" path="res://assets/background/backgroung.png" id="1_dbg05"]
+[ext_resource type="PackedScene" uid="uid://5lgnpekb1gx3" path="res://src/levels/envierment/path follower/path_follower.tscn" id="2_pgkro"]
+
+[sub_resource type="Curve2D" id="Curve2D_5vgfj"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1771, -80, 38.956, -89.1493, -38.956, 89.1493, 1777, 94, 16, -111, -16, 111, 1552, 374, 132, -194, -132, 194, 1685, 747, -16, 114, 16, -114, 1345, 689, -60, -48, 60, 48, 1499, 593, 110, -52, -110, 52, 1449, 885, 48, 92, -48, -92, 885, 927, 76, -56, -76, 56, 651, 811, 112, -24, -112, 24, 459, 773, -54, -60, 54, 60, 309, 945, 0, 0, 0, 0, 225, 1309, 0, 0, 0, 0, -77, 1316, 0, 0, 0, 0, -74, -69, 0, 0, 0, 0, 1771, -80)
+}
+point_count = 15
+
+[sub_resource type="Gradient" id="Gradient_mli1c"]
+offsets = PackedFloat32Array(0, 0.399038, 1)
+colors = PackedColorArray(0.8, 0.2, 0.6, 1, 0.75, 0.1, 0.25, 1, 0.65, 0.3, 0.1, 1)
+
+[sub_resource type="Curve2D" id="Curve2D_eph81"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -370, 215, -99.7807, -57.0175, 99.7807, 57.0175, 158, 278, -138.98, -3.56359, 138.98, 3.56359, 634, 626, -153.235, -28.5088, 153.235, 28.5088, 973, 395, -87.3081, -76.6173, 87.3081, 76.6173, 1200, 829, -122.944, -96.2171, 122.944, 96.2171, 1641, 1003, 0, 0, 0, 0, 1821, 1231, 0, 0, 0, 0, 1866, 1675, 0, 0, 0, 0, -538, 1669, 0, 0, 0, 0, -370, 215)
+}
+point_count = 10
+
+[sub_resource type="Gradient" id="Gradient_ja3wi"]
+offsets = PackedFloat32Array(0, 0.504808, 1)
+colors = PackedColorArray(0.45, 0.85, 0.75, 1, 0.4, 0.4, 0.95, 1, 0.8, 0.55, 0.9, 1)
+
+[sub_resource type="Curve2D" id="Curve2D_fa0eh"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 879, -167, -39.598, -138.593, 39.598, 138.593, 728, 90, -84.8528, -39.598, 84.8528, 39.598, 1366, 263, 25.4558, -101.823, -25.4558, 101.823, 1660, 584, 115.966, 31.1127, -115.966, -31.1127, 977, 679, 158.392, -5.65685, -158.392, 5.65685, 607, 426, 0, -107.48, 0, 107.48, 369, 645, -158.392, -5.65685, 158.392, 5.65685, 675, 962, 0, 0, 0, 0, 852, 1188, 0, 0, 0, 0, 2528, 1467, 0, 0, 0, 0, 2708, -245, 0, 0, 0, 0, 879, -167)
+}
+point_count = 12
+
+[sub_resource type="Gradient" id="Gradient_14dy0"]
+offsets = PackedFloat32Array(0, 0.427885, 1)
+colors = PackedColorArray(0.8, 0.8, 0.5, 1, 0.9, 0.5, 0.25, 1, 0.8, 0.2, 0.6, 1)
+
+[sub_resource type="Curve2D" id="Curve2D_g5ela"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 2888, -374, 0, 0, 0, 0, 48, -293, -106.18, -123.635, 106.18, 123.635, 288, 191, -144, 4, 144, -4, 731, 414, -6, 106, 6, -106, 948, 217, 110, -68, -110, 68, 627, 120, -36, -134, 36, 134, 331, 560, -196, 72, 196, -72, 934, 894, -70, 86, 70, -86, 1519, 854, 28, 72, -28, -72, 1759, 264, 120, -74, -120, 74, 1484, 120, -148, 76, 148, -76, 1446, 499, -28, -74, 28, 74, 1834, 443, 0, 0, 0, 0, 2216, 329, 0, 0, 0, 0, 3458, 790, 0, 0, 0, 0, 2888, -374)
+}
+point_count = 16
+
+[sub_resource type="Gradient" id="Gradient_sd3ml"]
+offsets = PackedFloat32Array(0, 0.451923, 1)
+colors = PackedColorArray(0.2, 0.9, 0.3, 1, 0.65, 0.9, 0.85, 1, 0.2, 0.6, 0.7, 1)
+
+[sub_resource type="Curve2D" id="Curve2D_064hi"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -386, 1422, 0, 0, 0, 0, 1551, 1229, 0, 63.5678, 0, -63.5678, 1456, 956, 27.546, 57.211, -27.546, -57.211, 1567, 803, -19.0703, 69.9246, 19.0703, -69.9246, 1327, 756, 33.9028, 67.8056, -33.9028, -67.8056, 1574, 644, 76.2813, 29.665, -76.2813, -29.665, 1322, 558, 186.465, -55.0921, -186.465, 55.0921, 1037, 318, 120.779, -82.6381, -120.779, 82.6381, 694, 572, 23.3082, 84.757, -23.3082, -84.757, 385, 563, -177.99, -40.2596, 177.99, 40.2596, 580, 344, 12.7136, 82.6381, -12.7136, -82.6381, 1063, 201, 0, 0, 0, 0, 1081, -133, 0, 0, 0, 0, -325, -130, 0, 0, 0, 0, -386, 1422)
+}
+point_count = 15
+
+[sub_resource type="Gradient" id="Gradient_d7m0h"]
+offsets = PackedFloat32Array(0, 0.288462, 0.692308, 1)
+colors = PackedColorArray(0.45, 0.85, 0.5, 1, 0.15, 0.35, 0.5, 1, 0.7, 0.3, 0.8, 1, 0.373816, 0.645309, 0.862408, 1)
+
+[node name="Background" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+self_modulate = Color(0.5, 0.5, 0.5, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_dbg05")
+
+[node name="Paths" type="Node2D" parent="."]
+process_mode = 3
+
+[node name="Path2D" type="Path2D" parent="Paths"]
+curve = SubResource("Curve2D_5vgfj")
+
+[node name="PathFollower" parent="Paths/Path2D" instance=ExtResource("2_pgkro")]
+position = Vector2(1771, -80)
+rotation = 1.53633
+speed = 0.2
+gradiant = SubResource("Gradient_mli1c")
+max_length = 40
+
+[node name="Path2D2" type="Path2D" parent="Paths"]
+curve = SubResource("Curve2D_eph81")
+
+[node name="PathFollower" parent="Paths/Path2D2" instance=ExtResource("2_pgkro")]
+position = Vector2(-370, 215)
+rotation = 0.118757
+speed = 0.4
+gradiant = SubResource("Gradient_ja3wi")
+max_length = 20
+
+[node name="Path2D3" type="Path2D" parent="Paths"]
+curve = SubResource("Curve2D_fa0eh")
+
+[node name="PathFollower" parent="Paths/Path2D3" instance=ExtResource("2_pgkro")]
+position = Vector2(879, -167)
+rotation = 2.10201
+speed = 0.3
+gradiant = SubResource("Gradient_14dy0")
+max_length = 30
+
+[node name="Path2D4" type="Path2D" parent="Paths"]
+curve = SubResource("Curve2D_g5ela")
+
+[node name="PathFollower" parent="Paths/Path2D4" instance=ExtResource("2_pgkro")]
+position = Vector2(2888, -374)
+rotation = 3.11308
+speed = 0.15
+gradiant = SubResource("Gradient_sd3ml")
+max_length = 30
+
+[node name="Path2D5" type="Path2D" parent="Paths"]
+curve = SubResource("Curve2D_064hi")
+
+[node name="PathFollower" parent="Paths/Path2D5" instance=ExtResource("2_pgkro")]
+position = Vector2(-386, 1422)
+rotation = -0.0993108
+speed = 0.1
+gradiant = SubResource("Gradient_d7m0h")
+max_length = 40

@@ -1,7 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://5lgnpekb1gx3"]
+[gd_scene load_steps=5 format=3 uid="uid://5lgnpekb1gx3"]
 
 [ext_resource type="Script" path="res://src/levels/envierment/path follower/path_follower.gd" id="1_kmryg"]
-[ext_resource type="Texture2D" uid="uid://b4gm63i2w3sj2" path="res://icon.svg" id="2_x0miw"]
 [ext_resource type="Texture2D" uid="uid://dbtjwjw1rtm2p" path="res://assets/in game/trail.png" id="3_8u0er"]
 [ext_resource type="Script" path="res://src/levels/envierment/path follower/trail/trail.gd" id="3_brycy"]
 
@@ -11,10 +10,6 @@ point_count = 2
 
 [node name="PathFollower" type="PathFollow2D"]
 script = ExtResource("1_kmryg")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-visible = false
-texture = ExtResource("2_x0miw")
 
 [node name="Trail" type="Line2D" parent="."]
 top_level = true
