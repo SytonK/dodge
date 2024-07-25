@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://dy71k0weyketa"]
+[gd_scene load_steps=9 format=3 uid="uid://dy71k0weyketa"]
 
 [ext_resource type="Theme" uid="uid://bgdcd6x4oip32" path="res://resources/theme/base_theme.tres" id="1_3yqal"]
 [ext_resource type="PackedScene" uid="uid://3swy431y7di3" path="res://src/UI/components/level selector/level_selector.tscn" id="1_mym05"]
 [ext_resource type="Script" path="res://src/UI/components/new scene button/new_scene_button.gd" id="1_qusho"]
+[ext_resource type="Script" path="res://src/UI/menus/main menu/main_menu.gd" id="2_brv7k"]
 [ext_resource type="Script" path="res://src/UI/components/quit button/quit_button.gd" id="2_mxf2y"]
+[ext_resource type="PackedScene" uid="uid://dil4wgq461fem" path="res://src/UI/background/background.tscn" id="2_uj0rf"]
+[ext_resource type="PackedScene" uid="uid://b5ulac8xhrgtl" path="res://src/UI/menus/settings/settings_menu.tscn" id="6_blkap"]
+
+[sub_resource type="ButtonGroup" id="ButtonGroup_4bv8f"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -13,6 +18,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_3yqal")
+script = ExtResource("2_brv7k")
+
+[node name="Background" parent="." instance=ExtResource("2_uj0rf")]
+layout_mode = 1
 
 [node name="GameTitle" type="Label" parent="."]
 layout_mode = 1
@@ -30,7 +39,7 @@ text = "Dodge"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="MainMenu" type="VBoxContainer" parent="."]
+[node name="MainMenuVBox" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -46,24 +55,40 @@ grow_vertical = 2
 theme_override_constants/separation = 8
 alignment = 1
 
-[node name="LevelSelector" parent="MainMenu" instance=ExtResource("1_mym05")]
+[node name="LevelSelector" parent="MainMenuVBox" instance=ExtResource("1_mym05")]
 layout_mode = 2
 
-[node name="SettingsMenu" type="Button" parent="MainMenu"]
+[node name="SettingsMenu" type="Button" parent="MainMenuVBox"]
 layout_mode = 2
 focus_neighbor_top = NodePath("../LevelSelector/HBoxContainer/SelectLevelButton")
 text = "settings"
-script = ExtResource("1_qusho")
-file_path = "res://src/UI/menus/settings/settings_menu.tscn"
 
-[node name="SandboxButton" type="Button" parent="MainMenu"]
+[node name="SandboxButton" type="Button" parent="MainMenuVBox"]
 layout_mode = 2
 text = "Sandbox
 "
 script = ExtResource("1_qusho")
 file_path = "res://src/levels/sandbox.tscn"
 
-[node name="QuitButton" type="Button" parent="MainMenu"]
+[node name="QuitButton" type="Button" parent="MainMenuVBox"]
 layout_mode = 2
 text = "Quit"
 script = ExtResource("2_mxf2y")
+
+[node name="SettingsMenu" parent="." instance=ExtResource("6_blkap")]
+visible = false
+layout_mode = 1
+
+[node name="AudioButton" parent="SettingsMenu/VBoxContainer/SettingsSelector" index="0"]
+button_group = SubResource("ButtonGroup_4bv8f")
+
+[node name="VideoButton" parent="SettingsMenu/VBoxContainer/SettingsSelector" index="1"]
+button_group = SubResource("ButtonGroup_4bv8f")
+
+[node name="MainMenuButton" parent="SettingsMenu/VBoxContainer" index="3"]
+script = null
+
+[connection signal="pressed" from="MainMenuVBox/SettingsMenu" to="." method="_on_settings_menu_pressed"]
+[connection signal="pressed" from="SettingsMenu/VBoxContainer/MainMenuButton" to="." method="_on_main_menu_button_pressed"]
+
+[editable path="SettingsMenu"]
