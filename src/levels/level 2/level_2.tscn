@@ -16,21 +16,21 @@ player_start_position = Vector2(0, 150)
 level_number = 2
 
 [node name="ParallalTower" parent="." instance=ExtResource("2_x6cjw")]
-disabled = true
 speed = 400.0
 frequency = 1.0
+disabled = true
 
 [node name="TargetPlayerTowerLeft" parent="." instance=ExtResource("3_0aq8e")]
 position = Vector2(-450, 0)
-disabled = true
 speed = 300.0
 frequency = 0.4
+disabled = true
 
 [node name="TargetPlayerTowerRight" parent="." instance=ExtResource("3_0aq8e")]
 position = Vector2(450, 0)
-disabled = true
 speed = 675.0
 frequency = 1.0
+disabled = true
 
 [node name="chaser" parent="." instance=ExtResource("2_rn1v3")]
 position = Vector2(-500, -200)
