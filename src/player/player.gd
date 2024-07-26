@@ -45,11 +45,13 @@ func _move() -> void:
 func _on_hurtbox_hurt() -> void:
 	health -= 1
 	audio_stream_player.play()
-	animation_player.play('invulnerable')
 	_update_health_ui()
 	hurt.emit()
 	if health <= 0:
+		hurtbox.monitoring = false
 		_game_over()
+	else:
+		animation_player.play('invulnerable')
 
 func _set_health(new_health: int) -> void:
 	health = clamp(new_health, 0, max_health)
