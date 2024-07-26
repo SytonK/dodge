@@ -50,6 +50,7 @@ var game_over: bool = false
 @export var level_envierment: LevelEnvierment
 
 func _ready() -> void:
+	Engine.time_scale = 1
 	_add_level_envierments()
 	_add_camera()
 	_add_player()

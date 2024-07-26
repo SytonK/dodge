@@ -8,6 +8,10 @@ extends Control
 @onready var settings_menu: Control = $SettingsMenu
 
 
+func _ready() -> void:
+	Engine.time_scale = 1
+
+
 func _on_settings_menu_pressed() -> void:
 	game_title.visible = false
 	main_menu_v_box.visible = false
