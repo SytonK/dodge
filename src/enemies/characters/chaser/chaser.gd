@@ -9,7 +9,7 @@ const SPIKE = preload("res://src/enemies attacks/attack with lifetime/spike/spik
 @export var is_recovering: bool = false
 @onready var animation_player = $AnimationPlayer
 
-@export var leavse_spike_trail: bool = false
+@export var leavse_spike_trail: bool = false: set = _set_leavse_spike_trail
 @export var trail_duration: float
 @export var trail_frequency: float = 0
 var spiketrail_timer: Timer
@@ -39,12 +39,15 @@ func _init_spike() -> void:
 		spiketrail_timer.wait_time = trail_frequency
 		spiketrail_timer.timeout.connect(_on_spiketrail_timer_timeout)
 		add_child(spiketrail_timer)
+
+func _set_leavse_spike_trail(new_val: bool) -> void:
+	leavse_spike_trail = new_val
+	if leavse_spike_trail:
 		spiketrail_timer.start()
 
 func _on_spiketrail_timer_timeout() -> void:
-	if leavse_spike_trail:
-		var new_spike: Spike = SPIKE.instantiate()
-		new_spike.top_level = true
-		new_spike.lifetime = trail_duration
-		new_spike.position = spike_marker.global_position
-		add_child(new_spike)
+	var new_spike: Spike = SPIKE.instantiate()
+	new_spike.top_level = true
+	new_spike.lifetime = trail_duration
+	new_spike.position = spike_marker.global_position
+	add_child(new_spike)
