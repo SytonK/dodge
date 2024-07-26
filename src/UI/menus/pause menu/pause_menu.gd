@@ -35,3 +35,4 @@ func _on_settings_button_pressed() -> void:
 func _on_return_button_pressed() -> void:
 	pause_menu_v_box.visible = true
 	settings_menu.visible = false
+	unpause_button.grab_focus()

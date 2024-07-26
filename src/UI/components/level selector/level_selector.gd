@@ -1,3 +1,4 @@
+class_name LevelSelector
 extends VBoxContainer
 
 
@@ -19,7 +20,7 @@ const FULL_STAR = preload("res://assets/UI/stars/full_star.png")
 var score: Score
 
 func _ready() -> void:
-	select_level_button.grab_focus()
+	focus()
 	_init_score()
 	level = CurrentLevel.current_level
 
@@ -46,3 +47,7 @@ func _init_score() -> void:
 func _set_stars() -> void:
 	for star_index in score_stars.size():
 		score_stars[star_index].texture = FULL_STAR if score.stars[level] > star_index else EMPTY_STAR
+
+
+func focus() -> void:
+	select_level_button.grab_focus()

@@ -10,7 +10,9 @@ extends Control
 
 
 func _ready() -> void:
-	audio_button.grab_focus()
+	if visible:
+		audio_button.grab_focus()
+	visibility_changed.connect(_on_visibility_change)
 
 
 func _on_audio_button_pressed() -> void:
@@ -24,3 +26,8 @@ func _set_curr_settings_menu(new_menu: Control) -> void:
 	curr_settings_menu.visible = false
 	curr_settings_menu = new_menu
 	curr_settings_menu.visible = true
+
+
+func _on_visibility_change() -> void:
+	if visible:
+		audio_button.grab_focus()
