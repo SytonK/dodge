@@ -40,10 +40,10 @@ alignment = 1
 
 [node name="ButtonLeft" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-text = "<"
+text = " < "
 
 [node name="SelectLevelButton" type="Button" parent="HBoxContainer"]
-custom_minimum_size = Vector2(200, 40)
+custom_minimum_size = Vector2(240, 40)
 layout_mode = 2
 text = "level 0"
 script = ExtResource("2_vwwec")
@@ -51,7 +51,7 @@ file_path = "res://src/levels/level 0/level_0.tscn"
 
 [node name="ButtonRight" type="Button" parent="HBoxContainer"]
 layout_mode = 2
-text = ">"
+text = " > "
 
 [connection signal="pressed" from="HBoxContainer/ButtonLeft" to="." method="_on_button_left_pressed"]
 [connection signal="pressed" from="HBoxContainer/ButtonRight" to="." method="_on_button_right_pressed"]
