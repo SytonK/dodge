@@ -13,6 +13,7 @@ signal hurt
 
 @export var max_health: int = 4
 @onready var health: int = max_health : set = _set_health
+@export var can_take_damage_this_frame: bool = true
 @onready var health_polygons: Array[Polygon2D] = [$Health/Health1, $Health/Health2, $Health/Health3, $Health/Health4]
 
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
@@ -48,13 +49,15 @@ func _on_hurtbox_hurt() -> void:
 	_update_health_ui()
 	hurt.emit()
 	if health <= 0:
-		hurtbox.monitoring = false
+		hurtbox.set_deferred("monitoring", false)
 		_game_over()
 	else:
 		animation_player.play('invulnerable')
 
 func _set_health(new_health: int) -> void:
-	health = clamp(new_health, 0, max_health)
+	if can_take_damage_this_frame:
+		health = clamp(new_health, 0, max_health)
+		can_take_damage_this_frame = false
 
 func _update_health_ui() -> void:
 	health_polygons[max_health - health - 1].color = NO_HEALTH_COLOR
