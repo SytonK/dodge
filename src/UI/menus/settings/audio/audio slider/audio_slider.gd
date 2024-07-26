@@ -8,9 +8,8 @@ extends HSlider
 
 func _ready() -> void:
 	value = AudioServer.get_bus_volume_db(audio_bus)
-	drag_ended.connect(_on_drag_ended)
+	value_changed.connect(_on_value_changed)
 
-
-func _on_drag_ended(_value_changed: bool) -> void:
+func _on_value_changed(_new_value: float) -> void:
 	AudioServer.set_bus_volume_db(audio_bus, value)
 	ConfigFileHandler.save_audio_settings(bus_name.to_lower() + '_volum', value)
