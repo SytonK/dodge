@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://b12pq0kxsyadm"]
+[gd_scene load_steps=9 format=3 uid="uid://b12pq0kxsyadm"]
 
 [ext_resource type="Script" path="res://src/levels/level 4/level_4.gd" id="1_4hvdf"]
 [ext_resource type="PackedScene" uid="uid://cy0r1nnyfoc00" path="res://src/levels/envierment/level_envierment.tscn" id="2_8vgt4"]
@@ -6,6 +6,8 @@
 [ext_resource type="Script" path="res://src/enemies/timed attacker/global enemies/global bullet spawner/parallal/global_bullet_spawner_parallal_direction.gd" id="4_ftd8h"]
 [ext_resource type="Script" path="res://src/enemies/timed attacker/global enemies/global hazard spawner/global_hazard_spawner.gd" id="5_8qdhv"]
 [ext_resource type="Script" path="res://src/enemies/timed attacker/global enemies/global hazard spawner/random position/global_random_position_hazard_spawner.gd" id="6_v05kp"]
+[ext_resource type="PackedScene" uid="uid://bi8ccuhy8gxha" path="res://src/enemies/timed attacker/towers/parallal tower/parallal_tower.tscn" id="7_6ugsy"]
+[ext_resource type="PackedScene" uid="uid://hm1pwd5uc2b4" path="res://src/enemies/timed attacker/towers/target player tower/target_player_tower.tscn" id="8_3si0n"]
 
 [node name="Level4" type="Node2D"]
 script = ExtResource("1_4hvdf")
@@ -18,23 +20,33 @@ hard_time = 30
 [node name="GlobalBulletSpawner" type="Node2D" parent="."]
 script = ExtResource("3_6b7pb")
 speed = 500.0
-frequency = 1.0
+frequency = 1.3
 
 [node name="GlobalBulletSpawnerParallalDirection" type="Node2D" parent="."]
 script = ExtResource("4_ftd8h")
 speed = 300.0
-frequency = 0.5
+frequency = 0.7
 
 [node name="GlobalHazardSpawner" type="Node2D" parent="."]
 script = ExtResource("5_8qdhv")
-lifetime = 5.0
+lifetime = 4.0
 setup_time = 1.0
 hazard_scale = Vector2(0.45, 0.45)
-frequency = 0.95
+frequency = 1.15
 
 [node name="GlobalRandomPositionHazardSpawner" type="Node2D" parent="."]
 script = ExtResource("6_v05kp")
-lifetime = 5.0
+lifetime = 4.0
 setup_time = 1.0
 hazard_scale = Vector2(0.55, 0.55)
-frequency = 0.85
+frequency = 0.95
+
+[node name="ParallalTower" parent="." instance=ExtResource("7_6ugsy")]
+position = Vector2(700, -300)
+speed = 300.0
+frequency = 2.0
+
+[node name="TargetPlayerTower" parent="." instance=ExtResource("8_3si0n")]
+position = Vector2(-700, 300)
+speed = 600.0
+frequency = 1.5
