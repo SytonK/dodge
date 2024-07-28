@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://do4iuw0chtvvm" path="res://assets/in game/exlosion.png" id="4_qa74x"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f7hul"]
-radius = 32.0
+radius = 28.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nri3i"]
 radius = 64.0
