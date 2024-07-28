@@ -27,24 +27,28 @@ position = Vector2(-14, 16)
 polygon = PackedVector2Array(-725, -250, -375, -250, -400, -200, -700, -200)
 
 [node name="Polygon2D" type="Polygon2D" parent="LevelWalls/StaticBody2D/CollisionPolygon2D"]
+color = Color(0.75, 0.75, 0.75, 1)
 polygon = PackedVector2Array(-725, -250, -375, -250, -400, -200, -700, -200)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="LevelWalls/StaticBody2D"]
 polygon = PackedVector2Array(-425, 35, -375, 35, -200, 200, -250, 200)
 
 [node name="Polygon2D" type="Polygon2D" parent="LevelWalls/StaticBody2D/CollisionPolygon2D2"]
+color = Color(0.75, 0.75, 0.75, 1)
 polygon = PackedVector2Array(-425, 35, -375, 35, -200, 200, -250, 200)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="LevelWalls/StaticBody2D"]
 polygon = PackedVector2Array(300, 50, 450, 50, 550, -300, 425, -25)
 
 [node name="Polygon2D" type="Polygon2D" parent="LevelWalls/StaticBody2D/CollisionPolygon2D3"]
+color = Color(0.75, 0.75, 0.75, 1)
 polygon = PackedVector2Array(300, 50, 450, 50, 550, -300, 425, -25)
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="LevelWalls/StaticBody2D"]
 polygon = PackedVector2Array(295, 255, 320, 225, 400, 225, 445, 265, 445, 330, 415, 360, 415, 280, 390, 255, 340, 255, 320, 285)
 
 [node name="Polygon2D" type="Polygon2D" parent="LevelWalls/StaticBody2D/CollisionPolygon2D4"]
+color = Color(0.75, 0.75, 0.75, 1)
 polygon = PackedVector2Array(295, 255, 320, 225, 400, 225, 445, 265, 445, 330, 415, 360, 415, 280, 390, 255, 340, 255, 320, 285)
 
 [node name="Bounce" parent="." instance=ExtResource("3_8hls5")]
