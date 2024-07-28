@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bvr544xcdynot"]
+
+[ext_resource type="Texture2D" uid="uid://b4gm63i2w3sj2" path="res://icon.svg" id="1_5yuh4"]
+[ext_resource type="Script" path="res://src/enemies/characters/bounce/bounce.gd" id="1_r1ah3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tnhd3"]
+size = Vector2(64, 64)
+
+[node name="Bounce" type="CharacterBody2D"]
+script = ExtResource("1_r1ah3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_tnhd3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_5yuh4")

@@ -1,9 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://cpw5rkjet4364"]
+[gd_scene load_steps=3 format=3 uid="uid://cpw5rkjet4364"]
 
 [ext_resource type="Script" path="res://src/levels/level.gd" id="1_tvtlc"]
+[ext_resource type="PackedScene" uid="uid://bvr544xcdynot" path="res://src/enemies/characters/bounce/bounce.tscn" id="2_fb6jl"]
 
 [node name="Sandbox" type="Node2D"]
 script = ExtResource("1_tvtlc")
 easy_time = 5
 normal_time = 5
 hard_time = 5
+
+[node name="Bounce" parent="." instance=ExtResource("2_fb6jl")]
+position = Vector2(207, 194)
+speed = 100.0
