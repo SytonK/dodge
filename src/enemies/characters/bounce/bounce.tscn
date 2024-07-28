@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://bvr544xcdynot"]
+[gd_scene load_steps=6 format=3 uid="uid://bvr544xcdynot"]
 
 [ext_resource type="Script" path="res://src/enemies/characters/bounce/bounce.gd" id="1_r1ah3"]
 [ext_resource type="Script" path="res://src/components/hitbox and hurtbox/hitbox/hitbox.gd" id="2_tbr18"]
@@ -7,70 +7,6 @@
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f7hul"]
 radius = 28.0
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_nri3i"]
-radius = 64.0
-
-[sub_resource type="Animation" id="Animation_8ce3a"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ExplosionSprite2D:self_modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0.95, 0.1, 0.2, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_6ft37"]
-resource_name = "collide"
-length = 0.8
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("ExplosionHitbox:monitoring")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0.1, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("ExplosionHitbox:monitorable")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.1, 0.3),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [true, false]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("ExplosionSprite2D:self_modulate")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 0,
-"values": [Color(0.95, 0.1, 0.2, 0), Color(0.95, 0.1, 0.2, 0.5), Color(0.95, 0.1, 0.2, 0.15), Color(0.95, 0.1, 0.2, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_faq5w"]
-_data = {
-"RESET": SubResource("Animation_8ce3a"),
-"collide": SubResource("Animation_6ft37")
-}
 
 [node name="Bounce" type="CharacterBody2D"]
 script = ExtResource("1_r1ah3")
@@ -93,16 +29,3 @@ texture = ExtResource("3_7q4eh")
 self_modulate = Color(0.95, 0.1, 0.2, 0)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("4_qa74x")
-
-[node name="ExplosionHitbox" type="Area2D" parent="."]
-monitoring = false
-monitorable = false
-script = ExtResource("2_tbr18")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="ExplosionHitbox"]
-shape = SubResource("CircleShape2D_nri3i")
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_faq5w")
-}

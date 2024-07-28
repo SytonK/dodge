@@ -2,6 +2,8 @@ class_name Bounce
 extends CharacterBody2D
 
 
+const EXPLOSION = preload("res://src/enemies attacks/attack with lifetime/explosion/explosion.tscn")
+
 const ROTATION_SPEED_FACTOR: float = 0.002
 const MAX_SPEED_FOR_ROTATION: float = 1000
 
@@ -10,8 +12,6 @@ const MAX_SPEED_FOR_ROTATION: float = 1000
 @onready var sprite_2d: Sprite2D = $Sprite2D
 
 @export var explode_on_collision: bool = false
-@onready var animation_player: AnimationPlayer = $AnimationPlayer
-@onready var explosion_sprite_2d: Sprite2D = $ExplosionSprite2D
 
 
 func _ready() -> void:
@@ -35,11 +35,17 @@ func _move(delta: float) -> void:
 	var collision = move_and_collide(velocity * delta)
 	if collision:
 		velocity = velocity.bounce(collision.get_normal())
-		if explode_on_collision && !animation_player.is_playing():
-			explosion_sprite_2d.rotation = randf_range(0, 2 * PI)
-			animation_player.play('collide')
+		_add_explosion()
 
 func _rotate(delta: float) -> void:
 	var direction = velocity.x/abs(velocity.x)
 	var rotation_amount = min(speed, MAX_SPEED_FOR_ROTATION) * ROTATION_SPEED_FACTOR
 	sprite_2d.rotation += direction * PI * rotation_amount * delta
+
+func _add_explosion() -> void:
+	if explode_on_collision:
+		var new_explosion = EXPLOSION.instantiate()
+		new_explosion.rotation = randf_range(0, 2 * PI)
+		new_explosion.position = position
+		new_explosion.top_level = true
+		add_child(new_explosion)
