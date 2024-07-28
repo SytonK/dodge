@@ -32,21 +32,30 @@ script = ExtResource("5_8qdhv")
 lifetime = 4.0
 setup_time = 1.0
 hazard_scale = Vector2(0.45, 0.45)
-frequency = 1.15
+frequency = 1.2
+disabled = true
 
 [node name="GlobalRandomPositionHazardSpawner" type="Node2D" parent="."]
 script = ExtResource("6_v05kp")
 lifetime = 4.0
 setup_time = 1.0
 hazard_scale = Vector2(0.55, 0.55)
-frequency = 0.95
+frequency = 1.2
 
 [node name="ParallalTower" parent="." instance=ExtResource("7_6ugsy")]
-position = Vector2(700, -300)
+position = Vector2(0, -150)
 speed = 300.0
 frequency = 2.0
+disabled = true
 
-[node name="TargetPlayerTower" parent="." instance=ExtResource("8_3si0n")]
-position = Vector2(-700, 300)
+[node name="TargetPlayerTowerLeft" parent="." instance=ExtResource("8_3si0n")]
+position = Vector2(-650, 250)
 speed = 600.0
 frequency = 1.5
+disabled = true
+
+[node name="TargetPlayerTowerRigth" parent="." instance=ExtResource("8_3si0n")]
+position = Vector2(650, 250)
+speed = 600.0
+frequency = 1.5
+disabled = true
