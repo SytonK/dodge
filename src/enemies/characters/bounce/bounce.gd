@@ -6,13 +6,12 @@ const ROTATION_SPEED_FACTOR: float = 0.002
 const MAX_SPEED_FOR_ROTATION: float = 1000
 
 @export var speed: float: set = _set_speed
-@export var init_direction: Vector2 = Vector2(1,1)
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
 
 
 func _ready() -> void:
-	velocity = init_direction.normalized() * speed
+	_init_random_direction()
 	collision_layer = 0
 
 
@@ -20,6 +19,9 @@ func _physics_process(delta: float) -> void:
 	_move(delta)
 	_rotate(delta)
 
+
+func _init_random_direction() -> void:
+	velocity = Vector2.RIGHT.rotated(randf_range(0, 2 * PI)) * speed
 
 func _set_speed(new_speed: float) -> void:
 	speed = new_speed

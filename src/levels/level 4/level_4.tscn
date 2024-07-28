@@ -35,8 +35,8 @@ polygon = PackedVector2Array(200, 240, 250, 240, 550, -100, 375, -250, 325, -250
 polygon = PackedVector2Array(200, 240, 250, 240, 550, -100, 375, -250, 325, -250, 500, -100)
 
 [node name="Bounce" parent="." instance=ExtResource("3_8hls5")]
+position = Vector2(-200, -350)
 speed = 300.0
-init_direction = Vector2(-4, 3)
 
 [node name="GlobalBulletSpawner" type="Node2D" parent="."]
 script = ExtResource("3_6b7pb")
