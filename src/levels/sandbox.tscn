@@ -11,4 +11,4 @@ hard_time = 5
 
 [node name="Bounce" parent="." instance=ExtResource("2_fb6jl")]
 position = Vector2(207, 194)
-speed = 100.0
+speed = 500.0

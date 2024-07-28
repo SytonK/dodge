@@ -1,17 +1,25 @@
-[gd_scene load_steps=4 format=3 uid="uid://bvr544xcdynot"]
+[gd_scene load_steps=5 format=3 uid="uid://bvr544xcdynot"]
 
-[ext_resource type="Texture2D" uid="uid://b4gm63i2w3sj2" path="res://icon.svg" id="1_5yuh4"]
 [ext_resource type="Script" path="res://src/enemies/characters/bounce/bounce.gd" id="1_r1ah3"]
+[ext_resource type="Script" path="res://src/components/hitbox and hurtbox/hitbox/hitbox.gd" id="2_tbr18"]
+[ext_resource type="Texture2D" uid="uid://be0eeas0fg1sb" path="res://assets/in game/bounce.png" id="3_7q4eh"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tnhd3"]
-size = Vector2(64, 64)
+[sub_resource type="CircleShape2D" id="CircleShape2D_f7hul"]
+radius = 32.0
 
 [node name="Bounce" type="CharacterBody2D"]
 script = ExtResource("1_r1ah3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_tnhd3")
+shape = SubResource("CircleShape2D_f7hul")
+
+[node name="Hitbox" type="Area2D" parent="."]
+script = ExtResource("2_tbr18")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("CircleShape2D_f7hul")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_5yuh4")
+self_modulate = Color(0.3, 0, 0.4, 1)
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_7q4eh")
