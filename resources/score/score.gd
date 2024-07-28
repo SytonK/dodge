@@ -4,8 +4,8 @@ extends Resource
 
 const PATH: String = "user://score.tres"
 
-@export var stars: Array[int] = [0, 0, 0, 0]
-@export var score: Array[int] = [0, 0, 0, 0]
+@export var stars: Array[int]
+@export var score: Array[int]
 
 
 func save() -> void:

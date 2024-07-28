@@ -8,7 +8,7 @@ const LEVEL_PATH0: String = 'res://src/levels/level '
 const LEVEL_PATH1: String = '/level_'
 const LEVEL_PATH2: String = '.tscn'
 
-const MAX_LEVEL: int = 3
+const MAX_LEVEL: int = 4
 
 
 @onready var level: int: set = _set_level
@@ -45,6 +45,10 @@ func _init_score() -> void:
 	_set_stars()
 
 func _set_stars() -> void:
+	if level >= score.stars.size():
+		score.stars.append(0)
+		score.score.append(0)
+		score.save()
 	for star_index in score_stars.size():
 		score_stars[star_index].texture = FULL_STAR if score.stars[level] > star_index else EMPTY_STAR
 

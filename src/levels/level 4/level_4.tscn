@@ -15,9 +15,9 @@ script = ExtResource("1_4hvdf")
 easy_time = 20
 normal_time = 25
 hard_time = 30
+level_number = 4
 
 [node name="LevelEnvierment" parent="." instance=ExtResource("2_8vgt4")]
-position = Vector2(-14, 16)
 
 [node name="LevelWalls" type="Node2D" parent="."]
 
