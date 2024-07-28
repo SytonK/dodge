@@ -9,7 +9,7 @@
 radius = 28.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_nri3i"]
-radius = 64.0
+radius = 86.0
 
 [sub_resource type="Animation" id="Animation_6ft37"]
 resource_name = "collide"
@@ -21,7 +21,7 @@ tracks/0/path = NodePath("ExplosionHitbox:monitoring")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.1, 0.5),
+"times": PackedFloat32Array(0.1, 0.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -33,7 +33,7 @@ tracks/1/path = NodePath("ExplosionHitbox:monitorable")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.1, 0.5),
+"times": PackedFloat32Array(0.1, 0.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
@@ -45,10 +45,10 @@ tracks/2/path = NodePath("ExplosionSprite2D:self_modulate")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.3, 0.4, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [Color(0.95, 0.1, 0.2, 0), Color(0.95, 0.1, 0.2, 0.15), Color(0.95, 0.1, 0.2, 0.5), Color(0.95, 0.1, 0.2, 0.15), Color(0.95, 0.1, 0.2, 0)]
+"values": [Color(0.95, 0.1, 0.2, 0), Color(0.95, 0.1, 0.2, 0.5), Color(0.95, 0.1, 0.2, 0.15), Color(0.95, 0.1, 0.2, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_8ce3a"]
@@ -91,7 +91,7 @@ texture = ExtResource("3_7q4eh")
 
 [node name="ExplosionSprite2D" type="Sprite2D" parent="."]
 self_modulate = Color(0.95, 0.1, 0.2, 0)
-scale = Vector2(0.25, 0.25)
+scale = Vector2(0.35, 0.35)
 texture = ExtResource("4_qa74x")
 
 [node name="ExplosionHitbox" type="Area2D" parent="."]
