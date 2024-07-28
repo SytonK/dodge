@@ -13,7 +13,7 @@ radius = 86.0
 
 [sub_resource type="Animation" id="Animation_6ft37"]
 resource_name = "collide"
-length = 0.6
+length = 0.8
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -95,6 +95,8 @@ scale = Vector2(0.35, 0.35)
 texture = ExtResource("4_qa74x")
 
 [node name="ExplosionHitbox" type="Area2D" parent="."]
+monitoring = false
+monitorable = false
 script = ExtResource("2_tbr18")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="ExplosionHitbox"]

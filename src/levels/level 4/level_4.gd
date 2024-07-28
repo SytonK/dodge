@@ -30,7 +30,7 @@ func _to_normal() -> void:
 
 func _to_hard() -> void:
 	super._to_hard()
-	bounce.speed = 850
+	bounce.speed = 750
 	bounce.explode_on_collision = true
 	
 	global_bullet_spawner.speed = 625
@@ -49,4 +49,4 @@ func _to_hard() -> void:
 	
 	target_player_tower_left.speed = 700
 	
-	target_player_tower_rigth.frequency = .1
+	target_player_tower_rigth.frequency = 1.1
