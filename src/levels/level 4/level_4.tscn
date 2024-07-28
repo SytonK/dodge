@@ -1,7 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://b12pq0kxsyadm"]
+[gd_scene load_steps=9 format=3 uid="uid://b12pq0kxsyadm"]
 
 [ext_resource type="Script" path="res://src/levels/level 4/level_4.gd" id="1_4hvdf"]
-[ext_resource type="PackedScene" uid="uid://cy0r1nnyfoc00" path="res://src/levels/envierment/level_envierment.tscn" id="2_8vgt4"]
 [ext_resource type="Script" path="res://src/enemies/timed attacker/global enemies/global bullet spawner/global_bullet_spawner.gd" id="3_6b7pb"]
 [ext_resource type="PackedScene" uid="uid://bvr544xcdynot" path="res://src/enemies/characters/bounce/bounce.tscn" id="3_8hls5"]
 [ext_resource type="Script" path="res://src/enemies/timed attacker/global enemies/global bullet spawner/parallal/global_bullet_spawner_parallal_direction.gd" id="4_ftd8h"]
@@ -16,8 +15,6 @@ easy_time = 20
 normal_time = 25
 hard_time = 30
 level_number = 4
-
-[node name="LevelEnvierment" parent="." instance=ExtResource("2_8vgt4")]
 
 [node name="LevelWalls" type="Node2D" parent="."]
 
