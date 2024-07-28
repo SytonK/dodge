@@ -17,22 +17,35 @@ normal_time = 25
 hard_time = 30
 
 [node name="LevelEnvierment" parent="." instance=ExtResource("2_8vgt4")]
+position = Vector2(-14, 16)
 
 [node name="LevelWalls" type="Node2D" parent="."]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="LevelWalls"]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="LevelWalls/StaticBody2D"]
-polygon = PackedVector2Array(-730, -250, -300, -250, -250, 180, -300, 180, -350, -200, -730, -200)
+polygon = PackedVector2Array(-725, -250, -375, -250, -400, -200, -700, -200)
 
 [node name="Polygon2D" type="Polygon2D" parent="LevelWalls/StaticBody2D/CollisionPolygon2D"]
-polygon = PackedVector2Array(-730, -250, -300, -250, -250, 180, -300, 180, -350, -200, -730, -201)
+polygon = PackedVector2Array(-725, -250, -375, -250, -400, -200, -700, -200)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="LevelWalls/StaticBody2D"]
-polygon = PackedVector2Array(200, 240, 250, 240, 550, -100, 375, -250, 325, -250, 500, -100)
+polygon = PackedVector2Array(-425, 35, -375, 35, -200, 200, -250, 200)
 
 [node name="Polygon2D" type="Polygon2D" parent="LevelWalls/StaticBody2D/CollisionPolygon2D2"]
-polygon = PackedVector2Array(200, 240, 250, 240, 550, -100, 375, -250, 325, -250, 500, -100)
+polygon = PackedVector2Array(-425, 35, -375, 35, -200, 200, -250, 200)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="LevelWalls/StaticBody2D"]
+polygon = PackedVector2Array(300, 50, 450, 50, 550, -300, 425, -25)
+
+[node name="Polygon2D" type="Polygon2D" parent="LevelWalls/StaticBody2D/CollisionPolygon2D3"]
+polygon = PackedVector2Array(300, 50, 450, 50, 550, -300, 425, -25)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="LevelWalls/StaticBody2D"]
+polygon = PackedVector2Array(295, 255, 320, 225, 400, 225, 445, 265, 445, 330, 415, 360, 415, 280, 390, 255, 340, 255, 320, 285)
+
+[node name="Polygon2D" type="Polygon2D" parent="LevelWalls/StaticBody2D/CollisionPolygon2D4"]
+polygon = PackedVector2Array(295, 255, 320, 225, 400, 225, 445, 265, 445, 330, 415, 360, 415, 280, 390, 255, 340, 255, 320, 285)
 
 [node name="Bounce" parent="." instance=ExtResource("3_8hls5")]
 position = Vector2(-200, -350)
