@@ -9,6 +9,10 @@ const MAX_SPEED_FOR_ROTATION: float = 1000
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
 
+@export var explode_on_collision: bool = false
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var explosion_sprite_2d: Sprite2D = $ExplosionSprite2D
+
 
 func _ready() -> void:
 	_init_random_direction()
@@ -31,6 +35,9 @@ func _move(delta: float) -> void:
 	var collision = move_and_collide(velocity * delta)
 	if collision:
 		velocity = velocity.bounce(collision.get_normal())
+		if explode_on_collision && !animation_player.is_playing():
+			explosion_sprite_2d.rotation = randf_range(0, 2 * PI)
+			animation_player.play('collide')
 
 func _rotate(delta: float) -> void:
 	var direction = velocity.x/abs(velocity.x)

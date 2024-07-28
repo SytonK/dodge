@@ -12,3 +12,4 @@ hard_time = 5
 [node name="Bounce" parent="." instance=ExtResource("2_fb6jl")]
 position = Vector2(207, 194)
 speed = 500.0
+explode_on_collision = true
