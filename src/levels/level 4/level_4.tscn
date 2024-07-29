@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://b12pq0kxsyadm"]
+[gd_scene load_steps=10 format=3 uid="uid://b12pq0kxsyadm"]
 
 [ext_resource type="Script" path="res://src/levels/level 4/level_4.gd" id="1_4hvdf"]
+[ext_resource type="Texture2D" uid="uid://b37c2d1eu8irx" path="res://assets/envierment/texture.png" id="2_7xouq"]
 [ext_resource type="Script" path="res://src/enemies/timed attacker/global enemies/global bullet spawner/global_bullet_spawner.gd" id="3_6b7pb"]
 [ext_resource type="PackedScene" uid="uid://bvr544xcdynot" path="res://src/enemies/characters/bounce/bounce.tscn" id="3_8hls5"]
 [ext_resource type="Script" path="res://src/enemies/timed attacker/global enemies/global bullet spawner/parallal/global_bullet_spawner_parallal_direction.gd" id="4_ftd8h"]
@@ -24,28 +25,36 @@ level_number = 4
 polygon = PackedVector2Array(-725, -250, -375, -250, -400, -200, -700, -200)
 
 [node name="Polygon2D" type="Polygon2D" parent="LevelWalls/StaticBody2D/CollisionPolygon2D"]
+texture_repeat = 2
 color = Color(0.75, 0.75, 0.75, 1)
+texture = ExtResource("2_7xouq")
 polygon = PackedVector2Array(-725, -250, -375, -250, -400, -200, -700, -200)
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="LevelWalls/StaticBody2D"]
 polygon = PackedVector2Array(-425, 35, -375, 35, -200, 200, -250, 200)
 
 [node name="Polygon2D" type="Polygon2D" parent="LevelWalls/StaticBody2D/CollisionPolygon2D2"]
+texture_repeat = 2
 color = Color(0.75, 0.75, 0.75, 1)
+texture = ExtResource("2_7xouq")
 polygon = PackedVector2Array(-425, 35, -375, 35, -200, 200, -250, 200)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="LevelWalls/StaticBody2D"]
-polygon = PackedVector2Array(300, 50, 450, 50, 550, -300, 425, -25)
+polygon = PackedVector2Array(300, 50, 450, 50, 550, -300, 520, -290, 425, -25, 295, 25)
 
 [node name="Polygon2D" type="Polygon2D" parent="LevelWalls/StaticBody2D/CollisionPolygon2D3"]
+texture_repeat = 2
 color = Color(0.75, 0.75, 0.75, 1)
-polygon = PackedVector2Array(300, 50, 450, 50, 550, -300, 425, -25)
+texture = ExtResource("2_7xouq")
+polygon = PackedVector2Array(300, 50, 450, 50, 550, -300, 520, -290, 425, -25, 295, 25)
 
 [node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="LevelWalls/StaticBody2D"]
 polygon = PackedVector2Array(295, 255, 320, 225, 400, 225, 445, 265, 445, 330, 415, 360, 415, 280, 390, 255, 340, 255, 320, 285)
 
 [node name="Polygon2D" type="Polygon2D" parent="LevelWalls/StaticBody2D/CollisionPolygon2D4"]
+texture_repeat = 2
 color = Color(0.75, 0.75, 0.75, 1)
+texture = ExtResource("2_7xouq")
 polygon = PackedVector2Array(295, 255, 320, 225, 400, 225, 445, 265, 445, 330, 415, 360, 415, 280, 390, 255, 340, 255, 320, 285)
 
 [node name="Bounce" parent="." instance=ExtResource("3_8hls5")]
