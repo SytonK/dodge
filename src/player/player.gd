@@ -52,6 +52,7 @@ func _on_hurtbox_hurt() -> void:
 	hurt.emit()
 	if health <= 0:
 		hurtbox.set_deferred("monitoring", false)
+		hit_sprite.self_modulate.a = .5
 		_game_over()
 	else:
 		animation_player.play('invulnerable')

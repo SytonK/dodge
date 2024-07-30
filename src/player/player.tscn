@@ -49,7 +49,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_jiinl"]
 resource_name = "invulnerable"
-step = 0.25
+step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -93,7 +93,7 @@ tracks/3/path = NodePath("HitSprite:self_modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.25, 0.5, 1),
+"times": PackedFloat32Array(0, 0.15, 0.25, 0.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(0.7, 0.1, 0.2, 0), Color(0.7, 0.1, 0.2, 0.2), Color(0.702, 0.102, 0.2, 1), Color(0.7, 0.1, 0.2, 0)]
@@ -123,6 +123,7 @@ visible = false
 shape = SubResource("RectangleShape2D_xnu0d")
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
+rotation = -0.205949
 color = Color(0.05, 0.05, 0.5, 1)
 polygon = PackedVector2Array(6, -6, 6, 6, -6, 6, -6, -6)
 
