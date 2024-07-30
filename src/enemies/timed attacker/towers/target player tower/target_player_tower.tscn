@@ -18,3 +18,4 @@ polygon = PackedVector2Array(26, 0, 3, 26, -3, 26, -26, 0, -3, -26, 3, -26)
 
 [node name="AssemblyAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_mbnxn")
+bus = &"SFX"
