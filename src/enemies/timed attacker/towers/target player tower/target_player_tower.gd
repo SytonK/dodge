@@ -9,6 +9,7 @@ const ACTIVE_COLOR: Color = Color(0.8, 0.15, 0.15)
 
 const BULLET_COLOR: Color = Color(0.9, 0, 0)
 
+@onready var assembly_audio_stream_player: AudioStreamPlayer = $AssemblyAudioStreamPlayer
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
 
@@ -19,6 +20,8 @@ func _set_disabled(new_disabled: bool) -> void:
 	super._set_disabled(new_disabled)
 	if sprite_2d:
 		sprite_2d.modulate = DISABLED_COLOR if disabled else ACTIVE_COLOR
+	if !new_disabled && assembly_audio_stream_player:
+		assembly_audio_stream_player.play()
 
 
 func _on_timer_timeout() -> void:
