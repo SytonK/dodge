@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cdtt7rqvbt4lx"]
+[gd_scene load_steps=9 format=3 uid="uid://cdtt7rqvbt4lx"]
 
 [ext_resource type="Script" path="res://src/player/player.gd" id="1_m1oug"]
 [ext_resource type="Script" path="res://src/components/hitbox and hurtbox/hurtbox/hurtbox.gd" id="2_gwsoj"]
+[ext_resource type="Texture2D" uid="uid://dvgwoo2far5pn" path="res://assets/in game/player hit effect.png" id="3_fm3ie"]
 [ext_resource type="AudioStream" uid="uid://dtjr4ms3igkal" path="res://assets/sounds/player_hit.mp3" id="4_e4i7w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xnu0d"]
@@ -32,6 +33,18 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HitSprite:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.7, 0.1, 0.2, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_jiinl"]
@@ -72,6 +85,18 @@ tracks/2/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HitSprite:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.7, 0.1, 0.2, 0), Color(0.7, 0.1, 0.2, 0.2), Color(0.702, 0.102, 0.2, 1), Color(0.7, 0.1, 0.2, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xhc5q"]
@@ -121,6 +146,11 @@ polygon = PackedVector2Array(-8, 8, -12, -18, -18, -18, -18, 8)
 rotation = 4.71239
 color = Color(0.15, 0.8, 0.15, 1)
 polygon = PackedVector2Array(-8, 8, -12, -18, -18, -18, -18, 8)
+
+[node name="HitSprite" type="Sprite2D" parent="."]
+self_modulate = Color(0.7, 0.1, 0.2, 0)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_fm3ie")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 process_mode = 3

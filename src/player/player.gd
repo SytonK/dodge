@@ -15,6 +15,7 @@ signal hurt
 @onready var health: int = max_health : set = _set_health
 @export var can_take_damage_this_frame: bool = true
 @onready var health_polygons: Array[Polygon2D] = [$Health/Health1, $Health/Health2, $Health/Health3, $Health/Health4]
+@onready var hit_sprite: Sprite2D = $HitSprite
 
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
@@ -47,6 +48,7 @@ func _on_hurtbox_hurt() -> void:
 	health -= 1
 	audio_stream_player.play()
 	_update_health_ui()
+	hit_sprite.rotation =  randf_range(0, 2 * PI)
 	hurt.emit()
 	if health <= 0:
 		hurtbox.set_deferred("monitoring", false)
