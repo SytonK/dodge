@@ -13,9 +13,9 @@ hard_time = 25
 level_number = 1
 
 [node name="ParallalTower" parent="." instance=ExtResource("4_ldb0h")]
-disabled = true
 speed = 300.0
 frequency = 1.5
+disabled = true
 
 [node name="GlobalBulletSpawnerParallalDirection" type="Node2D" parent="."]
 script = ExtResource("3_tmrlw")

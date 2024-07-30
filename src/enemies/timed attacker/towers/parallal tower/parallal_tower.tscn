@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bi8ccuhy8gxha"]
+[gd_scene load_steps=4 format=3 uid="uid://bi8ccuhy8gxha"]
 
 [ext_resource type="Script" path="res://src/enemies/timed attacker/towers/parallal tower/parallal_tower.gd" id="1_dw2c0"]
 [ext_resource type="Texture2D" uid="uid://dirlfr4yhxppt" path="res://assets/in game/parallal tower.png" id="2_xtvhq"]
+[ext_resource type="AudioStream" uid="uid://c0gce6goanpo0" path="res://assets/sounds/assemble.mp3" id="3_3eh7g"]
 
 [node name="ParallalTower" type="Node2D"]
 script = ExtResource("1_dw2c0")
@@ -16,3 +17,4 @@ texture = ExtResource("2_xtvhq")
 polygon = PackedVector2Array(0, -26, 22, -12, 22, 12, 0, 26, -22, 12, -22, -12)
 
 [node name="AssemblyAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_3eh7g")

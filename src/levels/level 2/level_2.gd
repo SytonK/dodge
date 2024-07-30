@@ -16,7 +16,9 @@ func _to_normal() -> void:
 	global_bullet_spawner_parallal_direction.speed = 410
 	global_bullet_spawner.frequency = 1
 	parallal_tower.disabled = false
+	await get_tree().create_timer(0.35).timeout
 	target_player_tower_left.disabled = false
+	await get_tree().create_timer(0.35).timeout
 	target_player_tower_right.disabled = false
 
 func _to_hard() -> void:

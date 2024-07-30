@@ -24,7 +24,9 @@ func _to_normal() -> void:
 	global_hazard_spawner.disabled = false
 	global_random_position_hazard_spawner.frequency = 1
 	parallal_tower.disabled = false
+	await get_tree().create_timer(0.35).timeout
 	target_player_tower_left.disabled = false
+	await get_tree().create_timer(0.35).timeout
 	target_player_tower_rigth.disabled = false
 
 
