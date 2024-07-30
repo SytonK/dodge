@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://dil4wgq461fem"]
 
-[ext_resource type="Texture2D" uid="uid://chdqju1vhyomv" path="res://assets/background/backgroung.png" id="1_dbg05"]
+[ext_resource type="Texture2D" uid="uid://chdqju1vhyomv" path="res://assets/envierment/backgroung.png" id="1_dbg05"]
 [ext_resource type="PackedScene" uid="uid://5lgnpekb1gx3" path="res://src/levels/envierment/path follower/path_follower.tscn" id="2_pgkro"]
 
 [sub_resource type="Curve2D" id="Curve2D_5vgfj"]

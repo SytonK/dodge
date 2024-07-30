@@ -1,7 +1,7 @@
 [gd_scene load_steps=15 format=3 uid="uid://cy0r1nnyfoc00"]
 
 [ext_resource type="Script" path="res://src/levels/envierment/level_envierment.gd" id="1_ro7al"]
-[ext_resource type="Texture2D" uid="uid://chdqju1vhyomv" path="res://assets/background/backgroung.png" id="2_nvt56"]
+[ext_resource type="Texture2D" uid="uid://chdqju1vhyomv" path="res://assets/envierment/backgroung.png" id="2_nvt56"]
 [ext_resource type="PackedScene" uid="uid://5lgnpekb1gx3" path="res://src/levels/envierment/path follower/path_follower.tscn" id="2_xbsvb"]
 
 [sub_resource type="Gradient" id="Gradient_o4as6"]
