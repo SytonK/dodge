@@ -14,7 +14,6 @@ func _ready() -> void:
 	collision_mask = Layers.HITBOX_LAYER
 
 func _physics_process(delta: float) -> void:
-	print(bullets)
 	for bullet in bullets:
 		if is_instance_valid(bullet):
 			_add_to_direction(bullet, delta)
