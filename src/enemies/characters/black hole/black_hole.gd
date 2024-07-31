@@ -4,7 +4,8 @@ extends Hitbox
 
 const rotation_speed_1: float = 1
 const rotation_speed_2: float = -.8
-const rotation_speed_4: float = 0.4
+const rotation_speed_3: float = -.8
+const rotation_speed_4: float = .4
 
 
 @export var max_speed: float
@@ -20,10 +21,7 @@ var velocity: Vector2
 
 
 func _physics_process(delta: float) -> void:
-	black_hole_1.rotation += rotation_speed_1 * delta
-	black_hole_2.rotation += rotation_speed_2 * delta
-	black_hole_3.rotation += rotation_speed_2 * delta
-	black_hole_4.rotation += rotation_speed_4 * delta
+	_rotate_sprites(delta)
 	
 	accelerate_to_player(delta)
 	
@@ -33,3 +31,10 @@ func _physics_process(delta: float) -> void:
 func accelerate_to_player(delta: float) -> void:
 	var velocity_direction: Vector2 = (PlayerRef.player_ref.position - position).normalized()
 	velocity = (velocity + velocity_direction * acceleration * delta).limit_length(max_speed)
+
+
+func _rotate_sprites(delta: float) -> void:
+	black_hole_1.rotation += rotation_speed_1 * delta
+	black_hole_2.rotation += rotation_speed_2 * delta
+	black_hole_3.rotation += rotation_speed_3 * delta
+	black_hole_4.rotation += rotation_speed_4 * delta
