@@ -11,3 +11,5 @@ hard_time = 5
 
 [node name="BlackHole" parent="." instance=ExtResource("2_6sda6")]
 position = Vector2(-447, -222)
+max_speed = 400.0
+acceleration = 1200.0
