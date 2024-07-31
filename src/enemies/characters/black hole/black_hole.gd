@@ -1,5 +1,5 @@
 class_name BlackHole
-extends Hurtbox
+extends Hitbox
 
 
 const rotation_speed_1: float = 1
