@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cbbre6otp61mo"]
+[gd_scene load_steps=13 format=3 uid="uid://cbbre6otp61mo"]
 
 [ext_resource type="Texture2D" uid="uid://be2jukasfvdnp" path="res://assets/in game/black hole/black hole 0.png" id="1_eri66"]
 [ext_resource type="Script" path="res://src/enemies/characters/black hole/black_hole.gd" id="1_ym74a"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b0n7xscw34wkn" path="res://assets/in game/black hole/black hole 2.png" id="3_qfm51"]
 [ext_resource type="Texture2D" uid="uid://dehva5shlk427" path="res://assets/in game/black hole/black hole 3.png" id="4_bdw6f"]
 [ext_resource type="Texture2D" uid="uid://cx0ohi2yybn2e" path="res://assets/in game/black hole/black hole 4.png" id="5_esbwl"]
+[ext_resource type="Script" path="res://src/enemies/characters/black hole/worp/worp.gd" id="7_oq3rv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_juggg"]
 radius = 36.0
@@ -107,6 +108,9 @@ _data = {
 "recover": SubResource("Animation_iophd")
 }
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_a5wru"]
+radius = 64.0
+
 [node name="BlackHole" type="Area2D"]
 script = ExtResource("1_ym74a")
 
@@ -143,5 +147,11 @@ texture = ExtResource("5_esbwl")
 libraries = {
 "": SubResource("AnimationLibrary_7ly6l")
 }
+
+[node name="Worp" type="Area2D" parent="."]
+script = ExtResource("7_oq3rv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Worp"]
+shape = SubResource("CircleShape2D_a5wru")
 
 [connection signal="hit" from="." to="." method="_on_hit"]

@@ -1,11 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cpw5rkjet4364"]
+[gd_scene load_steps=4 format=3 uid="uid://cpw5rkjet4364"]
 
 [ext_resource type="Script" path="res://src/levels/level.gd" id="1_tvtlc"]
 [ext_resource type="Script" path="res://src/enemies/timed attacker/global enemies/global bullet spawner/global_bullet_spawner.gd" id="2_x4cm6"]
-[ext_resource type="Script" path="res://src/enemies/characters/black hole/worp/worp.gd" id="3_47n2o"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_pcdql"]
-radius = 64.0
+[ext_resource type="PackedScene" uid="uid://cbbre6otp61mo" path="res://src/enemies/characters/black hole/black_hole.tscn" id="3_k5j01"]
 
 [node name="Sandbox" type="Node2D"]
 script = ExtResource("1_tvtlc")
@@ -16,10 +13,9 @@ hard_time = 5
 [node name="GlobalBulletSpawner" type="Node2D" parent="."]
 script = ExtResource("2_x4cm6")
 speed = 300.0
-frequency = 5.0
+frequency = 0.1
 
-[node name="Worp" type="Area2D" parent="."]
-script = ExtResource("3_47n2o")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Worp"]
-shape = SubResource("CircleShape2D_pcdql")
+[node name="BlackHole" parent="." instance=ExtResource("3_k5j01")]
+position = Vector2(-341, -184)
+max_speed = 300.0
+acceleration = 800.0

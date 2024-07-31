@@ -21,11 +21,13 @@ func _physics_process(delta: float) -> void:
 			bullets.erase(bullet)
 
 
-func _on_bullet_entered(bullet: Bullet) -> void:
-	bullets.append(bullet)
+func _on_bullet_entered(area: Area2D) -> void:
+	if area is Bullet:
+		bullets.append(area)
 
-func _on_bullet_exiced(bullet: Bullet) -> void:
-	bullets.erase(bullet)
+func _on_bullet_exiced(area: Area2D) -> void:
+	if area is Bullet:
+		bullets.erase(area)
 
 func _add_to_direction(bullet: Bullet, delta: float) -> void:
 	var direction_to_add: Vector2 = (position - bullet.global_position).normalized() * WORP_STRENGTH * delta
