@@ -19,13 +19,16 @@ var velocity: Vector2
 @onready var black_hole_3: Sprite2D = $BlackHole3
 @onready var black_hole_4: Sprite2D = $BlackHole4
 
+@export var is_recovering: bool = false
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+
 
 func _physics_process(delta: float) -> void:
 	_rotate_sprites(delta)
 	
-	_accelerate_to_player(delta)
-	
-	position += velocity * delta
+	if !is_recovering:
+		_accelerate_to_player(delta)
+		position += velocity * delta
 
 
 func _accelerate_to_player(delta: float) -> void:
@@ -38,3 +41,8 @@ func _rotate_sprites(delta: float) -> void:
 	black_hole_2.rotation += rotation_speed_2 * delta
 	black_hole_3.rotation += rotation_speed_3 * delta
 	black_hole_4.rotation += rotation_speed_4 * delta
+
+
+func _on_hit() -> void:
+	animation_player.play('recover')
+	velocity = Vector2.ZERO
