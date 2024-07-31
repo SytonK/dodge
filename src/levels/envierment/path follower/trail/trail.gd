@@ -6,7 +6,7 @@ extends Line2D
 var queue : Array
 
  
-func _process(_delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	_update_points()
 
 func _update_points() -> void:

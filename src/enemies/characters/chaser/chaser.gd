@@ -19,7 +19,7 @@ var spiketrail_timer: Timer
 func _ready() -> void:
 	_init_spike()
 
-func _process(_delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if !is_recovering:
 		_chase_player()
 

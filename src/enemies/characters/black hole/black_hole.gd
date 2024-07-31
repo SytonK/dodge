@@ -14,8 +14,10 @@ const rotation_speed_4: float = 0.4
 @onready var black_hole_4: Sprite2D = $BlackHole4
 
 
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	black_hole_1.rotation += rotation_speed_1 * delta
 	black_hole_2.rotation += rotation_speed_2 * delta
 	black_hole_3.rotation += rotation_speed_2 * delta
 	black_hole_4.rotation += rotation_speed_4 * delta
+
+

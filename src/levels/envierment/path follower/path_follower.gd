@@ -13,7 +13,7 @@ func _ready() -> void:
 	_set_gradiant(gradiant)
 	trail.max_length = max_length
 
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	progress_ratio += speed * delta
 
 

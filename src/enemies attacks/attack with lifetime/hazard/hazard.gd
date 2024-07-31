@@ -25,6 +25,8 @@ func _init_setup_timer() -> void:
 
 func _process(delta: float) -> void:
 	super._process(delta)
+
+func _physics_process(_delta: float) -> void:
 	_calc_sprite_a()
 
 
