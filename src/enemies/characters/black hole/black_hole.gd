@@ -23,12 +23,12 @@ var velocity: Vector2
 func _physics_process(delta: float) -> void:
 	_rotate_sprites(delta)
 	
-	accelerate_to_player(delta)
+	_accelerate_to_player(delta)
 	
 	position += velocity * delta
 
 
-func accelerate_to_player(delta: float) -> void:
+func _accelerate_to_player(delta: float) -> void:
 	var velocity_direction: Vector2 = (PlayerRef.player_ref.position - position).normalized()
 	velocity = (velocity + velocity_direction * acceleration * delta).limit_length(max_speed)
 
