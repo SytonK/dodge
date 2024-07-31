@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=3 uid="uid://cbbre6otp61mo"]
+
+[ext_resource type="Texture2D" uid="uid://be2jukasfvdnp" path="res://assets/in game/black hole/black hole 0.png" id="1_eri66"]
+[ext_resource type="Script" path="res://src/enemies/characters/black hole/black_hole.gd" id="1_ym74a"]
+[ext_resource type="Texture2D" uid="uid://oiv7xpv4ygeo" path="res://assets/in game/black hole/black hole 1.png" id="2_aguen"]
+[ext_resource type="Texture2D" uid="uid://b0n7xscw34wkn" path="res://assets/in game/black hole/black hole 2.png" id="3_qfm51"]
+[ext_resource type="Texture2D" uid="uid://dehva5shlk427" path="res://assets/in game/black hole/black hole 3.png" id="4_bdw6f"]
+[ext_resource type="Texture2D" uid="uid://cx0ohi2yybn2e" path="res://assets/in game/black hole/black hole 4.png" id="5_esbwl"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_juggg"]
+radius = 30.0
+
+[node name="BlackHole" type="Area2D"]
+script = ExtResource("1_ym74a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CircleShape2D_juggg")
+
+[node name="BlackHole0" type="Sprite2D" parent="."]
+self_modulate = Color(0.175, 0.025, 0.075, 1)
+position = Vector2(0, -3)
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("1_eri66")
+
+[node name="BlackHole1" type="Sprite2D" parent="."]
+self_modulate = Color(0.025, 0.025, 0.2, 1)
+position = Vector2(0, -3)
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("2_aguen")
+
+[node name="BlackHole2" type="Sprite2D" parent="."]
+self_modulate = Color(0.15, 0.025, 0.2, 1)
+position = Vector2(0, -3)
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("3_qfm51")
+
+[node name="BlackHole3" type="Sprite2D" parent="."]
+self_modulate = Color(0.25, 0.025, 0.075, 1)
+position = Vector2(0, -3)
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("4_bdw6f")
+
+[node name="BlackHole4" type="Sprite2D" parent="."]
+self_modulate = Color(0.025, 0.1, 0.125, 1)
+position = Vector2(0, -3)
+scale = Vector2(0.125, 0.125)
+texture = ExtResource("5_esbwl")

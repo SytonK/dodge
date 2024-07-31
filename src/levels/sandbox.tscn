@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cpw5rkjet4364"]
+[gd_scene load_steps=3 format=3 uid="uid://cpw5rkjet4364"]
 
 [ext_resource type="Script" path="res://src/levels/level.gd" id="1_tvtlc"]
-[ext_resource type="PackedScene" uid="uid://bvr544xcdynot" path="res://src/enemies/characters/bounce/bounce.tscn" id="2_fb6jl"]
-[ext_resource type="PackedScene" uid="uid://c3hvu4efpgqdd" path="res://src/enemies attacks/attack with lifetime/explosion/explosion.tscn" id="3_ewoan"]
+[ext_resource type="PackedScene" uid="uid://cbbre6otp61mo" path="res://src/enemies/characters/black hole/black_hole.tscn" id="2_6sda6"]
 
 [node name="Sandbox" type="Node2D"]
 script = ExtResource("1_tvtlc")
@@ -10,10 +9,5 @@ easy_time = 5
 normal_time = 5
 hard_time = 5
 
-[node name="Bounce" parent="." instance=ExtResource("2_fb6jl")]
-position = Vector2(207, 194)
-speed = 500.0
-explode_on_collision = true
-
-[node name="Explosion" parent="." instance=ExtResource("3_ewoan")]
-position = Vector2(518, -213)
+[node name="BlackHole" parent="." instance=ExtResource("2_6sda6")]
+position = Vector2(-447, -222)
