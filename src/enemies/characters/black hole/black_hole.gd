@@ -2,10 +2,10 @@ class_name BlackHole
 extends Hitbox
 
 
-const rotation_speed_1: float = 1
-const rotation_speed_2: float = -.8
-const rotation_speed_3: float = -.8
-const rotation_speed_4: float = .4
+const rotation_speed_1: float = .7 * PI
+const rotation_speed_2: float = -.4 * PI
+const rotation_speed_3: float = -.4 * PI
+const rotation_speed_4: float = .6 * PI
 
 
 @export var max_speed: float
