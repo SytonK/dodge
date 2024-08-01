@@ -47,7 +47,6 @@ gradiants1 = Array[Gradient]([SubResource("Gradient_o4as6"), SubResource("Gradie
 gradiants2 = Array[Gradient]([SubResource("Gradient_2qo4f"), SubResource("Gradient_ogvdj"), SubResource("Gradient_75ws0"), null])
 
 [node name="TextureRect" type="TextureRect" parent="."]
-modulate = Color(0.5, 0.5, 0.5, 1)
 self_modulate = Color(0.5, 0.5, 0.5, 1)
 anchors_preset = 15
 anchor_right = 1.0
