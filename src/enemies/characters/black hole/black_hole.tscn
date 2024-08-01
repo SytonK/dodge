@@ -16,8 +16,8 @@ radius = 128.0
 
 [sub_resource type="Curve" id="Curve_tk1gh"]
 min_value = -1.0
-_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.175, -0.5), 0.0, 0.0, 0, 0, Vector2(0.35, 0.5), 0.0, 0.0, 0, 0, Vector2(0.45, 0.15), 0.0, 0.0, 0, 0, Vector2(0.5, 0), 0.0, 0.0, 0, 0]
-point_count = 5
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.083779, -0.827992), -3.22653, -3.22653, 0, 0, Vector2(0.194296, -0.776978), -4.54265, -4.54265, 0, 0, Vector2(0.319073, 0.549379), 5.17051, 5.17051, 0, 0, Vector2(0.406417, 0.583388), -5.96223, -5.96223, 0, 0, Vector2(0.45, 0.15), 4.66041, 4.66041, 0, 0, Vector2(0.5, 0), 0.0, 0.0, 0, 0]
+point_count = 7
 
 [sub_resource type="CurveTexture" id="CurveTexture_87tbb"]
 curve = SubResource("Curve_tk1gh")
@@ -128,6 +128,7 @@ _data = {
 }
 
 [node name="BlackHole" type="Area2D"]
+scale = Vector2(1, 0.75)
 script = ExtResource("1_ym74a")
 
 [node name="Warp" type="Area2D" parent="."]
@@ -139,7 +140,7 @@ shape = SubResource("CircleShape2D_a5wru")
 
 [node name="Sprite2D" type="Sprite2D" parent="Warp"]
 material = SubResource("ShaderMaterial_s411g")
-scale = Vector2(2.5, 2.5)
+scale = Vector2(2, 1.5)
 texture = ExtResource("8_86vmk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
