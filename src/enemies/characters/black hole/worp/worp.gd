@@ -1,8 +1,7 @@
 class_name Worp
 extends Area2D
 
-
-const WORP_STRENGTH: float = 2.5
+@export var worp_strength: float
 
 var bullets: Array[Bullet]
 
@@ -30,6 +29,6 @@ func _on_bullet_exiced(area: Area2D) -> void:
 		bullets.erase(area)
 
 func _add_to_direction(bullet: Bullet, delta: float) -> void:
-	var direction_to_add: Vector2 = (position - bullet.global_position).normalized() * WORP_STRENGTH * delta
+	var direction_to_add: Vector2 = (position - bullet.global_position).normalized() * worp_strength * delta
 	bullet.direction += direction_to_add
 
