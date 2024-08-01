@@ -1,4 +1,4 @@
-class_name Worp
+class_name Warp
 extends Area2D
 
 @export var worp_strength: float
