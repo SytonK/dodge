@@ -12,8 +12,6 @@ hard_time = 5
 
 [node name="BlackHole" parent="." instance=ExtResource("3_k5j01")]
 position = Vector2(-341, -184)
-max_speed = 200.0
-acceleration = 500.0
 
 [node name="GlobalBulletSpawner" type="Node2D" parent="."]
 script = ExtResource("2_x4cm6")
