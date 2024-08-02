@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=3 uid="uid://dvfue3ljumhc3"]
+
+[ext_resource type="Script" path="res://src/levels/level 5/level_5.gd" id="1_qh1bk"]
+[ext_resource type="PackedScene" uid="uid://cy0r1nnyfoc00" path="res://src/levels/envierment/level_envierment.tscn" id="2_8u1bx"]
+[ext_resource type="PackedScene" uid="uid://cbbre6otp61mo" path="res://src/enemies/characters/black hole/black_hole.tscn" id="3_3avrx"]
+[ext_resource type="Script" path="res://src/enemies/timed attacker/global enemies/global bullet spawner/global_bullet_spawner.gd" id="3_ohdji"]
+[ext_resource type="Script" path="res://src/enemies/timed attacker/global enemies/global bullet spawner/parallal/global_bullet_spawner_parallal_direction.gd" id="4_rb1el"]
+[ext_resource type="PackedScene" uid="uid://bi8ccuhy8gxha" path="res://src/enemies/timed attacker/towers/parallal tower/parallal_tower.tscn" id="5_ls021"]
+[ext_resource type="PackedScene" uid="uid://hm1pwd5uc2b4" path="res://src/enemies/timed attacker/towers/target player tower/target_player_tower.tscn" id="6_kxhu7"]
+
+[node name="Level5" type="Node2D"]
+script = ExtResource("1_qh1bk")
+easy_time = 25
+normal_time = 25
+hard_time = 25
+
+[node name="LevelEnvierment" parent="." instance=ExtResource("2_8u1bx")]
+
+[node name="BlackHole" parent="." instance=ExtResource("3_3avrx")]
+position = Vector2(0, -150)
+max_speed = 200.0
+acceleration = 400.0
+
+[node name="GlobalBulletSpawner" type="Node2D" parent="."]
+script = ExtResource("3_ohdji")
+speed = 700.0
+frequency = 1.5
+
+[node name="GlobalBulletSpawnerParallalDirection" type="Node2D" parent="."]
+script = ExtResource("4_rb1el")
+speed = 350.0
+frequency = 0.4
+
+[node name="ParallalTower" parent="." instance=ExtResource("5_ls021")]
+speed = 300.0
+frequency = 1.2
+
+[node name="TargetPlayerTowerTopRigth" parent="." instance=ExtResource("6_kxhu7")]
+position = Vector2(648, -277)
+speed = 600.0
+frequency = 1.0
+disabled = true
+
+[node name="TargetPlayerTowerBottomRigth" parent="." instance=ExtResource("6_kxhu7")]
+position = Vector2(648, 273)
+speed = 300.0
+frequency = 0.5
+disabled = true
+
+[node name="TargetPlayerTowerBottomLeft" parent="." instance=ExtResource("6_kxhu7")]
+position = Vector2(-652, 273)
+speed = 600.0
+frequency = 1.0
+disabled = true
+
+[node name="TargetPlayerTowerTopLeft" parent="." instance=ExtResource("6_kxhu7")]
+position = Vector2(-652, -277)
+speed = 300.0
+frequency = 0.5
+disabled = true
