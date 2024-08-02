@@ -128,7 +128,7 @@ _data = {
 }
 
 [node name="BlackHole" type="Area2D"]
-scale = Vector2(1, 0.75)
+scale = Vector2(1, 0.8)
 script = ExtResource("1_ym74a")
 
 [node name="Warp" type="Area2D" parent="."]
@@ -140,7 +140,7 @@ shape = SubResource("CircleShape2D_a5wru")
 
 [node name="Sprite2D" type="Sprite2D" parent="Warp"]
 material = SubResource("ShaderMaterial_s411g")
-scale = Vector2(2, 1.5)
+scale = Vector2(2, 2)
 texture = ExtResource("8_86vmk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
