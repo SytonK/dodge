@@ -13,6 +13,7 @@ script = ExtResource("1_qh1bk")
 easy_time = 25
 normal_time = 25
 hard_time = 25
+level_number = 5
 
 [node name="LevelEnvierment" parent="." instance=ExtResource("2_8u1bx")]
 

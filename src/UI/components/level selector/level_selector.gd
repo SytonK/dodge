@@ -8,7 +8,7 @@ const LEVEL_PATH0: String = 'res://src/levels/level '
 const LEVEL_PATH1: String = '/level_'
 const LEVEL_PATH2: String = '.tscn'
 
-const MAX_LEVEL: int = 4
+const MAX_LEVEL: int = 5
 
 
 @onready var level: int: set = _set_level
