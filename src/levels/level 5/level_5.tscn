@@ -10,8 +10,8 @@
 
 [node name="Level5" type="Node2D"]
 script = ExtResource("1_qh1bk")
-easy_time = 25
-normal_time = 25
+easy_time = 15
+normal_time = 20
 hard_time = 25
 level_number = 5
 
@@ -24,13 +24,13 @@ acceleration = 400.0
 
 [node name="GlobalBulletSpawner" type="Node2D" parent="."]
 script = ExtResource("3_ohdji")
-speed = 700.0
+speed = 650.0
 frequency = 1.5
 
 [node name="GlobalBulletSpawnerParallalDirection" type="Node2D" parent="."]
 script = ExtResource("4_rb1el")
 speed = 350.0
-frequency = 0.4
+frequency = 0.5
 
 [node name="ParallalTower" parent="." instance=ExtResource("5_ls021")]
 speed = 300.0
@@ -38,24 +38,24 @@ frequency = 1.2
 
 [node name="TargetPlayerTowerTopRigth" parent="." instance=ExtResource("6_kxhu7")]
 position = Vector2(648, -277)
-speed = 600.0
-frequency = 1.0
+speed = 850.0
+frequency = 2.4
 disabled = true
 
 [node name="TargetPlayerTowerBottomRigth" parent="." instance=ExtResource("6_kxhu7")]
 position = Vector2(648, 273)
-speed = 300.0
-frequency = 0.5
+speed = 850.0
+frequency = 2.4
 disabled = true
 
 [node name="TargetPlayerTowerBottomLeft" parent="." instance=ExtResource("6_kxhu7")]
 position = Vector2(-652, 273)
-speed = 600.0
-frequency = 1.0
+speed = 850.0
+frequency = 2.4
 disabled = true
 
 [node name="TargetPlayerTowerTopLeft" parent="." instance=ExtResource("6_kxhu7")]
 position = Vector2(-652, -277)
-speed = 300.0
-frequency = 0.5
+speed = 850.0
+frequency = 2.4
 disabled = true
