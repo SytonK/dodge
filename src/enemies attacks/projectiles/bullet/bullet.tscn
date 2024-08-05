@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://c4ijp0jd2r1y2"]
 
 [ext_resource type="Script" path="res://src/enemies attacks/projectiles/bullet/bullet.gd" id="1_gv3sv"]
-[ext_resource type="Texture2D" uid="uid://bo2ddd3a4qolu" path="res://assets/in game/bullet.png" id="2_fenar"]
+[ext_resource type="Texture2D" uid="uid://bo2ddd3a4qolu" path="res://src/enemies attacks/projectiles/bullet/assets/bullet.png" id="2_fenar"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2xhtv"]
 size = Vector2(32, 8)
