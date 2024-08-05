@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dirlfr4yhxppt"
-path="res://.godot/imported/parallal tower.png-6ca0d522f59605eb71dcb1eb2b9f515d.ctex"
+path="res://.godot/imported/parallal tower.png-1ca413b32222f4de2e29f4affb3a1385.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/in game/parallal tower.png"
-dest_files=["res://.godot/imported/parallal tower.png-6ca0d522f59605eb71dcb1eb2b9f515d.ctex"]
+source_file="res://src/enemies/timed attacker/towers/parallal tower/assets/parallal tower.png"
+dest_files=["res://.godot/imported/parallal tower.png-1ca413b32222f4de2e29f4affb3a1385.ctex"]
 
 [params]
 
