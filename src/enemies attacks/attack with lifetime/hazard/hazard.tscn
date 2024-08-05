@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://byb65lbpo2jm0"]
 
 [ext_resource type="Script" path="res://src/enemies attacks/attack with lifetime/hazard/hazard.gd" id="1_qm4lu"]
-[ext_resource type="Texture2D" uid="uid://bpm3njr60dgyh" path="res://assets/in game/hazard.png" id="2_vd1bv"]
+[ext_resource type="Texture2D" uid="uid://bpm3njr60dgyh" path="res://src/enemies attacks/attack with lifetime/hazard/assets/hazard.png" id="2_vd1bv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ai04r"]
 radius = 60.0

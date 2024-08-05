@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bpm3njr60dgyh"
-path="res://.godot/imported/hazard.png-fada7f9f2435d021acb32277131be9db.ctex"
+path="res://.godot/imported/hazard.png-044cf0b5b449cdfa269c9d3f4ddc2f87.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/in game/hazard.png"
-dest_files=["res://.godot/imported/hazard.png-fada7f9f2435d021acb32277131be9db.ctex"]
+source_file="res://src/enemies attacks/attack with lifetime/hazard/assets/hazard.png"
+dest_files=["res://.godot/imported/hazard.png-044cf0b5b449cdfa269c9d3f4ddc2f87.ctex"]
 
 [params]
 
