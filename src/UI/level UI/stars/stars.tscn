@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://bfasxqcvma3xo"]
 
-[ext_resource type="Texture2D" uid="uid://cwg8cbqjt73qi" path="res://assets/UI/stars/empty_star.png" id="1_i2lcb"]
 [ext_resource type="Script" path="res://src/UI/level UI/stars/stars.gd" id="1_vlk8y"]
+[ext_resource type="Texture2D" uid="uid://dxbwaoe3d4yof" path="res://assets/UI/stars/star.png" id="2_61d87"]
 [ext_resource type="AudioStream" uid="uid://1i0qyl58fbvf" path="res://assets/sounds/gain_star.mp3" id="3_p8d16"]
 
 [node name="Stars" type="HBoxContainer"]
@@ -10,16 +10,19 @@ offset_bottom = 40.0
 script = ExtResource("1_vlk8y")
 
 [node name="Star2" type="TextureRect" parent="."]
+self_modulate = Color(0.2, 0.2, 0.2, 1)
 layout_mode = 2
-texture = ExtResource("1_i2lcb")
+texture = ExtResource("2_61d87")
 
 [node name="Star1" type="TextureRect" parent="."]
+self_modulate = Color(0.2, 0.2, 0.2, 1)
 layout_mode = 2
-texture = ExtResource("1_i2lcb")
+texture = ExtResource("2_61d87")
 
 [node name="Star0" type="TextureRect" parent="."]
+self_modulate = Color(0.2, 0.2, 0.2, 1)
 layout_mode = 2
-texture = ExtResource("1_i2lcb")
+texture = ExtResource("2_61d87")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_p8d16")
