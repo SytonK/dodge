@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://yrt0w0v5c5gv"]
 
 [ext_resource type="Script" path="res://src/enemies attacks/attack with lifetime/spike/spike.gd" id="1_v4g7r"]
-[ext_resource type="Texture2D" uid="uid://sphksnbmil56" path="res://assets/in game/spike.png" id="2_8t4bx"]
+[ext_resource type="Texture2D" uid="uid://sphksnbmil56" path="res://src/enemies attacks/attack with lifetime/spike/assets/spike.png" id="2_8t4bx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wln2i"]
 
