@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://brp3sverp85o2"
-path="res://.godot/imported/tower.png-2158fdbdec105434ec9a5e40d8f2351a.ctex"
+path="res://.godot/imported/tower.png-0707ac017c889391f1ab0ce08e9e08d0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/in game/tower.png"
-dest_files=["res://.godot/imported/tower.png-2158fdbdec105434ec9a5e40d8f2351a.ctex"]
+source_file="res://src/enemies/timed attacker/towers/target player tower/assets/tower.png"
+dest_files=["res://.godot/imported/tower.png-0707ac017c889391f1ab0ce08e9e08d0.ctex"]
 
 [params]
 

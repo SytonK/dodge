@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://hm1pwd5uc2b4"]
 
 [ext_resource type="Script" path="res://src/enemies/timed attacker/towers/target player tower/target_player_tower.gd" id="1_0negt"]
-[ext_resource type="Texture2D" uid="uid://brp3sverp85o2" path="res://assets/in game/tower.png" id="2_mhabt"]
+[ext_resource type="Texture2D" uid="uid://brp3sverp85o2" path="res://src/enemies/timed attacker/towers/target player tower/assets/tower.png" id="2_mhabt"]
 [ext_resource type="AudioStream" uid="uid://c0gce6goanpo0" path="res://assets/sounds/assemble.mp3" id="3_mbnxn"]
 
 [node name="TargetPlayerTower" type="Node2D"]
