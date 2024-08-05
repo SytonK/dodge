@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b0n7xscw34wkn"
-path="res://.godot/imported/black hole 2.png-b02b7ac66e721b88803ba075fba07eaf.ctex"
+uid="uid://be2jukasfvdnp"
+path="res://.godot/imported/black hole 0.png-dedf873997c62fa43cfd26480206b2d9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/in game/black hole/black hole 2.png"
-dest_files=["res://.godot/imported/black hole 2.png-b02b7ac66e721b88803ba075fba07eaf.ctex"]
+source_file="res://src/enemies/characters/black hole/black hole/black hole 0.png"
+dest_files=["res://.godot/imported/black hole 0.png-dedf873997c62fa43cfd26480206b2d9.ctex"]
 
 [params]
 
