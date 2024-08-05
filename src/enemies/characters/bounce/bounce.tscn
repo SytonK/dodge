@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://src/enemies/characters/bounce/bounce.gd" id="1_r1ah3"]
 [ext_resource type="Script" path="res://src/components/hitbox and hurtbox/hitbox/hitbox.gd" id="2_tbr18"]
-[ext_resource type="Texture2D" uid="uid://be0eeas0fg1sb" path="res://assets/in game/bounce.png" id="3_7q4eh"]
+[ext_resource type="Texture2D" uid="uid://be0eeas0fg1sb" path="res://src/enemies/characters/bounce/assets/bounce.png" id="3_7q4eh"]
 [ext_resource type="Texture2D" uid="uid://do4iuw0chtvvm" path="res://assets/in game/exlosion.png" id="4_qa74x"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f7hul"]
