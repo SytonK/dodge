@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://c3hvu4efpgqdd"]
 
 [ext_resource type="Script" path="res://src/components/hitbox and hurtbox/hitbox/hitbox.gd" id="1_veidp"]
-[ext_resource type="Texture2D" uid="uid://do4iuw0chtvvm" path="res://assets/in game/exlosion.png" id="2_1gmwl"]
+[ext_resource type="Texture2D" uid="uid://do4iuw0chtvvm" path="res://src/enemies attacks/attack with lifetime/explosion/assets/exlosion.png" id="2_1gmwl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4m5u8"]
 radius = 60.0

@@ -65,6 +65,7 @@ focus_neighbor_top = NodePath("../LevelSelector/HBoxContainer/SelectLevelButton"
 text = "settings"
 
 [node name="SandboxButton" type="Button" parent="MainMenuVBox"]
+visible = false
 layout_mode = 2
 text = "Sandbox
 "
@@ -72,6 +73,7 @@ script = ExtResource("1_qusho")
 file_path = "res://src/levels/sandbox.tscn"
 
 [node name="QuitButton" type="Button" parent="MainMenuVBox"]
+visible = false
 layout_mode = 2
 text = "Quit"
 script = ExtResource("2_mxf2y")
