@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://src/player/player.gd" id="1_m1oug"]
 [ext_resource type="Script" path="res://src/components/hitbox and hurtbox/hurtbox/hurtbox.gd" id="2_gwsoj"]
-[ext_resource type="Texture2D" uid="uid://dvgwoo2far5pn" path="res://assets/in game/player hit effect.png" id="3_fm3ie"]
+[ext_resource type="Texture2D" uid="uid://dvgwoo2far5pn" path="res://src/player/assets/player hit effect.png" id="3_fm3ie"]
 [ext_resource type="AudioStream" uid="uid://dtjr4ms3igkal" path="res://assets/sounds/player_hit.mp3" id="4_e4i7w"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xnu0d"]

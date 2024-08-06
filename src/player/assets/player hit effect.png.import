@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvgwoo2far5pn"
-path="res://.godot/imported/player hit effect.png-a2f3fbbece3cf8260a7741e63ec97740.ctex"
+path="res://.godot/imported/player hit effect.png-81369be299e373bf9059390a29228670.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/in game/player hit effect.png"
-dest_files=["res://.godot/imported/player hit effect.png-a2f3fbbece3cf8260a7741e63ec97740.ctex"]
+source_file="res://src/player/assets/player hit effect.png"
+dest_files=["res://.godot/imported/player hit effect.png-81369be299e373bf9059390a29228670.ctex"]
 
 [params]
 
