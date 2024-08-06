@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbtjwjw1rtm2p"
-path="res://.godot/imported/trail.png-26572461b74afd7465de23f96d24e57b.ctex"
+path="res://.godot/imported/trail.png-d0bcbb38a451f8f39538cd71e94b7489.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/in game/trail.png"
-dest_files=["res://.godot/imported/trail.png-26572461b74afd7465de23f96d24e57b.ctex"]
+source_file="res://src/levels/envierment/path follower/assets/trail.png"
+dest_files=["res://.godot/imported/trail.png-d0bcbb38a451f8f39538cd71e94b7489.ctex"]
 
 [params]
 
