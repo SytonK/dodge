@@ -22,6 +22,9 @@ var velocity: Vector2
 @export var is_recovering: bool = false
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
+const rotation_amount: float = 1
+@onready var sprite_2d_web: Sprite2D = $Warp/Sprite2DWeb
+
 
 func _physics_process(delta: float) -> void:
 	_rotate_sprites(delta)
@@ -41,6 +44,8 @@ func _rotate_sprites(delta: float) -> void:
 	black_hole_2.rotation += rotation_speed_2 * delta
 	black_hole_3.rotation += rotation_speed_3 * delta
 	black_hole_4.rotation += rotation_speed_4 * delta
+	
+	sprite_2d_web.rotation += PI * rotation_amount * delta
 
 
 func _on_hit() -> void:

@@ -1,7 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://dvfue3ljumhc3"]
+[gd_scene load_steps=7 format=3 uid="uid://dvfue3ljumhc3"]
 
 [ext_resource type="Script" path="res://src/levels/level 5/level_5.gd" id="1_qh1bk"]
-[ext_resource type="PackedScene" uid="uid://cy0r1nnyfoc00" path="res://src/levels/envierment/level_envierment.tscn" id="2_8u1bx"]
 [ext_resource type="PackedScene" uid="uid://cbbre6otp61mo" path="res://src/enemies/characters/black hole/black_hole.tscn" id="3_3avrx"]
 [ext_resource type="Script" path="res://src/enemies/timed attacker/global enemies/global bullet spawner/global_bullet_spawner.gd" id="3_ohdji"]
 [ext_resource type="Script" path="res://src/enemies/timed attacker/global enemies/global bullet spawner/parallal/global_bullet_spawner_parallal_direction.gd" id="4_rb1el"]
@@ -14,8 +13,6 @@ easy_time = 15
 normal_time = 20
 hard_time = 25
 level_number = 5
-
-[node name="LevelEnvierment" parent="." instance=ExtResource("2_8u1bx")]
 
 [node name="BlackHole" parent="." instance=ExtResource("3_3avrx")]
 position = Vector2(0, -150)

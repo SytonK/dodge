@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cbbre6otp61mo"]
+[gd_scene load_steps=20 format=3 uid="uid://cbbre6otp61mo"]
 
 [ext_resource type="Texture2D" uid="uid://be2jukasfvdnp" path="res://src/enemies/characters/black hole/assets/black hole 0.png" id="1_eri66"]
 [ext_resource type="Script" path="res://src/enemies/characters/black hole/black_hole.gd" id="1_ym74a"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b0n7xscw34wkn" path="res://src/enemies/characters/black hole/assets/black hole 2.png" id="3_qfm51"]
 [ext_resource type="Texture2D" uid="uid://dehva5shlk427" path="res://src/enemies/characters/black hole/assets/black hole 3.png" id="4_bdw6f"]
 [ext_resource type="Texture2D" uid="uid://cx0ohi2yybn2e" path="res://src/enemies/characters/black hole/assets/black hole 4.png" id="5_esbwl"]
+[ext_resource type="Texture2D" uid="uid://4tb2mngk3t2h" path="res://src/enemies/characters/black hole/assets/black hole web.png" id="5_i6ya3"]
 [ext_resource type="Texture2D" uid="uid://csk2sh8a7syuk" path="res://src/enemies/characters/black hole/assets/circle.png" id="5_wn8m0"]
 [ext_resource type="Script" path="res://src/enemies/characters/black hole/warp/warp.gd" id="7_rnhww"]
 [ext_resource type="Texture2D" uid="uid://b4gm63i2w3sj2" path="res://icon.svg" id="8_86vmk"]
@@ -139,9 +140,15 @@ worp_strength = 3.0
 shape = SubResource("CircleShape2D_a5wru")
 
 [node name="Sprite2D" type="Sprite2D" parent="Warp"]
+visible = false
 material = SubResource("ShaderMaterial_s411g")
 scale = Vector2(2, 2)
 texture = ExtResource("8_86vmk")
+
+[node name="Sprite2DWeb" type="Sprite2D" parent="Warp"]
+self_modulate = Color(1, 1, 1, 0.1)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_i6ya3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(0.175, 0.175)
