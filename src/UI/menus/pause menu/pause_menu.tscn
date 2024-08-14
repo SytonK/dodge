@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://btg6r1ilc3tjr"]
+[gd_scene load_steps=9 format=3 uid="uid://btg6r1ilc3tjr"]
 
 [ext_resource type="Script" path="res://src/UI/menus/pause menu/pause_menu.gd" id="1_x2u21"]
 [ext_resource type="Theme" uid="uid://bgdcd6x4oip32" path="res://resources/theme/base_theme.tres" id="1_yhmnt"]
 [ext_resource type="Script" path="res://src/UI/components/reload button/reload_button.gd" id="2_56x2q"]
+[ext_resource type="Script" path="res://src/UI/components/sound button/sound_button.gd" id="3_m1pna"]
 [ext_resource type="Script" path="res://src/UI/components/new scene button/new_scene_button.gd" id="3_twfhd"]
 [ext_resource type="Script" path="res://src/UI/components/quit button/quit_button.gd" id="4_vg5ho"]
 [ext_resource type="PackedScene" uid="uid://b5ulac8xhrgtl" path="res://src/UI/menus/settings/settings_menu.tscn" id="6_p1dnb"]
@@ -44,6 +45,7 @@ text = "pause menu
 layout_mode = 2
 text = "unpause
 "
+script = ExtResource("3_m1pna")
 
 [node name="ReloadButton" type="Button" parent="PauseMenuVBox"]
 layout_mode = 2
@@ -53,6 +55,7 @@ script = ExtResource("2_56x2q")
 [node name="SettingsButton" type="Button" parent="PauseMenuVBox"]
 layout_mode = 2
 text = "settings"
+script = ExtResource("3_m1pna")
 
 [node name="MainMenuButton" type="Button" parent="PauseMenuVBox"]
 layout_mode = 2

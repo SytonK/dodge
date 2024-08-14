@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://hr45rmwyom6f"]
+[gd_scene load_steps=7 format=3 uid="uid://hr45rmwyom6f"]
 
 [ext_resource type="Texture2D" uid="uid://clhxqjd0cmg7h" path="res://assets/icons/unchecked.png" id="1_c34w7"]
 [ext_resource type="Theme" uid="uid://bgdcd6x4oip32" path="res://resources/theme/base_theme.tres" id="1_uwrts"]
 [ext_resource type="Script" path="res://src/UI/menus/settings/video/video_menu.gd" id="2_0t02f"]
 [ext_resource type="Texture2D" uid="uid://bfmq10ffonh1f" path="res://assets/icons/checked.png" id="2_ucs11"]
 [ext_resource type="Texture2D" uid="uid://df0ipw6xkjeok" path="res://assets/icons/focuse.png" id="5_wrecc"]
+[ext_resource type="Script" path="res://src/UI/components/sound texture button/sound_texture_button.gd" id="6_pmhyc"]
 
 [node name="VideoMenu" type="Control"]
 layout_mode = 3
@@ -36,5 +37,6 @@ toggle_mode = true
 texture_normal = ExtResource("1_c34w7")
 texture_pressed = ExtResource("2_ucs11")
 texture_focused = ExtResource("5_wrecc")
+script = ExtResource("6_pmhyc")
 
 [connection signal="pressed" from="ScreenShake/ScreenShakeButton" to="." method="_on_screen_shake_button_pressed"]

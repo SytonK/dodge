@@ -1,8 +1,9 @@
 class_name QuitButton
-extends Button
+extends SoundButton
 
 
 func _init() -> void:
+	super._init()
 	pressed.connect(_quit)
 
 func _quit() -> void:

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dy71k0weyketa"]
+[gd_scene load_steps=11 format=3 uid="uid://dy71k0weyketa"]
 
 [ext_resource type="Theme" uid="uid://bgdcd6x4oip32" path="res://resources/theme/base_theme.tres" id="1_3yqal"]
 [ext_resource type="PackedScene" uid="uid://3swy431y7di3" path="res://src/UI/components/level selector/level_selector.tscn" id="1_mym05"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://src/UI/menus/main menu/main_menu.gd" id="2_brv7k"]
 [ext_resource type="Script" path="res://src/UI/components/quit button/quit_button.gd" id="2_mxf2y"]
 [ext_resource type="PackedScene" uid="uid://dil4wgq461fem" path="res://src/UI/background/background.tscn" id="2_uj0rf"]
+[ext_resource type="Script" path="res://src/UI/components/sound button/sound_button.gd" id="5_4qd3p"]
 [ext_resource type="PackedScene" uid="uid://b5ulac8xhrgtl" path="res://src/UI/menus/settings/settings_menu.tscn" id="6_blkap"]
 [ext_resource type="AudioStream" uid="uid://ijq1ivh54fat" path="res://assets/music/theme.wav" id="8_0v6dj"]
 
@@ -63,6 +64,7 @@ layout_mode = 2
 layout_mode = 2
 focus_neighbor_top = NodePath("../LevelSelector/HBoxContainer/SelectLevelButton")
 text = "settings"
+script = ExtResource("5_4qd3p")
 
 [node name="SandboxButton" type="Button" parent="MainMenuVBox"]
 visible = false

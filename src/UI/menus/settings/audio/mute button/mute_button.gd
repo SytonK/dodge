@@ -1,5 +1,5 @@
 class_name MuteButton
-extends TextureButton
+extends SoundTextureButton
 
 
 @export var bus_name: String

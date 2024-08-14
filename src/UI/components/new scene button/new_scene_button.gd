@@ -1,11 +1,12 @@
 class_name ChangeSceneButton
-extends Button
+extends SoundButton
 
 
 @export var file_path: String
 
 
 func _init() -> void:
+	super._init()
 	pressed.connect(_change_scene)
 
 
