@@ -95,6 +95,29 @@ bus_name = "SFX"
 layout_mode = 2
 bus_name = "SFX"
 
+[node name="UI" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 64
+
+[node name="Label" type="Label" parent="VBoxContainer/UI"]
+custom_minimum_size = Vector2(350, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "UI"
+
+[node name="AudioSlider" type="HSlider" parent="VBoxContainer/UI"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = -30.0
+max_value = 10.0
+script = ExtResource("2_ayami")
+bus_name = "UI"
+
+[node name="MuteButton" parent="VBoxContainer/UI" instance=ExtResource("2_ds4v7")]
+layout_mode = 2
+bus_name = "UI"
+
 [node name="ResetButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 64

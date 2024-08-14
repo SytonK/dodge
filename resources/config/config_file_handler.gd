@@ -18,8 +18,24 @@ func _ready() -> void:
 	else:
 		config_file.load(SETTINGS_FILE_PATH)
 		
+		_check_new_settings()
 		_load_audio_settings()
 		_load_video_settings()
+
+
+func _check_new_settings() -> void:
+	if !(config_file.has_section_key('audio', 'master_muted') &&
+		config_file.has_section_key('audio', 'master_volum') &&
+		config_file.has_section_key('audio', 'music_muted') &&
+		config_file.has_section_key('audio', 'music_volum') &&
+		config_file.has_section_key('audio', 'sfx_muted') &&
+		config_file.has_section_key('audio', 'sfx_volum') &&
+		config_file.has_section_key('audio', 'ui_muted') &&
+		config_file.has_section_key('audio', 'ui_volum')):
+		_set_default_audio_settings()
+	
+	if !config_file.has_section_key('video', 'screen_shake'):
+		_set_default_video_settings()
 
 
 func _set_default_audio_settings() -> void:
@@ -29,6 +45,8 @@ func _set_default_audio_settings() -> void:
 	config_file.set_value("audio", "music_volum", 0)
 	config_file.set_value("audio", "sfx_muted", false)
 	config_file.set_value("audio", "sfx_volum", 0)
+	config_file.set_value("audio", "ui_muted", false)
+	config_file.set_value("audio", "ui_volum", 0)
 
 func save_audio_settings(key: String, value):
 	config_file.set_value('audio', key, value)
@@ -41,6 +59,8 @@ func _load_audio_settings() -> void:
 	AudioServer.set_bus_volume_db(1, config_file.get_value('audio', 'music_volum'))
 	AudioServer.set_bus_mute(2, config_file.get_value('audio', 'sfx_muted'))
 	AudioServer.set_bus_volume_db(2, config_file.get_value('audio', 'sfx_volum'))
+	AudioServer.set_bus_mute(3, config_file.get_value('audio', 'ui_muted'))
+	AudioServer.set_bus_volume_db(3, config_file.get_value('audio', 'ui_volum'))
 
 
 func _set_default_video_settings() -> void:
